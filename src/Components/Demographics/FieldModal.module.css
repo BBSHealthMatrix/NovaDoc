@@ -1,0 +1,26 @@
+.dmg-overlay {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, .72);
+  display: grid; place-items: center; z-index: 1000;
+}
+.dmg-modal {
+  position: relative; width: 360px; background: #fff; border-radius: 8px; padding: 18px 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+.dmg-x { position: absolute; top: 12px; right: 12px; border: none; background: none; color: #94a3b8; cursor: pointer; display: grid; }
+.dmg-modal h3 { margin: 0 0 16px; font-size: 14px; font-weight: 600; color: #0b1f3f; }
+.dmg-lbl {
+  display: block; margin-bottom: 5px; font-size: 9px; font-weight: 600; letter-spacing: .06em;
+  text-transform: uppercase; color: #64748b;
+}
+.dmg-in {
+  width: 100%; height: 32px; padding: 0 10px; margin-bottom: 14px; border: 1px solid #e2e8f0;
+  border-radius: 5px; font-size: 11.5px; font-family: inherit; color: #1e293b; outline: none; background: #fff;
+}
+.dmg-in:focus { border-color: #3b6fd4; }
+.dmg-m-btns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+.dmg-btn-c, .dmg-btn-b { border-radius: 5px; padding: 8px 14px; font-size: 11px; font-family: inherit; cursor: pointer; }
+.dmg-btn-c { border: 1px solid #e2e8f0; background: #fff; color: #1e293b; }
+.dmg-btn-c:hover { background: #f8fafc; }
+.dmg-btn-b { border: 1px solid #2f5fc0; background: #3b6fd4; color: #fff; font-weight: 600; }
+.dmg-btn-b:hover { background: #1e4fd8; }
+.dmg-btn-b:disabled { background: #93b0e6; border-color: #93b0e6; cursor: default; }

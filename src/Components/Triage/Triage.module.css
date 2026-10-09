@@ -1,0 +1,174 @@
+.tri-page {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 56px);
+  margin: 0;
+  overflow: hidden;
+  color: #0b1f3f;
+  background: #fff;
+}
+
+.tri-label {
+  margin: 0 0 6px; font-size: 7.5px; font-weight: 700;
+  letter-spacing: 0.6px; text-transform: uppercase; color: #94a3b8;
+}
+.tri-left {
+  display: flex; flex-direction: column; flex-shrink: 0;
+  width: 230px; border-right: 1px solid #e2e8f0; background: #fff;
+}
+.tri-left-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 13px 14px 11px 15px; border-bottom: 1px solid #e2e8f0;
+}
+.tri-left-head h3 { margin: 0; font-size: 12.5px; font-weight: 700; color: #0f172a; }
+.tri-left-head span { display: block; margin-top: 3px; font-size: 8.5px; color: #94a3b8; }
+.tri-new {
+  display: flex; align-items: center; gap: 4px; height: 25px; padding: 0 10px;
+  border: none; border-radius: 6px; background: #4a7fd4; color: #fff;
+  font: inherit; font-size: 10.5px; font-weight: 600; cursor: pointer;
+}
+.tri-new:hover { background: #3b6fd4; }
+
+.tri-algos { flex: 1; overflow-y: auto; padding: 7px 8px; }
+.tri-algo {
+  min-height: 96px; box-sizing: border-box; margin-bottom: 7px; padding: 12px 11px;
+  border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; cursor: pointer;
+}
+.tri-algo:hover { background: #fafbfd; }
+.tri-algo-on, .tri-algo-on:hover { border-color: #b9cbea; background: #e8eef8; }
+.tri-algo-top { display: flex; align-items: center; gap: 8px; }
+.tri-algo-top h4 {
+  flex: 1; min-width: 0; margin: 0;
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  font-size: 12px; font-weight: 600; color: #1e293b;
+}
+.tri-algo-cc { margin: 4px 0 0; font-size: 9px; color: #3b6fd4; }
+.tri-algo-n { display: block; margin-top: 8px; font-size: 8.5px; color: #94a3b8; }
+.tri-sw {
+  position: relative; flex-shrink: 0; width: 25px; height: 14px; padding: 0;
+  border: none; border-radius: 10px; background: #e2e8f0; cursor: pointer; transition: background 0.15s;
+}
+.tri-sw::after {
+  content: ""; position: absolute; top: 2px; left: 2px;
+  width: 10px; height: 10px; border-radius: 50%; background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.2); transition: left 0.15s;
+}
+.tri-sw-on { background: #4a7fd4; }
+.tri-sw-on::after { left: 13px; }
+.tri-right { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+.tri-top {
+  display: flex; align-items: flex-end; gap: 14px;
+  padding: 13px 22px 14px; border-bottom: 1px solid #e2e8f0; background: #fff;
+}
+.tri-top-inp {
+  box-sizing: border-box; height: 28px; padding: 0 11px;
+  border: 1px solid #e2e8f0; border-radius: 5px; background: #fff; outline: none;
+  font: inherit; font-size: 12.5px; font-weight: 500; color: #1e293b;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+.tri-top-inp:focus { border-color: #3b6fd4; box-shadow: 0 0 0 2px rgba(59, 111, 212, 0.12); }
+.tri-top-name { width: 404px; max-width: 100%; }
+.tri-top-cc { width: 188px; }
+
+.tri-steps { flex: 1; overflow-y: auto; padding: 18px 18px 22px; background: #fff; }
+.tri-step {
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0; border-radius: 10px; background: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07);
+}
+.tri-step-open { border-color: #c7d8f3; }
+.tri-step-head { display: flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 16px; }
+.tri-step-open .tri-step-head { border-bottom: 1px solid #eef1f5; }
+.tri-num {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #f1f5f9; color: #64748b; font-size: 9px; font-weight: 600;
+}
+.tri-step-head h4 {
+  flex: 1; min-width: 0; margin: 0;
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  font-size: 12.5px; font-weight: 600; color: #0f172a;
+}
+.tri-badge {
+  flex-shrink: 0; padding: 3px 6px; border: 1px solid; border-radius: 3px; line-height: 1;
+  font-style: normal; font-size: 7px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
+}
+.tri-b-patient { background: #f0f9ff; border-color: #a5d8ef; color: #0369a1; }
+.tri-b-complaint { background: #f8fafc; border-color: #cbd5e1; color: #334155; }
+.tri-b-qgroup { background: #fffbeb; border-color: #fcd34d; color: #b45309; }
+.tri-b-flag { background: #fff1f2; border-color: #fda4af; color: #e11d48; }
+.tri-b-severity { background: #faf5ff; border-color: #d8b4fe; color: #9333ea; }
+.tri-b-character { background: #f0fdfa; border-color: #5eead4; color: #0d9488; }
+.tri-b-outcome { background: #f0fdf4; border-color: #86efac; color: #16a34a; }
+.tri-step-tools { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.tri-step-tools > button:not(.tri-config) {
+  display: grid; place-items: center; width: 18px; height: 18px; padding: 0;
+  border: none; background: transparent; color: #94a3b8; cursor: pointer;
+}
+.tri-step-tools > button:not(.tri-config):hover:not(:disabled) { color: #0f172a; }
+.tri-step-tools > button:disabled { color: #e2e8f0; cursor: default; }
+.tri-step-tools .tri-del { color: #cbd5e1; }
+.tri-step-tools .tri-del:hover { color: #e11d48; }
+.tri-config {
+  display: flex; align-items: center; gap: 3px; margin-left: 6px; padding: 0;
+  border: none; background: transparent;
+  font: inherit; font-size: 10.5px; font-weight: 600; color: #3b6fd4; cursor: pointer;
+}
+.tri-routes { display: flex; align-items: center; gap: 6px; padding: 0 16px 11px; margin-top: -3px; }
+.tri-routes > span { margin-right: 2px; font-size: 7.5px; color: #94a3b8; }
+.tri-body { padding: 12px 15px 15px; }
+.tri-addstep {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  width: 100%; height: 48px;
+  border: 1px dashed #dbe2ec; border-radius: 10px; background: transparent;
+  font: inherit; font-size: 12px; font-weight: 500; color: #94a3b8; cursor: pointer;
+}
+.tri-addstep:hover { background: #fafbfd; color: #64748b; }
+
+.tri-pick {
+  padding: 16px 15px 12px;
+  border: 1px solid #e2e8f0; border-radius: 10px; background: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07);
+}
+.tri-pick .tri-label { margin-bottom: 11px; }
+.tri-pick-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+.tri-tile {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
+  min-height: 48px; padding: 9px 11px; box-sizing: border-box;
+  border: 1px solid; border-radius: 6px; font: inherit; text-align: left; cursor: pointer;
+}
+.tri-tile b { font-size: 10.5px; font-weight: 600; }
+.tri-tile small { font-size: 8.5px; }
+.tri-tile:hover:not(:disabled) { filter: brightness(0.98); }
+.tri-tile-patient { background: #f0f9ff; border-color: #bae6fd; color: #0369a1; }
+.tri-tile-complaint { background: #f8fafc; border-color: #cbd5e1; color: #334155; }
+.tri-tile-qgroup { background: #fffbeb; border-color: #fde68a; color: #b45309; }
+.tri-tile-qgroup small { color: #a16207; }
+.tri-tile-flag { background: #fff1f2; border-color: #fecdd3; color: #e11d48; }
+.tri-tile-flag small { color: #be123c; }
+.tri-tile-severity { background: #faf5ff; border-color: #e9d5ff; color: #9333ea; }
+.tri-tile-severity small { color: #7e22ce; }
+.tri-tile-character { background: #f0fdfa; border-color: #99f6e4; color: #0d9488; }
+.tri-tile-character small { color: #0f766e; }
+.tri-tile-outcome { background: #f0fdf4; border-color: #bbf7d0; color: #16a34a; }
+.tri-tile-outcome small { color: #15803d; }
+.tri-tile:disabled { background: #f8fafc; border-color: #eef1f5; color: #cbd5e1; cursor: default; }
+.tri-tile:disabled small { color: #d5dce5; }
+.tri-pick-foot { display: flex; justify-content: flex-end; margin-top: 11px; padding-top: 10px; border-top: 1px solid #eef1f5; }
+.tri-pick-foot button {
+  padding: 0; border: none; background: transparent;
+  font: inherit; font-size: 10.5px; color: #94a3b8; cursor: pointer;
+}
+.tri-pick-foot button:hover { color: #475569; }
+.tri-toast {
+  position: fixed; top: 14px; right: 22px; z-index: 3000;
+  display: flex; align-items: center; gap: 6px;
+  height: 29px; padding: 0 15px;
+  border-radius: 20px; background: #16a34a; color: #fff;
+  font-size: 11px; font-weight: 600;
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.3);
+  opacity: 0; transform: translateY(-8px); pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.tri-toast-show { opacity: 1; transform: translateY(0); }

@@ -1,0 +1,97 @@
+/* ── New / Edit Formulary Partner modal (pm-) ── */
+.pm-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(0,0,0,.8); }
+.pm-modal {
+  position: relative; display: flex; flex-direction: column; width: 611px; max-width: 100%; max-height: calc(100vh - 40px);
+  padding: 20px 23px 22px; background: #f8fafc; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+}
+.pm-close { position: absolute; top: 16px; right: 17px; display: grid; place-items: center; padding: 1px; border: none; background: none; color: #62748e; cursor: pointer; }
+.pm-close:hover { color: #0f172b; }
+
+.pm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.pm-title { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 22px; color: #0f172b; }
+.pm-stepno { margin-top: 3px; font-size: 10px; color: #90a1b9; }
+
+/* stepper */
+.pm-steps { display: flex; align-items: center; margin-top: 12px; }
+.pm-step { display: flex; align-items: center; gap: 8px; flex-shrink: 0; font-size: 11px; font-weight: 600; color: #90a1b9; }
+.pm-step-on { color: #4982cf; }
+.pm-num { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: #f1f5f9; font-size: 9.5px; font-weight: 700; color: #90a1b9; }
+.pm-num-on { background: #4982cf; color: #fff; }
+.pm-line { flex: 1; height: 1px; margin: 0 7px; background: #e2e8f0; }
+
+/* step 1 */
+.pm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 35px; }
+.pm-lbl { display: block; margin-bottom: 7px; font-size: 11px; font-weight: 600; line-height: 14px; color: #314158; }
+.pm-lbl em { font-style: normal; color: #fb2c36; }
+.pm-mt { margin-top: 20px; }
+.pm-input, .pm-select {
+  display: block; width: 100%; height: 32px; padding: 0 12px; outline: none;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 13px; color: #0f172b;
+}
+.pm-input { background: #f8fafc; }
+.pm-input::placeholder { color: #62748e; }
+.pm-select { padding: 0 10px 0 14px; background: #fff; cursor: pointer; }
+.pm-input:focus, .pm-select:focus { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+
+/* footers */
+.pm-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 15px; }
+.pm-foot-1 { justify-content: flex-end; gap: 8px; margin-top: 22px; }
+.pm-foot-r { display: flex; gap: 8px; }
+.pm-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; height: 33px; padding: 0 15px; cursor: pointer;
+  border-radius: 6px; font-family: inherit; font-size: 13px; font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.pm-ghost { background: #fff; border: 1px solid #e2e8f0; color: #0f172b; }
+.pm-ghost:hover { background: #f1f5f9; }
+.pm-primary { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.pm-primary:hover { background: #356fbb; }
+.pm-primary:disabled, .pm-primary:disabled:hover { background: #4982cf; opacity: .4; cursor: not-allowed; box-shadow: none; }
+
+/* step 2: toolbar */
+.pm-tools { display: flex; align-items: center; gap: 8px; margin-top: 30px; }
+.pm-search {
+  display: flex; align-items: center; gap: 9px; width: 291px; height: 29px; padding: 0 11px; flex-shrink: 0;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.pm-search:focus-within { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.pm-search svg { flex-shrink: 0; color: #90a1b9; }
+.pm-search input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-family: inherit; font-size: 12.5px; color: #0f172b; }
+.pm-search input::placeholder { color: #62748e; }
+.pm-count { flex: 1; text-align: center; font-size: 10.5px; color: #62748e; }
+.pm-link { padding: 0; border: none; background: none; cursor: pointer; font-family: inherit; font-size: 10.5px; font-weight: 600; color: #4982cf; }
+.pm-link:hover { text-decoration: underline; }
+.pm-link-muted { color: #90a1b9; }
+
+/* step 2: generic list */
+.pm-list { height: 279px; margin-top: 11px; overflow-y: auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; }
+.pm-cat {
+  position: sticky; top: 0; z-index: 1; height: 28px; padding: 0 15px; line-height: 28px;
+  background: #f8fafc; border-bottom: 1px solid #f1f5f9;
+  font-size: 8.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #62748e;
+}
+.pm-grow { display: flex; align-items: center; gap: 10px; height: 37px; padding: 0 15px; }
+.pm-gblock-open { background: #fff; }
+.pm-gname { flex: 1; min-width: 0; display: flex; align-items: center; gap: 11px; cursor: pointer; font-size: 11.5px; font-weight: 500; color: #314158; }
+.pm-gname input { width: 13px; height: 13px; margin: 0; flex-shrink: 0; cursor: pointer; accent-color: #4982cf; }
+.pm-gname em { margin-left: -5px; font-style: normal; font-size: 8px; font-weight: 400; color: #90a1b9; }
+.pm-chev { display: grid; place-items: center; width: 20px; height: 20px; padding: 0; cursor: pointer; background: none; border: 1px solid transparent; border-radius: 4px; color: #90a1b9; }
+.pm-chev:hover, .pm-chev-on { background: #f8fafc; border-color: #e2e8f0; }
+
+/* step 2: brand pricing table */
+.pm-trow { display: grid; grid-template-columns: 124px 1fr 87px 87px; align-items: center; column-gap: 29px; height: 34px; padding: 0 15px 0 30px; border-bottom: 1px solid #f8fafc; }
+.pm-thead {
+  height: 32px; background: #f8fafc; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;
+  font-size: 7.5px; font-weight: 700; line-height: 10px; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.pm-thead span:nth-child(n+3) { text-align: center; }
+.pm-tbrand { font-size: 11px; font-weight: 500; color: #314158; }
+.pm-tstr { font-size: 8.5px; color: #90a1b9; }
+.pm-num-in {
+  width: 87px; height: 22px; padding: 0 12px; outline: none; text-align: right;
+  background: #fff; border: 1px solid #cad5e2; border-radius: 5px;
+  font-family: inherit; font-size: 12.5px; color: #314158;    -moz-appearance: textfield; appearance: textfield;
+}
+.pm-num-in::-webkit-outer-spin-button, .pm-num-in::-webkit-inner-spin-button {  -webkit-appearance: none; margin: 0; }
+.pm-num-in:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.pm-none { margin: 0; padding: 24px; text-align: center; font-size: 11px; color: #90a1b9; }

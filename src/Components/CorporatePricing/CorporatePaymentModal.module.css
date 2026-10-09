@@ -1,0 +1,39 @@
+/* ── Corporate › Add Advance Payment modal (cra-) ── */
+.cra-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(0,0,0,.8); }
+.cra-modal {
+  position: relative; width: 349px; max-width: 100%; padding: 20px 22px 22px;
+  background: #f8fafc; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+}
+.cra-close { position: absolute; top: 16px; right: 17px; display: grid; place-items: center; padding: 1px; border: none; background: none; color: #62748e; cursor: pointer; }
+.cra-close:hover { color: #0f172b; }
+.cra-title { margin: 0; font-size: 16px; font-weight: 600; line-height: 22px; color: #0f172b; }
+
+.cra-lbl { display: block; margin: 15px 0 6px; font-size: 11px; font-weight: 600; line-height: 14px; color: #314158; }
+.cra-lbl em { font-style: normal; color: #fb2c36; }
+
+.cra-amount, .cra-input {
+  width: 100%; height: 33px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 13px; color: #0f172b;
+}
+.cra-amount { display: flex; align-items: center; gap: 8px; padding: 0 11px; }
+.cra-amount span { font-size: 12.5px; color: #90a1b9; }
+.cra-amount input {
+  flex: 1; min-width: 0; padding: 0; outline: none; background: none; border: none;
+  font-family: inherit; font-size: 13px; color: #0f172b; -moz-appearance: textfield; appearance: textfield;
+}
+.cra-amount input::-webkit-outer-spin-button, .cra-amount input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.cra-input { display: block; padding: 0 11px; outline: none; }
+.cra-amount input::placeholder, .cra-input::placeholder { color: #62748e; }
+.cra-amount:focus-within, .cra-input:focus { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+
+.cra-foot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 17px; }
+.cra-btn {
+  height: 33px; padding: 0 15px; cursor: pointer; border-radius: 6px;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.cra-ghost { background: #fff; border: 1px solid #e2e8f0; color: #0f172b; }
+.cra-ghost:hover { background: #f1f5f9; }
+.cra-primary { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.cra-primary:hover { background: #356fbb; }
+.cra-primary:disabled, .cra-primary:disabled:hover { background: #4982cf; opacity: .4; cursor: not-allowed; box-shadow: none; }

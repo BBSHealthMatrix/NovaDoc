@@ -1,0 +1,94 @@
+/* ── New / Edit Consumable Provider modal (cpm-) ── */
+.cpm-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(0,0,0,.8); }
+.cpm-modal {
+  position: relative; display: flex; flex-direction: column; width: 611px; max-width: 100%; max-height: calc(100vh - 40px);
+  padding: 20px 23px 22px; background: #f8fafc; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+}
+.cpm-close { position: absolute; top: 16px; right: 17px; display: grid; place-items: center; padding: 1px; border: none; background: none; color: #62748e; cursor: pointer; }
+.cpm-close:hover { color: #0f172b; }
+
+.cpm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cpm-title { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 22px; color: #0f172b; }
+.cpm-stepno { margin-top: 3px; font-size: 10px; color: #90a1b9; }
+
+/* stepper */
+.cpm-steps { display: flex; align-items: center; margin-top: 12px; }
+.cpm-step { display: flex; align-items: center; gap: 8px; flex-shrink: 0; font-size: 11px; font-weight: 600; color: #90a1b9; }
+.cpm-step-on { color: #4982cf; }
+.cpm-num { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: #f1f5f9; font-size: 9.5px; font-weight: 700; color: #90a1b9; }
+.cpm-num-on { background: #4982cf; color: #fff; }
+.cpm-line { flex: 1; height: 1px; margin: 0 7px; background: #e2e8f0; }
+
+/* step 1 */
+.cpm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 35px; }
+.cpm-lbl { display: block; margin-bottom: 7px; font-size: 11px; font-weight: 600; line-height: 14px; color: #314158; }
+.cpm-lbl em { font-style: normal; color: #fb2c36; }
+.cpm-mt { margin-top: 20px; }
+.cpm-input, .cpm-select {
+  display: block; width: 100%; height: 32px; padding: 0 12px; outline: none;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 13px; color: #0f172b;
+}
+.cpm-input { background: #f8fafc; }
+.cpm-input::placeholder { color: #62748e; }
+.cpm-select { padding: 0 10px 0 14px; background: #fff; cursor: pointer; }
+.cpm-input:focus, .cpm-select:focus { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+
+/* footers */
+.cpm-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 15px; }
+.cpm-foot-1 { justify-content: flex-end; gap: 8px; margin-top: 22px; }
+.cpm-foot-r { display: flex; gap: 8px; }
+.cpm-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; height: 33px; padding: 0 15px; cursor: pointer;
+  border-radius: 6px; font-family: inherit; font-size: 13px; font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.cpm-ghost { background: #fff; border: 1px solid #e2e8f0; color: #0f172b; }
+.cpm-ghost:hover { background: #f1f5f9; }
+.cpm-primary { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.cpm-primary:hover { background: #356fbb; }
+.cpm-primary:disabled, .cpm-primary:disabled:hover { background: #4982cf; opacity: .4; cursor: not-allowed; box-shadow: none; }
+
+/* step 2: toolbar */
+.cpm-tools { display: flex; align-items: center; gap: 8px; margin-top: 30px; }
+.cpm-search {
+  display: flex; align-items: center; gap: 9px; width: 291px; height: 29px; padding: 0 11px; flex-shrink: 0;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.cpm-search:focus-within { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.cpm-search svg { flex-shrink: 0; color: #90a1b9; }
+.cpm-search input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-family: inherit; font-size: 12.5px; color: #0f172b; }
+.cpm-search input::placeholder { color: #62748e; }
+.cpm-count { flex: 1; text-align: center; font-size: 10.5px; color: #62748e; }
+.cpm-link { padding: 0; border: none; background: none; cursor: pointer; font-family: inherit; font-size: 10.5px; font-weight: 600; color: #4982cf; }
+.cpm-link:hover { text-decoration: underline; }
+.cpm-link-muted { color: #90a1b9; }
+
+/* step 2: item list */
+.cpm-list { height: 279px; margin-top: 11px; overflow-y: auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; }
+.cpm-cat {
+  position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 9px; height: 28px; padding: 0 15px;
+  background: #f8fafc; border-bottom: 1px solid #f1f5f9;
+  font-size: 8.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #62748e;
+}
+.cpm-dot { width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; }
+.cpm-row { display: flex; align-items: center; gap: 8px; height: 31px; padding: 0 15px; }
+.cpm-row-on { height: 37px; }
+.cpm-iname { flex: 1; min-width: 0; display: flex; align-items: center; gap: 11px; cursor: pointer; font-size: 11.5px; font-weight: 500; color: #314158; }
+.cpm-iname input { width: 13px; height: 13px; margin: 0; flex-shrink: 0; cursor: pointer; accent-color: #4982cf; }
+.cpm-unit {
+  display: inline-flex; align-items: center; height: 14px; padding: 0 5px; flex-shrink: 0;
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px;
+  font-family: "JetBrains Mono", monospace; font-size: 8px; color: #90a1b9;
+}
+.cpm-price { display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.cpm-cost { margin-left: 4px; }
+.cpm-price em { font-style: normal; font-size: 8.5px; color: #90a1b9; }
+.cpm-in {
+  width: 72px; height: 22px; padding: 0 10px; outline: none; text-align: right;
+  background: #fff; border: 1px solid #cad5e2; border-radius: 5px;
+  font-family: inherit; font-size: 12px; color: #314158;    -moz-appearance: textfield; appearance: textfield;
+}
+.cpm-in::placeholder { color: #90a1b9; }
+.cpm-in::-webkit-outer-spin-button, .cpm-in::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.cpm-in:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.cpm-none { margin: 0; padding: 24px; text-align: center; font-size: 11px; color: #90a1b9; }

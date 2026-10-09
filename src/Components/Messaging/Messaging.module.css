@@ -1,0 +1,49 @@
+.msg-wrap { height: calc(100vh - 56px); display: flex; }
+.msg-side { width: 255px; flex-shrink: 0; display: flex; flex-direction: column; background: #fff; border-right: 1px solid #e6eaf0; }
+.msg-side-top { padding: 14px 12px 12px; border-bottom: 1px solid #e6eaf0; }
+.msg-title { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 13px; font-weight: 600; }
+.msg-title-icon { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 6px; background: #e8effb; color: #3b6fd4; }
+.msg-search { display: flex; align-items: center; gap: 7px; height: 28px; padding: 0 9px; border: 1px solid #d8dee8; border-radius: 6px; color: #94a3b8; box-shadow: 0 1px 2px rgba(15,23,42,.05); }
+.msg-search input { flex: 1; border: 0; outline: 0; font-size: 10px; }
+.msg-roles { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
+.msg-roles button { padding: 3px 8px; border: 0; border-radius: 99px; background: #eef1f5; color: #475569; font-size: 8.5px; font-weight: 500; cursor: pointer; }
+.msg-roles button.on { background: #3b6fd4; color: #fff; }
+.msg-list { flex: 1; overflow-y: auto; }
+.msg-contact { width: 100%; display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 0; border-bottom: 1px solid #eef1f5; background: #fff; text-align: left; cursor: pointer; }
+.msg-contact:hover { background: #f8fafc; }
+.msg-contact.on { background: #eef3fb; }
+.msg-contact.on b { color: #3b6fd4; }
+.msg-avatar { position: relative; flex-shrink: 0; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-size: 9px; font-weight: 700; }
+.msg-avatar i { position: absolute; right: -1px; bottom: -1px; width: 8px; height: 8px; border: 2px solid #fff; border-radius: 50%; background: #cbd5e1; }
+.msg-avatar i.on { background: #22c55e; }
+.msg-contact-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.msg-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.msg-row b { overflow: hidden; font-size: 10.5px; font-weight: 600; white-space: nowrap; text-overflow: ellipsis; }
+.msg-row time { flex-shrink: 0; font-size: 8px; color: #94a3b8; }
+.msg-row small { overflow: hidden; font-size: 8.5px; color: #64748b; white-space: nowrap; text-overflow: ellipsis; }
+.msg-row em { flex-shrink: 0; padding: 1px 5px; border: 1px solid #e2e8f0; border-radius: 3px; font-style: normal; font-size: 7.5px; color: #64748b; }
+.msg-none { padding: 20px; text-align: center; font-size: 9px; color: #94a3b8; }
+.msg-chat { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.msg-chat-head { display: flex; align-items: center; gap: 10px; padding: 10px 20px; background: #fff; border-bottom: 1px solid #e6eaf0; }
+.msg-chat-head b { display: block; font-size: 10.5px; }
+.msg-chat-head small { font-size: 8.5px; color: #64748b; }
+.msg-chat-head .on { color: #16a34a; }
+.msg-chat-head .off { color: #94a3b8; }
+.msg-body { flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 22px 20px; overflow-y: auto; background: #f7f9fc; }
+.msg-date { align-self: center; padding: 3px 10px; border-radius: 99px; background: #e9edf3; font-size: 8.5px; color: #64748b; }
+.msg-bubble { max-width: 60%; padding: 9px 13px 6px; border-radius: 12px; }
+.msg-bubble p { font-size: 10.5px; line-height: 1.5; }
+.msg-bubble time { display: block; margin-top: 3px; text-align: right; font-size: 7.5px; }
+.msg-bubble.msg-them { align-self: flex-start; background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(15,23,42,.05); color: #0f172a; }
+.msg-bubble.msg-them time { color: #94a3b8; }
+.msg-bubble.msg-me { align-self: flex-end; background: #4a7fd4; color: #fff; }
+.msg-bubble.msg-me time { color: rgba(255,255,255,.75); }
+.msg-input { display: flex; gap: 10px; padding: 12px 20px; background: #fff; border-top: 1px solid #e6eaf0; }
+.msg-input input { flex: 1; height: 30px; padding: 0 12px; border: 1px solid #d8dee8; border-radius: 6px; outline: 0; font-size: 10px; }
+.msg-input input:focus { border-color: #3b6fd4; }
+.msg-input button { display: flex; align-items: center; gap: 5px; height: 30px; padding: 0 14px; border: 0; border-radius: 6px; background: #3b6fd4; color: #fff; font-size: 10px; font-weight: 600; cursor: pointer; }
+.msg-input button:disabled { opacity: .45; cursor: not-allowed; }
+
+@media (max-width: 900px) {
+  .msg-side { width: 200px; }
+}

@@ -1,0 +1,116 @@
+// Imaging catalog seed: modality -> body parts -> protocols
+let uid = 0;
+const newId = (prefix) => `${prefix}${++uid}_${Date.now()}`;
+
+const mod = (name, color, parts) => ({
+  id: newId("m"), name, color, on: true,
+  parts: parts.map(([partName, protocols]) => ({
+    id: newId("b"), name: partName, on: true,
+    protocols: protocols.map((p) => ({ id: newId("p"), name: p })),
+  })),
+});
+
+const MODALITIES = [
+  mod("X-Ray", "#0ea5e9", [
+    ["Chest", ["Single View", "AP Portable", "PA View", "PA & Lateral (2 Views)", "3 Views", "Decubitus", "Rib Series"]],
+    ["Abdomen", ["Supine", "Erect", "Supine & Erect"]],
+    ["Cervical Spine", ["AP & Lateral", "Flexion & Extension", "3 Views", "4 Views"]],
+    ["Lumbar Spine", ["AP & Lateral", "Flexion & Extension", "3 Views", "4 Views"]],
+    ["Thoracic Spine", ["AP & Lateral", "3 Views"]],
+    ["Pelvis", ["AP View", "AP & Lateral"]],
+    ["Knee", ["AP & Lateral", "Sunrise View", "3 Views", "Weight Bearing"]],
+    ["Shoulder", ["AP View", "Y-View", "AP & Axillary (2 Views)"]],
+    ["Wrist", ["AP & Lateral", "3 Views"]],
+    ["Hand", ["AP & Oblique", "3 Views"]],
+    ["Ankle", ["AP & Lateral", "3 Views"]],
+    ["Foot", ["AP & Lateral", "3 Views", "Weight Bearing"]],
+    ["Hip", ["AP View", "AP & Lateral"]],
+    ["Elbow", ["AP & Lateral", "3 Views"]],
+    ["Forearm", ["AP & Lateral"]],
+    ["Tibia/Fibula", ["AP & Lateral"]],
+    ["Skull", ["AP & Lateral", "Towne's View", "3 Views"]],
+    ["Facial Bones", ["Standard Views", "Waters View"]],
+    ["Sinuses", ["Waters View", "Paranasal Sinus Series"]],
+  ]),
+  mod("CT", "#8b5cf6", [
+    ["Head/Brain", ["Without Contrast", "With Contrast", "With & Without Contrast"]],
+    ["Chest", ["Without Contrast", "With Contrast", "Pulmonary Angiography (CTPA)", "High Resolution (HRCT)"]],
+    ["Abdomen", ["Without Contrast", "With Contrast", "With & Without Contrast"]],
+    ["Pelvis", ["Without Contrast", "With Contrast", "With & Without Contrast"]],
+    ["Abdomen & Pelvis", ["Without Contrast", "With Contrast", "With & Without Contrast", "Triple Phase"]],
+    ["Spine (Cervical)", ["Without Contrast", "With Contrast"]],
+    ["Spine (Lumbar)", ["Without Contrast", "With Contrast"]],
+    ["Spine (Thoracic)", ["Without Contrast", "With Contrast"]],
+    ["Coronary", ["CT Coronary Angiography (CTCA)", "Calcium Score"]],
+    ["Peripheral Angiography", ["Standard Protocol"]],
+    ["KUB / Urogram", ["Non-Contrast (NCCT KUB)", "With Contrast (IVU)"]],
+    ["Neck/Soft Tissue", ["Without Contrast", "With Contrast"]],
+    ["Sinuses", ["Without Contrast"]],
+    ["Orbits", ["Without Contrast", "With Contrast"]],
+  ]),
+  mod("MRI", "#6366f1", [
+    ["Brain", ["Without Contrast", "With Contrast", "With & Without Contrast", "Spectroscopy", "Diffusion (DWI)"]],
+    ["Spine (Cervical)", ["Without Contrast", "With Contrast"]],
+    ["Spine (Lumbar)", ["Without Contrast", "With Contrast"]],
+    ["Spine (Thoracic)", ["Without Contrast", "With Contrast"]],
+    ["Knee", ["Without Contrast"]],
+    ["Shoulder", ["Without Contrast", "With Contrast (Arthrogram)"]],
+    ["Hip", ["Without Contrast", "With Contrast"]],
+    ["Wrist", ["Without Contrast"]],
+    ["Ankle/Foot", ["Without Contrast"]],
+    ["Abdomen", ["Without Contrast", "With Contrast", "With & Without Contrast"]],
+    ["Pelvis", ["Without Contrast", "With Contrast"]],
+    ["Prostate", ["Multi-parametric (mpMRI)"]],
+    ["Breast", ["Bilateral With Contrast"]],
+    ["Cardiac (CMR)", ["Standard Protocol", "Stress Protocol", "Viability Protocol"]],
+    ["Whole Body", ["Without Contrast"]],
+    ["MRCP", ["Standard Protocol"]],
+  ]),
+  mod("Ultrasound", "#10b981", [
+    ["Abdomen", ["Complete", "Limited", "Focused"]],
+    ["Pelvis", ["Transabdominal", "Transvaginal (TVS)"]],
+    ["Thyroid & Neck", ["Standard"]],
+    ["Renal", ["Bilateral Kidneys", "Single Kidney", "KUB"]],
+    ["Testicular/Scrotal", ["Standard with Doppler"]],
+    ["Breast", ["Bilateral", "Unilateral Right", "Unilateral Left"]],
+    ["Doppler – Carotid", ["Bilateral Carotid Doppler"]],
+    ["Doppler – Lower Limb Veins", ["Bilateral DVT Screen", "Unilateral Right", "Unilateral Left"]],
+    ["Doppler – Lower Limb Arteries", ["Bilateral", "Unilateral Right", "Unilateral Left"]],
+    ["Doppler – Upper Limb Veins", ["Bilateral", "Unilateral"]],
+    ["Obstetric (Dating)", ["Standard Dating Scan"]],
+    ["Obstetric (Anatomy)", ["Detailed Anomaly Scan (18–22 weeks)"]],
+    ["Shoulder", ["Standard"]],
+    ["Soft Tissue / Mass", ["Standard"]],
+    ["Guided Procedure", ["Aspiration", "Biopsy", "Drainage"]],
+  ]),
+  mod("Mammography", "#ec4899", [
+    ["Bilateral", ["Standard Screening (2 Views Each)", "Diagnostic", "Tomosynthesis (3D)"]],
+    ["Unilateral Right", ["Standard", "Diagnostic", "Tomosynthesis (3D)"]],
+    ["Unilateral Left", ["Standard", "Diagnostic", "Tomosynthesis (3D)"]],
+  ]),
+  mod("Echocardiography", "#ef4444", [
+    ["Transthoracic (TTE)", ["2D Echo with Doppler", "M-Mode", "Bubble Study"]],
+    ["Stress Echo", ["Exercise Stress", "Dobutamine Stress"]],
+    ["Trans-Esophageal (TEE)", ["Standard Protocol"]],
+  ]),
+  mod("Nuclear Medicine", "#f59e0b", [
+    ["Bone Scan", ["Whole Body", "3-Phase", "SPECT/CT"]],
+    ["Thyroid Scan", ["Technetium-99m", "Iodine I-131"]],
+    ["PET-CT", ["Whole Body FDG", "Brain FDG", "Cardiac Viability"]],
+    ["Renal Scan", ["MAG3 (Dynamic)", "DMSA (Static)"]],
+    ["Hepatobiliary", ["HIDA Scan", "Cholecystokinin (CCK) HIDA"]],
+    ["Ventilation/Perfusion (V/Q)", ["Standard Protocol"]],
+  ]),
+  mod("Fluoroscopy", "#14b8a6", [
+    ["Oesophagus", ["Barium Swallow"]],
+    ["Stomach", ["Barium Meal", "Upper GI Series"]],
+    ["Colon", ["Barium Enema", "Water-Soluble Enema"]],
+    ["Uterus/Tubes", ["HSG (Hysterosalpingogram)"]],
+    ["Bladder", ["VCUG (Voiding Cystourethrogram)", "Cystogram"]],
+    ["Bile Ducts", ["ERCP", "T-Tube Cholangiogram"]],
+  ]),
+];
+
+const MODALITY_COLORS = ["#0ea5e9", "#8b5cf6", "#6366f1", "#10b981", "#ec4899", "#ef4444", "#f59e0b", "#14b8a6"];
+
+export { MODALITIES, MODALITY_COLORS, newId };

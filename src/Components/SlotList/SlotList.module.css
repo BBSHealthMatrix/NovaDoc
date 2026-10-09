@@ -1,0 +1,5 @@
+.slot-row { display: flex; align-items: center; gap: 20px; padding: 9px 12px; border-bottom: 1px solid #eef1f5; cursor: pointer; }
+.slot-row:hover { background: #f8fafc; }
+.slot-time b { display: block; font-family: 'JetBrains Mono', monospace; font-size: 9px; }
+.slot-time small { font-family: 'JetBrains Mono', monospace; font-size: 7.5px; color: #94a3b8; }
+.slot-appt { padding: 3px 8px; border-radius: 4px; background: #eef3ff; color: #1e4fd8; font-size: 9px; font-weight: 600; }

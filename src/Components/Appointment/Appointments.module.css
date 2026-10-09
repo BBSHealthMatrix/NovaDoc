@@ -1,0 +1,34 @@
+/* ===== Appointments page ===== */
+.ap-wrap { min-height: calc(100vh - 56px); display: flex; flex-direction: column; }
+.ap-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #fff; border-bottom: 1px solid #e6eaf0; }
+.ap-bar.sub { padding: 6px 12px; background: #f7f9fc; border-bottom: 0; }
+.ap-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.ap-body { flex: 1; padding: 10px 12px; }
+
+/* chips: Front Desk / count / No appointments */
+.fd-chip { display: flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 99px; background: #e8ecfb; color: #3b4fb8; font-size: 9px; font-weight: 600; }
+.fd-chip.nurse { background: #fde8ec; color: #e11d48; }
+.fd-chip.doc { background: #d5f5ec; color: #0f9f7a; }
+.count-chip, .status-chip { display: flex; align-items: center; gap: 4px; padding: 2px 7px; border: 1px solid #e2e8f0; border-radius: 99px; background: #f8fafc; font-size: 8.5px; color: #64748b; }
+.count-chip { background: #eef3ff; border-color: #dbe6fb; color: #3b6fd4; }
+.dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+.dot.gray { background: #cbd5e1; }
+
+/* fixed doctor name (Doctor pages) */
+.doc-fixed { display: flex; align-items: center; gap: 5px; height: 26px; padding: 0 10px; border: 1px solid #d8dee8; border-radius: 6px; background: #fff; color: #0f172a; font-size: 10px; }
+.doc-fixed svg { color: #0f9f7a; }
+
+/* buttons */
+.seg { display: flex; overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 5px; }
+.seg button { display: flex; align-items: center; gap: 4px; padding: 5px 10px; border: 0; background: none; color: #475569; font-size: 9px; font-weight: 600; cursor: pointer; }
+.seg button + button { border-left: 1px solid #e2e8f0; }
+.seg button.on { background: #3b6fd4; color: #fff; }
+.seg.small button { padding: 4px 9px; font-size: 8.5px; }
+.icon-only { display: grid; place-items: center; padding: 4px; border: 0; background: none; color: #64748b; cursor: pointer; }
+.quick-add { display: flex; align-items: center; gap: 5px; height: 28px; padding: 0 16px; border: 0; border-radius: 5px; background: #3b6fd4; color: #fff; font-size: 10.5px; font-weight: 600; cursor: pointer; }
+.type-chip { padding: 3px 8px; border: 1px solid #d8dee8; border-radius: 99px; background: #fff; color: #475569; font-size: 8.5px; font-weight: 500; cursor: pointer; }
+.type-chip.on { background: #3b6fd4; border-color: #3b6fd4; color: #fff; }
+.clear-btn { display: flex; align-items: center; gap: 2px; border: 0; background: none; color: #94a3b8; font-size: 8.5px; cursor: pointer; }
+.arrow-btn { display: grid; place-items: center; width: 20px; height: 20px; border: 1px solid #d8dee8; border-radius: 4px; background: #fff; cursor: pointer; }
+.ap-label { min-width: 150px; text-align: center; font-size: 10px; font-weight: 600; }
+.today-btn { display: flex; align-items: center; gap: 4px; border: 0; background: none; color: #64748b; font-size: 9px; cursor: pointer; }

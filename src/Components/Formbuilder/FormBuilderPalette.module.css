@@ -1,0 +1,21 @@
+.description { font-size: 9.5px; color: #64748b; margin: 0 0 14px; max-width: 310px; line-height: 1.5; }
+.wide { max-width: none; margin-bottom: 10px; }
+.caption {
+  font-size: 8.5px; font-weight: 600; letter-spacing: .08em; color: #64748b;
+  margin: 12px 0 10px; text-transform: uppercase;
+}
+.top { margin: 6px 0 4px; }
+.grid { display: grid; grid-template-columns: repeat(2, 264px); gap: 8px; }
+.component {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid #e2e8f0;
+  border-radius: 6px; background: #fff; cursor: pointer; font-size: 9.5px; color: #1e293b;
+  font-family: inherit; text-align: left; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.component:hover { border-color: #cbd5e1; }
+.enabled, .enabled:hover { background: #e9eff9; border-color: #a9bde6; color: #3b6fd4; }
+.icon { width: 20px; height: 20px; border-radius: 5px; display: grid; place-items: center; flex-shrink: 0; }
+.text { flex: 1; }
+.mark { color: #cbd5e1; flex-shrink: 0; }
+.enabled .mark { color: #3b6fd4; }
+.note { font-size: 8.5px; color: #94a3b8; margin-top: 14px; }
+.description { max-width: none; margin-bottom: 10px; }

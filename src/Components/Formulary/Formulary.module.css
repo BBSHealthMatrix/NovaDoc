@@ -1,0 +1,17 @@
+/* ── shell: fixed header + tabs ── */
+.fm-wrap { display: flex; flex-direction: column; height: calc(100vh - 56px); background: #f8fafc; }
+.fm-header { flex-shrink: 0; padding: 18px 22px 14px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.fm-title { display: flex; align-items: center; gap: 9px; margin: 0 0 4px; font-size: 17px; font-weight: 600; line-height: 22px; color: #0f172b; }
+.fm-title svg { color: #4982cf; }
+.fm-desc { margin: 0; font-size: 11px; color: #62748e; }
+
+.fm-tabs { display: flex; flex-shrink: 0; padding: 0 22px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.fm-tab {
+  display: inline-flex; align-items: center; gap: 6px; height: 35px; padding: 0 14px; margin-bottom: -1px;
+  border-bottom: 2px solid transparent; text-decoration: none;
+  font-size: 11px; font-weight: 500; color: #45556c;
+}
+.fm-tab svg { color: #90a1b9; }
+.fm-tab:hover { color: #1d293d; }
+.fm-tab-on, .fm-tab-on:hover { border-bottom-color: #4982cf; color: #4982cf; }
+.fm-tab-on svg { color: #4982cf; }

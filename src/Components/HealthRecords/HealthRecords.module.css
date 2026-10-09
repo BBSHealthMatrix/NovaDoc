@@ -1,0 +1,22 @@
+.hr-page { padding: 24px 26px; }
+.hr-head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.hr-icon { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 8px; background: #e8effb; color: #3b6fd4; }
+.hr-head h1 { font-size: 15px; font-weight: 600; }
+.hr-head small { font-size: 8.5px; color: #94a3b8; }
+.hr-card { overflow-x: auto; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(15,23,42,.06); }
+.hr-table { width: 100%; min-width: 820px; border-collapse: collapse; }
+.hr-table th { padding: 12px 14px; background: #fff; border-bottom: 1px solid #e6eaf0; text-align: left; font-size: 8.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #475569; }
+.hr-table th:first-child { width: 40px; }
+.hr-table th:last-child { text-align: right; }
+.hr-table td { padding: 12px 14px; border-bottom: 1px solid #eef1f5; font-size: 10.5px; color: #334155; }
+.hr-table tr:last-child td { border-bottom: 0; }
+.hr-table tbody tr:hover { background: #fafcff; }
+.hr-table td.hr-muted { color: #64748b; }
+.hr-table td.hr-strong { font-weight: 600; color: #0f172a; }
+.hr-type { padding: 2px 7px; border: 1px solid; border-radius: 4px; font-size: 8px; font-weight: 600; }
+.hr-type.new { background: #f0fdf4; border-color: #86efac; color: #16a34a; }
+.hr-type.addendum { background: #fffbeb; border-color: #fcd34d; color: #d97706; }
+.hr-table td.hr-actions { text-align: right; white-space: nowrap; }
+.hr-actions button { padding: 3px 5px; border: 0; background: none; color: #94a3b8; cursor: pointer; }
+.hr-actions button:hover { color: #3b6fd4; }
+.hr-actions button:last-child:hover { color: #dc2626; }

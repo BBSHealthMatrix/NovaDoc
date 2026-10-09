@@ -1,0 +1,8 @@
+.dp-item-head { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.dp-num {
+  width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center;
+  background: #e8eefb; color: #3b6fd4; font-size: 10px; font-weight: 700;
+}
+.dp-item-head b { font-size: 10.5px; font-weight: 600; color: #334155; }
+.dp-item-head button { margin-left: auto; display: grid; padding: 2px; border: none; background: none; color: #94a3b8; cursor: pointer; }
+.dp-item-head button:hover { color: #475569; }

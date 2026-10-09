@@ -1,0 +1,187 @@
+/* ── Insurance Pricing page (ip-) ── */
+.ip-wrap { display: flex; height: calc(100vh - 56px); background: #f8fafc; }
+
+/* left list */
+.ip-side { display: flex; flex-direction: column; width: 261px; flex-shrink: 0; background: #fff; border-right: 1px solid #e2e8f0; }
+.ip-stop { padding: 14px 15px 15px; }
+.ip-add {
+  display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; height: 35px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ip-add:hover { background: #356fbb; }
+.ip-search {
+  display: flex; align-items: center; gap: 9px; height: 29px; margin-top: 11px; padding: 0 10px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.ip-search:focus-within { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.ip-search svg { flex-shrink: 0; color: #90a1b9; }
+.ip-search input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-family: inherit; font-size: 12.5px; color: #0f172b; }
+.ip-search input::placeholder { color: #62748e; }
+
+.ip-list { flex: 1; min-height: 0; overflow-y: auto; }
+.ip-item {
+  display: flex; align-items: center; gap: 10px; width: 100%; height: 57px; padding: 0 14px; cursor: pointer; text-align: left;
+  background: none; border: none; border-left: 2px solid transparent; border-bottom: 1px solid transparent; font-family: inherit;
+}
+.ip-item:hover { background: #f8fafc; }
+.ip-item-on, .ip-item-on:hover { background: #eff6ff; border-left-color: #4982cf; border-bottom-color: #4982cf; }
+.ip-av {
+  display: grid; place-items: center; width: 32px; height: 32px; flex-shrink: 0; border-radius: 50%;
+  background: #f1f5f9; font-size: 11px; font-weight: 600; color: #45556c;
+}
+.ip-item-on .ip-av { background: #4982cf; color: #fff; }
+.ip-itxt { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ip-iname { font-size: 13px; font-weight: 600; line-height: 18px; color: #1d293d; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ip-item-on .ip-iname { color: #4982cf; }
+.ip-imeta { display: flex; align-items: center; gap: 6px; margin-top: 2px; font-size: 9.5px; color: #90a1b9; white-space: nowrap; }
+.ip-pend {
+  display: inline-flex; align-items: center; height: 13px; padding: 0 4px;
+  background: #fff1f2; border: 1px solid #ffccd3; border-radius: 3px; font-size: 7.5px; font-weight: 600; color: #ec003f;
+}
+.ip-ichev { flex-shrink: 0; color: #4982cf; }
+.ip-foot { display: flex; align-items: center; height: 33px; flex-shrink: 0; padding: 0 15px; border-top: 1px solid #f1f5f9; font-size: 9px; color: #90a1b9; }
+
+/* right */
+.ip-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ip-empty { flex: 1; display: grid; place-items: center; text-align: center; }
+.ip-empty svg { color: #cad5e2; }
+.ip-empty h3 { margin: 14px 0 0; font-size: 15px; font-weight: 600; color: #45556c; }
+.ip-empty p { margin: 4px 0 0; font-size: 12.5px; color: #90a1b9; }
+
+.ip-dhead { flex-shrink: 0; padding: 14px 22px 0; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.ip-dtop { display: flex; align-items: center; gap: 11px; }
+.ip-dav {
+  display: grid; place-items: center; width: 36px; height: 36px; flex-shrink: 0; border-radius: 50%;
+  background: #4982cf; font-size: 12px; font-weight: 600; color: #fff;
+}
+.ip-dname { margin: 0; font-size: 15.5px; font-weight: 600; line-height: 20px; color: #0f172b; }
+.ip-demail { margin: 0; font-size: 11.5px; line-height: 15px; color: #62748e; }
+.ip-dacts { display: flex; gap: 8px; margin-left: auto; }
+.ip-hbtn {
+  display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; cursor: pointer;
+  background: #fff; border: 1px solid; border-radius: 6px; font-family: inherit; font-size: 12px; font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.ip-edit { border-color: #e2e8f0; color: #0f172b; }
+.ip-edit:hover { background: #f1f5f9; }
+.ip-delete { border-color: #ffccd3; color: #ec003f; }
+.ip-delete:hover { background: #fff1f2; }
+
+.ip-tabs { display: flex; justify-content: center; gap: 21px; margin-top: 12px; }
+.ip-tab {
+  height: 28px; padding: 0 4px; cursor: pointer; background: none; border: none; border-radius: 4px 4px 0 0;
+  font-family: inherit; font-size: 11.5px; font-weight: 500; color: #62748e; white-space: nowrap;
+}
+.ip-tab:hover { color: #1d293d; }
+.ip-tab-on, .ip-tab-on:hover { background: #eef4fb; color: #4982cf; }
+
+.ip-body { flex: 1; min-height: 0; overflow-y: auto; padding: 18px 22px 22px; }
+.ip-body-fill { display: flex; flex-direction: column; overflow: hidden; }
+
+/* overview: stat cards */
+.ip-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.ip-stat { min-height: 106px; padding: 14px 15px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.ip-shead { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11.5px; font-weight: 500; color: #45556c; }
+.ip-sico { display: grid; place-items: center; width: 26px; height: 26px; flex-shrink: 0; border-radius: 6px; }
+.ip-blue { background: #eff6ff; color: #4982cf; }
+.ip-green { background: #ecfdf5; color: #009966; }
+.ip-orange { background: #fff7ed; color: #f54900; }
+.ip-sval { margin-top: 10px; font-size: 19px; font-weight: 700; line-height: 24px; color: #0f172b; }
+.ip-ssub { margin-top: 4px; font-size: 8.5px; color: #90a1b9; }
+
+.ip-util { margin-top: 20px; padding: 14px 15px 13px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.ip-uhead { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; color: #314158; }
+.ip-uhead em { font-style: normal; font-weight: 400; color: #90a1b9; }
+.ip-bar { height: 8px; margin-top: 11px; overflow: hidden; background: #f1f5f9; border-radius: 99px; }
+.ip-bar i { display: block; min-width: 8px; height: 100%; background: #4982cf; border-radius: 99px; }
+.ip-umeta { display: flex; justify-content: space-between; margin-top: 7px; font-size: 8.5px; color: #62748e; }
+
+/* overview: patient pending summary */
+.ip-pps { margin-top: 20px; overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.ip-ppshead { display: flex; align-items: center; justify-content: space-between; height: 41px; padding: 0 18px; border-bottom: 1px solid #f1f5f9; }
+.ip-ppshead span { font-size: 15px; font-weight: 600; color: #1d293d; }
+.ip-ppshead em { font-style: normal; font-size: 11.5px; color: #90a1b9; }
+.ip-prow { display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; height: 54.5px; padding: 0 18px; border-bottom: 1px solid #f1f5f9; }
+.ip-prow:last-child { border-bottom: none; }
+.ip-phead {
+  height: 27px; background: #f9fbfd;
+  font-size: 7.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.ip-pname { font-size: 12.5px; font-weight: 600; line-height: 17px; color: #1d293d; }
+.ip-pmrn { margin-top: 1px; font-size: 8.5px; color: #90a1b9; }
+.ip-psvc { font-size: 11px; color: #62748e; }
+.ip-ptot { font-size: 12.5px; font-weight: 600; color: #1d293d; }
+.ip-ppend { font-size: 12.5px; font-weight: 600; color: #ec003f; }
+.ip-ppend-0 { color: #009966; }
+.ip-pill {
+  display: inline-flex; align-items: center; gap: 5px; width: 91px; height: 18px; padding: 0 7px;
+  border: 1px solid; border-radius: 4px; font-size: 8.5px; font-weight: 600;
+}
+.ip-unpaid { background: #fff1f2; border-color: #ffccd3; color: #ec003f; }
+.ip-partial { background: #fef3c6; border-color: #fee685; color: #bb4d00; }
+.ip-paid { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+
+/* ledger */
+.ip-lhead { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.ip-ltitle { margin: 0; font-size: 15px; font-weight: 600; line-height: 20px; color: #0f172b; }
+.ip-ldesc { margin: 0; font-size: 11px; color: #90a1b9; }
+.ip-ladd {
+  display: inline-flex; align-items: center; gap: 7px; flex-shrink: 0; height: 32px; padding: 0 15px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 12px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ip-ladd:hover { background: #356fbb; }
+.ip-bal {
+  display: inline-flex; align-items: center; gap: 11px; height: 41px; margin-top: 16px; padding: 0 15px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.ip-bal span { font-size: 11.5px; color: #45556c; }
+.ip-bal strong { font-size: 14px; font-weight: 700; color: #009966; }
+.ip-ltbl { margin-top: 16px; overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.ip-lrow {
+  display: grid; grid-template-columns: 100px 118px 79px 79px 79px 79px minmax(0, 1fr); align-items: center;
+  min-height: 44.5px; padding: 8px 18px; border-bottom: 1px solid #f1f5f9;
+}
+.ip-lrow:last-child { border-bottom: none; }
+.ip-lthead {
+  min-height: 31px; padding: 0 18px; background: #f9fbfd; border-bottom: 1px solid #f1f5f9;
+  font-size: 7.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.ip-ldate { font-size: 11.5px; color: #45556c; }
+.ip-ltype {
+  display: inline-flex; align-items: center; gap: 4px; height: 16px; padding: 0 7px;
+  border: 1px solid; border-radius: 4px; font-size: 8px; font-weight: 600;
+}
+.ip-t-tax { background: #fffbeb; border-color: #fee685; color: #bb4d00; }
+.ip-t-debit { background: #fff1f2; border-color: #ffccd3; color: #ec003f; }
+.ip-t-adv { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+.ip-lamt { padding-right: 6px; font-size: 12.5px; font-weight: 700; line-height: 17px; }
+.ip-plus { color: #009966; }
+.ip-minus { color: #ec003f; }
+.ip-ltax { font-size: 11px; color: #62748e; }
+.ip-lbal { font-size: 12px; font-weight: 700; color: #1d293d; }
+.ip-lref { font-family: "JetBrains Mono", monospace; font-size: 7.5px; color: #90a1b9; }
+.ip-lrem { min-width: 0; font-size: 11px; color: #314158; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ip-lempty { padding: 54px 16px 50px; text-align: center; }
+.ip-lempty svg { color: #cad5e2; }
+.ip-lempty h4 { margin: 10px 0 0; font-size: 12.5px; font-weight: 500; color: #45556c; }
+.ip-lempty p { margin: 4px 0 0; font-size: 11px; color: #90a1b9; }
+
+/* info & credit */
+.ip-info { max-width: 524px; padding-top: 2px; }
+.ip-igrid { display: grid; grid-template-columns: 1fr 1fr; row-gap: 15px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
+.ip-ilbl { font-size: 7.5px; font-weight: 700; line-height: 11px; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9; }
+.ip-ival { margin-top: 6px; font-size: 12.5px; font-weight: 600; line-height: 16px; color: #1d293d; }
+.ip-credit { margin-top: 20px; padding: 16px 15px 12px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.ip-ctitle { margin: 0 0 4px; font-size: 12.5px; font-weight: 700; line-height: 18px; color: #1d293d; }
+.ip-crow { display: flex; align-items: center; justify-content: space-between; height: 31px; font-size: 12.5px; color: #45556c; }
+.ip-crow strong { font-size: 14px; font-weight: 700; color: #0f172b; }
+.ip-crow b { font-size: 12.5px; font-weight: 600; color: #4982cf; }
+.ip-cpill {
+  display: inline-flex; align-items: center; height: 19px; padding: 0 8px;
+  background: #ecfdf5; border: 1px solid #a4f4cf; border-radius: 4px; font-size: 9.5px; font-weight: 600; color: #007a55;
+}
+.ip-cpill-off { background: #f1f5f9; border-color: #e2e8f0; color: #62748e; }

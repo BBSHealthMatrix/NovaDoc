@@ -1,0 +1,25 @@
+.ii-row { display: flex; align-items: center; gap: 8px; }
+.ii-plus { flex-shrink: 0; color: #90a1b9; }
+.ii-input {
+  flex: 1; min-width: 0; height: 26px; padding: 0 12px; outline: none;
+  background: #fff; border: 1px solid #4982cf; border-radius: 6px;
+  box-shadow: 0 0 0 2px rgba(73,130,207,.12);
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.ii-input::placeholder { color: #62748e; }
+.ii-ok, .ii-x { display: grid; place-items: center; flex-shrink: 0; padding: 2px; border: none; background: none; cursor: pointer; }
+.ii-ok { margin-left: 6px; color: #4982cf; }
+.ii-ok:hover { color: #356fbb; }
+.ii-x { margin-left: 4px; color: #62748e; }
+.ii-x:hover { color: #0f172b; }
+
+/* add modality (above the list) */
+.ii-top { padding: 0 2px 0 2px; margin-bottom: 12px; }
+/* add body part (inside a modality card, before the footer) */
+.ii-part { padding: 10px 16px 10px 32px; background: #fff; border-top: 1px solid #f1f5f9; }
+/* add / rename protocol */
+.ii-proto { padding: 3px 12px 3px 0; }
+.ii-proto .ii-input { height: 24px; font-size: 11.5px; }
+/* rename inside a modality / body-part header */
+.ii-flat { flex: 1; min-width: 0; margin-right: 8px; }
+.ii-flat .ii-input { height: 24px; font-size: 12px; }

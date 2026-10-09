@@ -1,0 +1,416 @@
+.sec-page {
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* Header */
+.sec-header {
+  background: #fff;
+  padding: 14px 22px 13px;
+  border-bottom: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.sec-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sec-title-icon {
+  color: #4982cf;
+  flex-shrink: 0;
+}
+
+.sec-title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0f172b;
+  line-height: 1.25;
+}
+
+.sec-desc {
+  margin: 3px 0 0;
+  font-size: 12.5px;
+  color: #62748e;
+}
+
+/* Tabs */
+.sec-tabs {
+  display: flex;
+  background: #fff;
+  padding: 0 22px;
+  border-bottom: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.sec-tab {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 15px;
+  margin-bottom: -1px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #62748e;
+  cursor: pointer;
+}
+
+.sec-tab:hover {
+  color: #314158;
+}
+
+.sec-tab-active,
+.sec-tab-active:hover {
+  color: #4982cf;
+  border-bottom-color: #4982cf;
+}
+
+/* Filter / info bar */
+.sec-bar {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  border-bottom: 1px solid #f1f5f9;
+  flex-shrink: 0;
+}
+
+.sec-filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sec-filter-icon {
+  color: #90a1b9;
+  margin-right: 6px;
+}
+
+.sec-filter-label {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #45556c;
+  margin-right: 6px;
+}
+
+.sec-chip {
+  height: 23px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #314158;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sec-chip:hover {
+  background: #f1f5f9;
+}
+
+.sec-chip-active,
+.sec-chip-active:hover {
+  color: #fff;
+}
+
+.sec-info {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #62748e;
+}
+
+.sec-save {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 13px;
+  background: #4982cf;
+  border: 1px solid #356fbb;
+  border-radius: 6px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sec-save:hover {
+  background: #356fbb;
+}
+
+/* List */
+.sec-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sec-list-rules {
+  gap: 11px;
+}
+
+.sec-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sec-card-head {
+  width: 100%;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sec-card-icon {
+  color: #90a1b9;
+  flex-shrink: 0;
+}
+
+.sec-card-title {
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #314158;
+}
+
+.sec-chev {
+  color: #90a1b9;
+  flex-shrink: 0;
+}
+
+/* Role access table */
+.sec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sec-table th {
+  height: 28px;
+  padding: 0 8px;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #45556c;
+  text-align: center;
+}
+
+.sec-table td {
+  height: 31px;
+  padding: 0 8px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 12px;
+  color: #314158;
+  text-align: center;
+}
+
+.sec-table th:first-child,
+.sec-table td:first-child {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.sec-table tbody tr:nth-child(odd) {
+  background: #f8fafc;
+}
+
+.sec-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sec-check {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  accent-color: #4982cf;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* Signing rules */
+.sec-badge {
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 9.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sec-badge-lock {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #1d293d;
+}
+
+.sec-badge-cosign {
+  background: #8e51ff;
+  color: #fff;
+}
+
+.sec-rule-body {
+  padding: 14px 18px 15px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 7px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #62748e;
+}
+
+.sec-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.sec-chips-last {
+  margin-bottom: 0;
+}
+
+.sec-rule-chip {
+  height: 24px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #45556c;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sec-rule-chip:hover {
+  background: #f1f5f9;
+}
+
+.sec-rule-chip-active,
+.sec-rule-chip-active:hover {
+  color: #fff;
+}
+
+.sec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 15px;
+  margin-top: 18px;
+}
+
+.sec-box {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.sec-box-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #314158;
+}
+
+.sec-box-sub {
+  margin-top: 2px;
+  font-size: 9.5px;
+  color: #90a1b9;
+}
+
+.sec-lock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #62748e;
+}
+
+.sec-lock-input {
+  width: 51px;
+  height: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #fff;
+  text-align: center;
+  font-family: inherit;
+  font-size: 12px;
+  color: #1d293d;
+  outline: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.sec-lock-input::-webkit-outer-spin-button,
+.sec-lock-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sec-lock-input:focus {
+  border-color: #4982cf;
+}
+
+.sec-toggle {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.sec-toggle span {
+  background: #f8fafc;
+}

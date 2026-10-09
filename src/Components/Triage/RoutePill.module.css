@@ -1,0 +1,15 @@
+.tri-route {
+  padding: 3px 7px; border: 1px solid; border-radius: 10px;
+  font-size: 7.5px; font-weight: 500; line-height: 1;
+}
+.tri-route b { font-weight: 700; }
+.tri-r-continue { background: #fff; border-color: #e2e8f0; color: #cbd5e1; }
+.tri-r-continue b { color: #94a3b8; }
+.tri-r-ambulance { background: #fef2f2; border-color: #fca5a5; color: #f87171; }
+.tri-r-ambulance b { color: #dc2626; }
+.tri-r-tele { background: #eff6ff; border-color: #bfdbfe; color: #60a5fa; }
+.tri-r-tele b { color: #2563eb; }
+.tri-r-nearby { background: #fff7ed; border-color: #fdba74; color: #fb923c; }
+.tri-r-nearby b { color: #ea580c; }
+.tri-r-advice { background: #f0fdf4; border-color: #86efac; color: #4ade80; }
+.tri-r-advice b { color: #16a34a; }

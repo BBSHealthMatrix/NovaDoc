@@ -1,0 +1,72 @@
+/* ── shell: fixed header + tabs + toolbar, scrolling list ── */
+.mc-wrap { display: flex; flex-direction: column; height: calc(100vh - 56px); background: #f8fafc; }
+.mc-header { flex-shrink: 0; padding: 18px 22px 14px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.mc-title { display: flex; align-items: center; gap: 9px; margin: 0 0 4px; font-size: 17px; font-weight: 600; line-height: 22px; color: #0f172b; }
+.mc-title svg { color: #4982cf; }
+.mc-desc { margin: 0; font-size: 11px; color: #62748e; }
+
+.mc-tabs { display: flex; flex-shrink: 0; padding: 0 22px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.mc-tab {
+  display: inline-flex; align-items: center; gap: 6px; height: 35px; padding: 0 14px; margin-bottom: -1px;
+  border-bottom: 2px solid transparent; text-decoration: none;
+  font-size: 11px; font-weight: 500; color: #45556c;
+}
+.mc-tab svg { color: #90a1b9; }
+.mc-tab:hover { color: #1d293d; }
+.mc-tab-on, .mc-tab-on:hover { border-bottom-color: #4982cf; color: #4982cf; }
+.mc-tab-on svg { color: #4982cf; }
+
+.mc-body { flex: 1; min-height: 0; display: flex; }
+.mc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+/* ── toolbar ── */
+.mc-toolbar { flex-shrink: 0; padding: 12px 22px 13px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.mc-trow { display: flex; align-items: center; gap: 11px; }
+.mc-search {
+  display: flex; align-items: center; gap: 9px; width: 215px; height: 28px; padding: 0 11px; flex-shrink: 0;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.mc-search svg { flex-shrink: 0; color: #90a1b9; }
+.mc-search input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-family: inherit; font-size: 12.5px; color: #0f172b; }
+.mc-search input::placeholder { color: #62748e; }
+.mc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.mc-chip {
+  height: 22px; padding: 0 10px; cursor: pointer; background: #fff; border: 1px solid #e2e8f0; border-radius: 999px;
+  font-family: inherit; font-size: 10.5px; font-weight: 500; color: #314158; white-space: nowrap;
+}
+.mc-chip:hover { background: #f8fafc; }
+.mc-chip-on, .mc-chip-on:hover { background: #4982cf; border-color: #4982cf; color: #fff; font-weight: 600; }
+.mc-tactions { display: flex; align-items: center; justify-content: flex-end; gap: 6px; margin-top: 12px; }
+.mc-inactive {
+  display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 9px; cursor: pointer;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 999px;
+  font-family: inherit; font-size: 10.5px; color: #62748e;
+}
+.mc-inactive:hover { background: #f8fafc; }
+.mc-inactive-on, .mc-inactive-on:hover { background: #314158; border-color: #314158; color: #fff; font-weight: 500; }
+.mc-export, .mc-add {
+  display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; cursor: pointer; border-radius: 6px;
+  font-family: inherit; font-size: 11.5px; box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.mc-export { background: #fff; border: 1px solid #e2e8f0; font-weight: 500; color: #0f172b; }
+.mc-export:hover { background: #f8fafc; }
+.mc-add { background: #4982cf; border: 1px solid #356fbb; font-weight: 600; color: #fff; }
+.mc-add:hover { background: #356fbb; }
+
+/* toolbar when the edit drawer is open (search on its own line, chips wrap) */
+.mc-toolbar-narrow .mc-trow { flex-direction: column; align-items: flex-start; gap: 10px; }
+.mc-toolbar-narrow .mc-search { width: 290px; }
+
+/* ── list ── */
+.mc-list { flex: 1; min-height: 0; overflow-y: auto; padding: 6px 22px 22px; }
+.mc-cat { margin-top: 6px; }
+.mc-cathead { display: flex; align-items: center; gap: 8px; height: 30px; }
+.mc-dot { width: 10px; height: 10px; flex-shrink: 0; border-radius: 50%; }
+.mc-catname { font-size: 10.5px; font-weight: 700; letter-spacing: .3px; text-transform: uppercase; color: #1d293d; }
+.mc-catcount { flex: 1; font-size: 9px; color: #90a1b9; }
+.mc-catchev { display: grid; place-items: center; padding: 1px; margin-right: 4px; border: none; background: none; color: #cad5e2; cursor: pointer; }
+.mc-catchev:hover { color: #62748e; }
+.mc-catchev svg { transition: transform .15s; }
+.mc-catchev-closed { transform: rotate(-90deg); }
+.mc-catbody { display: flex; flex-direction: column; gap: 9px; margin: 2px 0 8px 4px; padding: 2px 0 0 15px; border-left: 2px solid; }
+.mc-empty { margin: 30px 0; text-align: center; font-size: 11px; color: #90a1b9; }

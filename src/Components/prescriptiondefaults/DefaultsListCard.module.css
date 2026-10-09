@@ -1,0 +1,55 @@
+/* ── one list card (Routes / Frequencies / Durations / Units) ── */
+.pd-card {
+  overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.pd-head { display: flex; align-items: center; gap: 6px; height: 36px; padding: 0 15px; background: #f8fafc; border-bottom: 1px solid #f1f5f9; }
+.pd-head svg { color: #90a1b9; }
+.pd-title { flex: 1; font-size: 11px; font-weight: 600; color: #1d293d; }
+.pd-count { font-size: 8.5px; color: #90a1b9; }
+
+/* scrolling list */
+.pd-list { height: 233px; overflow-y: auto; }
+.pd-row {
+  display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 11px 0 14px;
+  background: #fff; border-bottom: 1px solid #f1f5f9; cursor: grab;
+}
+.pd-row:hover, .pd-row-edit { background: #f8fafc; }
+.pd-row-drag { opacity: .4; }
+.pd-grip { flex-shrink: 0; color: #cad5e2; }
+.pd-text { flex: 1; min-width: 0; font-size: 11.5px; color: #314158; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* hover actions */
+.pd-acts { display: flex; align-items: center; gap: 2px; opacity: 0; }
+.pd-row:hover .pd-acts { opacity: 1; }
+.pd-acts button, .pd-ok, .pd-x {
+  display: grid; place-items: center; width: 18px; height: 18px; padding: 0; border: none; border-radius: 4px;
+  background: none; color: #90a1b9; cursor: pointer;
+}
+.pd-acts button:hover { color: #4982cf; background: #f1f5f9; }
+.pd-acts .pd-del:hover { color: #ec003f; background: #fff1f2; }
+
+/* inline edit */
+.pd-einput {
+  flex: 1; min-width: 0; height: 24px; padding: 0 12px; outline: none; background: #fff;
+  border: 1px solid #4982cf; border-radius: 6px; box-shadow: 0 0 0 1px rgba(73,130,207,.25);
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.pd-ok { margin-left: 4px; color: #22c55e; }
+.pd-x:hover { color: #ec003f; }
+
+/* add row */
+.pd-add { display: flex; align-items: center; gap: 6px; padding: 7px 11px; }
+.pd-ainput {
+  flex: 1; min-width: 0; height: 27px; padding: 0 12px; outline: none; background: #fff;
+  border: 1px solid #e2e8f0; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.pd-ainput::placeholder { color: #62748e; }
+.pd-ainput:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.pd-abtn {
+  display: grid; place-items: center; flex-shrink: 0; width: 31px; height: 29px; padding: 0; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.pd-abtn:hover { background: #356fbb; }

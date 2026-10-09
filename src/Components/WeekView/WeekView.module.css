@@ -1,0 +1,25 @@
+.cal { overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; }
+.cal.fill { min-height: calc(100vh - 150px); }
+.week-grid { display: grid; grid-template-columns: 42px repeat(7, 1fr); }
+.week-grid > div + div { border-left: 1px solid #e2e8f0; }
+.week-grid.head > div:first-child { border-bottom: 1px solid #e2e8f0; }
+.wk-head { padding: 8px 0 6px; border-bottom: 1px solid #e2e8f0; text-align: center; }
+.wk-head small { display: block; font-size: 8px; font-weight: 600; letter-spacing: .05em; color: #64748b; }
+.wk-head b { display: block; font-size: 17px; line-height: 1.2; }
+.wk-head em { font-style: normal; font-size: 6.5px; color: #94a3b8; }
+.c-blue { font-style: normal; color: #3b6fd4; }
+.c-green { font-style: normal; color: #16a34a; }
+.off-pill { padding: 0 4px; border-radius: 99px; background: #fde2e2; color: #dc2626; font-size: 6.5px; }
+.wk-head.off b { color: #cbd5e1; }
+.wk-head.off, .wk-cell.off { background: #fdf6f6; }
+.wk-head.today, .wk-cell.today { background: #f3f7fc; }
+.wk-head.today { border-top: 2px solid #3b6fd4; }
+.wk-head.today b { color: #3b6fd4; }
+.week-grid.row { height: 46px; border-bottom: 1px solid #eef1f5; }
+.week-grid.row.now { border-top: 1px solid #e11d48; }
+.wk-time { display: grid; place-items: center; font-family: 'JetBrains Mono', monospace; font-size: 7.5px; color: #475569; }
+.week-grid.row.now .wk-time { background: #fdecef; color: #e11d48; }
+.wk-cell.open { cursor: pointer; }
+.wk-cell.open:hover { background: #f6f9ff; }
+.wk-appt { display: block; margin: 3px; padding: 3px 5px; border-left: 2px solid #3b6fd4; border-radius: 3px; background: #eef3ff; color: #1e4fd8; font-size: 8px; font-weight: 600; }
+.wk-appt small { display: block; font-weight: 400; color: #64748b; }

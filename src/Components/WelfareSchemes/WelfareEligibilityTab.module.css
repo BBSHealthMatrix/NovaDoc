@@ -1,0 +1,45 @@
+/* ── Welfare Schemes › Eligibility tab (wse-) ── */
+.wse-wrap { max-width: 609px; }
+.wse-card { padding: 18px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.wse-card + .wse-card { margin-top: 23px; }
+.wse-title { margin: 0 0 18px; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #90a1b9; }
+
+.wse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.wse-lbl { display: block; font-size: 11.5px; font-weight: 500; line-height: 15px; color: #314158; }
+.wse-help { display: block; margin-top: 2px; font-size: 8.5px; color: #90a1b9; }
+.wse-in {
+  display: block; width: 100%; height: 28px; margin-top: 7px; padding: 0 12px; outline: none;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.wse-in:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+
+.wse-docs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.wse-ages { display: flex; flex-wrap: wrap; gap: 12px; }
+.wse-tile {
+  display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 12px; cursor: pointer;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 12.5px; color: #314158;
+}
+.wse-tile:hover { border-color: #cad5e2; }
+.wse-tile input { width: 14px; height: 14px; margin: 0; flex-shrink: 0; cursor: pointer; accent-color: #4982cf; }
+
+.wse-pwd { display: flex; align-items: center; gap: 11px; margin-top: 13px; font-size: 12.5px; color: #314158; }
+.wse-tg { box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.wse-tg span { background: #f8fafc; }
+
+.wse-notes {
+  display: block; width: 100%; height: 70px; padding: 10px 12px; outline: none; resize: vertical;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; line-height: 19px; color: #1d293d;
+}
+.wse-notes:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+
+.wse-save { display: flex; align-items: center; gap: 11px; margin-top: 22px; }
+.wse-btn {
+  height: 28px; padding: 0 13px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 11.5px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.wse-btn:hover { background: #356fbb; }
+.wse-saved { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: #009966; }

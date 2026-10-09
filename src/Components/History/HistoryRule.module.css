@@ -1,0 +1,32 @@
+.hist-rule {
+  margin-bottom: 8px; padding: 11px 12px 13px;
+  border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc;
+}
+.hist-rule-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 11px; }
+.hist-rule-head span { font-size: 10px; font-weight: 700; color: #334155; }
+.hist-rule-head button {
+  display: grid; place-items: center; padding: 0;
+  border: none; background: transparent; color: #cbd5e1; cursor: pointer;
+}
+.hist-rule-head button:hover { color: #e11d48; }
+.hist-rule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.hist-rule-label {
+  margin: 0 0 5px; font-size: 7.5px; font-weight: 700;
+  letter-spacing: 0.6px; text-transform: uppercase; color: #94a3b8;
+}
+.hist-rule-label-show { margin-top: 13px; }
+.hist-rule-inp {
+  box-sizing: border-box; width: 100%; height: 32px; padding: 0 11px;
+  border: 1px solid #e2e8f0; border-radius: 6px; background: #fff; outline: none;
+  font: inherit; font-size: 12px; color: #0f172a;
+}
+.hist-rule-inp::placeholder { color: #64748b; }
+.hist-rule-inp:focus { border-color: #3b6fd4; box-shadow: 0 0 0 2px rgba(59, 111, 212, 0.15); }
+.hist-rule-none { margin: 0; font-size: 9.5px; color: #94a3b8; }
+.hist-rule-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.hist-rule-chip {
+  padding: 5px 10px; border: 1px solid #e2e8f0; border-radius: 20px; background: #fff;
+  font: inherit; font-size: 10px; font-weight: 500; color: #334155; cursor: pointer;
+}
+.hist-rule-chip:hover { border-color: #cbd5e1; }
+.hist-rule-chip-on, .hist-rule-chip-on:hover { border-color: #a9c1ea; background: #eef3fd; color: #3b6fd4; font-weight: 600; }

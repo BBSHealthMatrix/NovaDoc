@@ -1,0 +1,41 @@
+/* ── right drawer (Add / Edit Generic) ── */
+.ge-drawer { display: flex; flex-direction: column; width: 290px; flex-shrink: 0; background: #fff; border-left: 1px solid #e2e8f0; }
+.ge-dhead { display: flex; align-items: center; justify-content: space-between; height: 50px; padding: 0 19px; border-bottom: 1px solid #f1f5f9; }
+.ge-dhead h2 { margin: 0; font-size: 12.5px; font-weight: 600; color: #0f172b; }
+.ge-dclose { display: grid; place-items: center; padding: 1px; border: none; background: none; color: #90a1b9; cursor: pointer; }
+.ge-dclose:hover { color: #0f172b; }
+.ge-dbody { flex: 1; min-height: 0; overflow-y: auto; padding: 18px 19px; }
+.ge-dlabel { display: block; margin-bottom: 6px; font-size: 10.5px; font-weight: 500; color: #314158; }
+.ge-dmt { margin-top: 16px; }
+.ge-dinput, .ge-dselect {
+  display: block; width: 100%; height: 29px; padding: 0 11px; outline: none; background: #fff;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.ge-dinput::placeholder { color: #62748e; }
+.ge-dinput:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.ge-dselect { padding: 0 6px 0 11px; font-size: 11.5px; cursor: pointer; }
+.ge-dselect:focus { border-color: #0f172b; box-shadow: 0 0 0 1px #0f172b; }
+.ge-dnewcat { margin-top: 9px; }
+.ge-dhelp { margin: -3px 0 8px; font-size: 8.5px; color: #90a1b9; }
+.ge-dchips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 9px; }
+.ge-dchip {
+  display: inline-flex; align-items: center; gap: 5px; height: 18px; padding: 0 6px;
+  background: #fffbeb; border: 1px solid #fee685; border-radius: 999px; font-size: 10.5px; color: #bb4d00;
+}
+.ge-dchip button { display: grid; place-items: center; padding: 0; border: none; background: none; color: #bb4d00; cursor: pointer; }
+.ge-dkwrow { display: flex; gap: 8px; }
+.ge-dkwrow .ge-dinput { flex: 1; }
+.ge-dkwadd {
+  flex-shrink: 0; height: 29px; padding: 0 11px; cursor: pointer; background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 11px; font-weight: 600; color: #fff;
+}
+.ge-dkwadd:hover { background: #356fbb; }
+.ge-dfoot { flex-shrink: 0; padding: 14px 19px; border-top: 1px solid #f1f5f9; }
+.ge-dsave {
+  display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; height: 29px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 11.5px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ge-dsave:hover { background: #356fbb; }
+.ge-dsave:disabled { background: #a0bee6; border-color: #a0bee6; cursor: not-allowed; box-shadow: none; }

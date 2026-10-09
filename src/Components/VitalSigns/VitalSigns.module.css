@@ -1,0 +1,99 @@
+.vs-page { max-width: 807px; margin: 0 auto; padding: 22px 0 40px; color: #0b1f3f; }
+.vs-title { margin: 0; font-size: 21px; font-weight: 700; color: #0f172a; letter-spacing: -0.2px; }
+.vs-sub { margin: 5px 0 0; font-size: 12.5px; color: #64748b; }
+.vs-hint { margin: 22px 0 14px; font-size: 10.5px; color: #64748b; }
+
+/* table card */
+.vs-card {
+  overflow: hidden; border: 1px solid #e2e8f0; border-radius: 12px; background: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07);
+}
+.vs-row {
+  display: grid;
+  grid-template-columns: 36px 90px 52px 68px 88px 76px 98px 70px 90px 86px 1fr;
+  align-items: center; justify-items: center;
+  min-height: 64px; padding-left: 18px; border-top: 1px solid #eef1f5;
+}
+.vs-head {
+  min-height: 34px; border-top: none; background: #fbfcfd;
+  font-size: 8.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #64748b;
+}
+.vs-row > :nth-child(2) { justify-self: start; }
+.vs-row > :first-child { justify-self: start; }
+
+.vs-dot { width: 9px; height: 9px; border-radius: 50%; margin-left: 2px; }
+.vs-name { font-size: 11px; font-weight: 600; color: #1e293b; }
+.vs-name-in {
+  box-sizing: border-box; width: 82px; height: 22px; padding: 0 1px;
+  border: none; border-bottom: 1px solid #cbd5e1; background: transparent; outline: none;
+  font: inherit; font-size: 11px; font-weight: 600; color: #1e293b;
+}
+.vs-name-in:focus { border-bottom-color: #3b6fd4; }
+.vs-unit { font-size: 9px; color: #94a3b8; }
+.vs-unit-in {
+  box-sizing: border-box; width: 50px; height: 18px; padding: 0 4px;
+  border: 1px solid #e2e8f0; border-radius: 4px; background: #fff; outline: none;
+  font: inherit; font-size: 9px; color: #334155; text-align: center;
+}
+.vs-unit-in::placeholder { color: #cbd5e1; }
+.vs-unit-in:focus { border-color: #3b6fd4; }
+
+/* status pills */
+.vs-pill {
+  display: inline-grid; place-items: center; min-width: 56px; height: 17px; padding: 0 8px;
+  border: 1px solid; border-radius: 10px;
+  font: inherit; font-size: 8px; font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.vs-req { border-color: #bfd3f2; background: #eef3fd; color: #2563eb; }
+.vs-opt { border-color: #dbe2ec; background: #f1f5f9; color: #475569; }
+.vs-skip { border-color: #eef1f5; background: #f8fafc; color: #94a3b8; font-weight: 500; }
+.vs-pill:hover { filter: brightness(0.97); }
+
+/* reference range inputs */
+.vs-ref {
+  box-sizing: border-box; width: 58px; height: 18px; padding: 0 4px;
+  border: 1px solid #e2e8f0; border-radius: 4px; background: #fff; outline: none;
+  font: inherit; font-size: 9px; color: #334155; text-align: center;
+}
+.vs-ref::placeholder { color: #cbd5e1; }
+.vs-ref:focus { border-color: #3b6fd4; }
+
+/* colour picker */
+.vs-colours { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; width: 66px; }
+.vs-swatch {
+  box-sizing: border-box; width: 13px; height: 13px; padding: 0;
+  border: 2px solid transparent; border-radius: 50%; cursor: pointer;
+}
+.vs-swatch-on { border-color: #1e293b; }
+
+.vs-remove {
+  display: grid; place-items: center; padding: 2px;
+  border: none; background: transparent; color: #cbd5e1; cursor: pointer;
+}
+.vs-remove:hover { color: #e11d48; }
+
+/* add + legend */
+.vs-add {
+  display: flex; align-items: center; gap: 6px; margin: 14px 0 0 4px; padding: 0;
+  border: none; background: transparent;
+  font: inherit; font-size: 10.5px; font-weight: 600; color: #3b6fd4; cursor: pointer;
+}
+.vs-legend {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 18px;
+  font-size: 8.5px; color: #64748b;
+}
+.vs-legend b { font-weight: 600; color: #334155; margin-right: 8px; }
+.vs-legend .vs-pill-static { min-width: 0; cursor: default; margin-left: 8px; }
+.vs-legend .vs-pill-static:first-of-type { margin-left: 0; }
+.vs-legend i { margin-left: 8px; color: #94a3b8; }
+
+/* footer */
+.vs-foot { display: flex; align-items: center; justify-content: flex-end; margin-top: 22px; }
+.vs-saved { display: flex; align-items: center; gap: 6px; margin-right: auto; font-size: 10.5px; font-weight: 600; color: #16a34a; }
+.vs-save {
+  display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 16px;
+  border: 1px solid #2f5fc0; border-radius: 6px; background: #4a7fd4; color: #fff;
+  font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.1);
+}
+.vs-save:hover { background: #3b6fd4; }

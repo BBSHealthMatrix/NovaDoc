@@ -1,0 +1,40 @@
+/* ── Welfare Schemes › Coverage tab (wsc-) ── */
+.wsc-wrap { max-width: 609px; }
+.wsc-card { overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.wsc-row {
+  display: grid; grid-template-columns: 235px 87px 124px 1fr; align-items: center;
+  height: 48px; padding: 0 18px; border-bottom: 1px solid #f1f5f9;
+}
+.wsc-row:last-child { border-bottom: none; }
+.wsc-head {
+  height: 32px; background: #f9fbfd;
+  font-size: 7.5px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.wsc-name { font-size: 12.5px; font-weight: 500; color: #1d293d; }
+.wsc-tg { box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.wsc-tg span { background: #f8fafc; }
+.wsc-in {
+  display: block; width: 87px; height: 26px; padding: 0 12px; outline: none;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.wsc-in:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.wsc-in:disabled { background: #f8fafc; color: #90a1b9; cursor: not-allowed; }
+
+.wsc-pill {
+  display: inline-flex; align-items: center; height: 16px; padding: 0 6px; font-style: normal;
+  border: 1px solid; border-radius: 4px; font-size: 8px; font-weight: 600;
+}
+.wsc-full { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+.wsc-partial { background: #fffbeb; border-color: #fee685; color: #bb4d00; }
+.wsc-none { background: #f8fafc; border-color: #e2e8f0; color: #90a1b9; }
+
+.wsc-save { display: flex; align-items: center; gap: 11px; margin-top: 22px; }
+.wsc-btn {
+  height: 28px; padding: 0 13px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 11.5px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.wsc-btn:hover { background: #356fbb; }
+.wsc-saved { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: #009966; }

@@ -1,0 +1,28 @@
+.adm-overlay {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, .72);
+  display: grid; place-items: center; z-index: 1000;
+}
+.adm-modal {
+  width: 410px; background: #fff; border-radius: 8px; padding: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+.adm-modal h3 {
+  display: flex; align-items: center; gap: 8px; margin: 0 0 12px;
+  font-size: 14px; font-weight: 600; color: #be123c;
+}
+.adm-modal h3 svg { color: #e11d48; }
+.adm-modal p { font-size: 10.5px; color: #64748b; line-height: 1.55; margin: 0 0 8px; }
+.adm-modal p b { color: #1e293b; }
+.adm-modal .adm-modal-warn { color: #e11d48; font-weight: 600; }
+.adm-modal-btns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+.adm-modal-cancel {
+  border: 1px solid #e2e8f0; background: #fff; border-radius: 5px; padding: 8px 14px;
+  font-size: 10.5px; color: #1e293b; cursor: pointer; font-family: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+.adm-modal-cancel:hover { background: #f8fafc; }
+.adm-modal-ok {
+  border: none; background: #e11d48; color: #fff; border-radius: 5px; padding: 8px 14px;
+  font-size: 10.5px; font-weight: 600; cursor: pointer; font-family: inherit;
+}
+.adm-modal-ok:hover { background: #be123c; }

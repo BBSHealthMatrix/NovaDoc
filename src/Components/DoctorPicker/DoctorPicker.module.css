@@ -1,0 +1,11 @@
+/* doctor dropdown */
+.doc-picker { position: relative; }
+.doc-picker-btn { display: flex; align-items: center; gap: 8px; width: 160px; height: 26px; padding: 0 8px; border: 1px solid #d8dee8; border-radius: 6px; background: #fff; color: #64748b; font-size: 10px; cursor: pointer; }
+.doc-picker-btn span { flex: 1; text-align: center; color: #0f172a; }
+.doc-menu { position: absolute; top: calc(100% + 4px); left: 0; z-index: 40; width: 160px; padding: 4px 0; background: #fff; border: 1px solid #e6eaf0; border-radius: 6px; box-shadow: 0 10px 30px rgba(15,23,42,.12); }
+.doc-menu > div + div { margin-top: 4px; border-top: 1px solid #eef1f5; }
+.doc-menu-title { padding: 6px 9px 4px; font-size: 7px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #94a3b8; }
+.doc-menu-item { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 5px 9px; border: 0; background: none; color: #334155; text-align: left; cursor: pointer; }
+.doc-menu-item:hover { background: #f6f8fb; }
+.doc-menu-item b { display: block; font-size: 9.5px; font-weight: 500; }
+.doc-menu-item small { font-size: 7.5px; color: #94a3b8; }

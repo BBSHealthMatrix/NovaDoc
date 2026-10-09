@@ -1,0 +1,3 @@
+.body { flex: 1; display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; overflow-y: auto; }
+.body hr { margin: 6px 0; border: 0; border-top: 1px solid #eef1f5; }
+.body textarea { height: 52px; padding: 7px 8px; border: 1px solid #d8dee8; border-radius: 5px; font: inherit; font-size: 9.5px; resize: vertical; }

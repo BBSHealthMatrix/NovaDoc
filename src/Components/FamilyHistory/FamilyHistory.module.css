@@ -1,0 +1,60 @@
+.fh-wrap { padding: 46px 43px 40px; }
+.fh-title { font-size: 17px; font-weight: 600; color: #0f172a; margin: 0 0 7px; }
+.fh-desc { font-size: 12.5px; color: #8492a6; margin: 0 0 19px; }
+
+/* tabs */
+.fh-tabs { display: inline-flex; gap: 2px; padding: 3px; margin-bottom: 15px; background: #eef1f5; border-radius: 8px; }
+.fh-tab {
+  height: 24px; padding: 0 11px; border: none; border-radius: 6px; background: none;
+  font-size: 10.5px; font-weight: 600; color: #475569; font-family: inherit; cursor: pointer;
+}
+.fh-tab:hover { color: #1e293b; }
+.fh-tab-on { background: #fff; color: #3b6fd4; box-shadow: 0 1px 2px rgba(15, 23, 42, .1); }
+
+/* add row */
+.fh-add { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.fh-input {
+  flex: 1; min-width: 0; height: 30px; padding: 0 11px; background: #fff; border: 1px solid #dfe5ec; border-radius: 5px;
+  outline: none; font-size: 12.5px; color: #1e293b; font-family: inherit; box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+}
+.fh-input::placeholder { color: #64748b; }
+.fh-input:focus { border-color: #4a7fd4; }
+.fh-btn {
+  height: 32px; padding: 0 14px; background: #4a7fd4; border: 1px solid #3b6fd4; border-radius: 5px;
+  color: #fff; font-size: 11px; font-weight: 600; font-family: inherit; cursor: pointer; box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
+}
+.fh-btn:hover { background: #3b6fd4; }
+
+/* conditions table */
+.fh-table {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, .06);
+}
+.fh-head, .fh-row { display: grid; grid-template-columns: 365px 1fr 40px; align-items: center; padding: 0 15px; }
+.fh-head {
+  height: 31px; background: #fafbfc; border-bottom: 1px solid #eef1f5;
+  font-size: 8.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #64748b;
+}
+.fh-row { height: 34px; border-top: 1px solid #eef1f5; }
+.fh-head + .fh-row { border-top: none; }
+.fh-row:hover { background: #fafbfd; }
+.fh-name { font-size: 10.5px; font-weight: 500; color: #1e293b; }
+.fh-rels { font-size: 8px; color: #56657f; }
+
+/* genetic diseases */
+.fh-list { display: flex; flex-direction: column; gap: 7px; }
+.fh-item {
+  display: flex; align-items: center; justify-content: space-between; height: 29px; padding: 0 12px;
+  background: #fff; border: 1px solid #eef1f5; border-radius: 6px; font-size: 10.5px; color: #334155;
+}
+.fh-item:hover { border-color: #e2e8f0; }
+
+/* delete (shows on hover) */
+.fh-acts { display: flex; justify-content: flex-end; visibility: hidden; }
+.fh-row:hover .fh-acts, .fh-item:hover .fh-acts { visibility: visible; }
+.fh-acts button {
+  width: 16px; height: 16px; display: grid; place-items: center; padding: 0; border: none; border-radius: 3px;
+  background: none; color: #fca5a5; cursor: pointer;
+}
+.fh-acts button:hover { background: #fef2f2; color: #dc2626; }
+.fh-empty { padding: 20px 0; margin: 0; text-align: center; font-size: 11px; color: #94a3b8; }

@@ -1,0 +1,5 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+.main { flex: 1; }
+.footer { display: flex; justify-content: space-between; padding: 12px 20px; font-size: 10px; color: #64748b; background: #fff; border-top: 1px solid #e6eaf0; }
+
+.placeholder { padding: 40px; font-size: 11px; color: #94a3b8; text-align: center; }

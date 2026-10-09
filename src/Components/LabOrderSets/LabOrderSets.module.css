@@ -1,0 +1,144 @@
+.ls-wrap { max-width: 1140px; margin: 0 auto; padding: 22px 22px 40px; }
+.ls-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.ls-title { margin: 0 0 4px; font-size: 21px; font-weight: 700; line-height: 27px; color: #0f172b; }
+.ls-desc { margin: 0; font-size: 12.5px; line-height: 16px; color: #62748e; }
+.ls-hbtns { display: flex; gap: 10px; flex-shrink: 0; }
+.ls-export, .ls-newbtn {
+  display: inline-flex; align-items: center; gap: 7px; height: 33px; padding: 0 15px; cursor: pointer; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; font-weight: 600;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ls-export { background: #fff; border: 1px solid #e2e8f0; color: #314158; }
+.ls-export:hover { background: #f8fafc; }
+.ls-newbtn { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.ls-newbtn:hover { background: #356fbb; }
+
+/* toolbar */
+.ls-bar { display: flex; align-items: center; gap: 13px; margin-bottom: 16px; }
+.ls-search { display: flex; align-items: center; gap: 8px; width: 230px; height: 33px; padding: 0 11px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; }
+.ls-search svg { flex-shrink: 0; color: #90a1b9; }
+.ls-search input { flex: 1; border: none; outline: none; background: none; font-family: inherit; font-size: 12.5px; color: #0f172b; }
+.ls-filters { display: flex; flex-wrap: wrap; gap: 7px; }
+.ls-filter {
+  height: 31px; padding: 0 13px; cursor: pointer; background: #fff; border: 1px solid #e2e8f0; border-radius: 999px;
+  font-family: inherit; font-size: 11.5px; font-weight: 500; color: #45556c;
+}
+.ls-filter-on { background: #4982cf; border-color: #356fbb; color: #fff; font-weight: 600; }
+.ls-count { flex: 1; text-align: right; font-size: 10.5px; font-style: normal; color: #90a1b9; }
+
+/* grid of cards */
+.ls-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ls-card {
+  display: flex; flex-direction: column; gap: 12px; padding: 16px 18px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ls-ctop { display: flex; align-items: flex-start; gap: 11px; }
+.ls-icon { display: grid; place-items: center; width: 30px; height: 30px; flex-shrink: 0; background: #eef3fa; border-radius: 8px; color: #6d93c8; }
+.ls-cinfo { flex: 1; min-width: 0; }
+.ls-cname { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 4px; font-size: 13.5px; font-weight: 600; color: #1d293d; }
+.ls-cbadge { display: inline-flex; align-items: center; height: 17px; padding: 0 7px; border-radius: 4px; font-size: 9px; font-weight: 600; white-space: nowrap; }
+.ls-c-blue { background: #eff6ff; color: #4982cf; }
+.ls-c-purple { background: #faf5ff; color: #8200db; }
+.ls-c-red { background: #fff1f2; color: #ec003f; }
+.ls-c-amber { background: #fffbeb; color: #bb4d00; }
+.ls-c-gray { background: #f8fafc; color: #62748e; }
+.ls-csub { margin: 0; font-size: 11px; line-height: 15px; color: #45556c; }
+
+.ls-cmid { display: flex; align-items: center; justify-content: space-between; }
+.ls-items { display: inline-flex; align-items: center; gap: 4px; height: 19px; padding: 0 8px; background: #eff6ff; border: 1px solid #bedbff; border-radius: 999px; font-size: 9.5px; font-weight: 600; color: #4982cf; }
+.ls-view { display: inline-flex; align-items: center; gap: 3px; padding: 0; border: none; background: none; cursor: pointer; font-family: inherit; font-size: 10.5px; font-weight: 500; color: #62748e; }
+.ls-view:hover { color: #4982cf; }
+.ls-view svg { transition: transform .15s; }
+.ls-view-open { transform: rotate(90deg); }
+
+/* inline expanded item list (View / Hide) */
+.ls-exlist { display: flex; flex-direction: column; gap: 7px; padding: 2px 0 4px; }
+.ls-exrow { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.ls-exname { display: inline-flex; align-items: center; gap: 7px; font-size: 11.5px; color: #1d293d; }
+.ls-exname svg { flex-shrink: 0; color: #90a1b9; }
+.ls-exbadge { display: inline-flex; align-items: center; height: 17px; padding: 0 8px; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 9px; font-weight: 500; color: #62748e; }
+
+/* footer always pinned to the card's bottom, regardless of how tall the
+   content above it is — this is what keeps card heights visually aligned
+   across a row even when descriptions wrap to different line counts.
+   No divider line here — the reference card has plain spacing, no rule. */
+.ls-cfoot { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 10px; }
+.ls-status { display: flex; align-items: center; gap: 8px; }
+.ls-status .ls-tg { box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.ls-status .ls-tg span { background: #f8fafc; }
+.ls-aon { font-size: 10.5px; font-weight: 500; color: #45556c; }
+.ls-aoff { font-size: 10.5px; font-weight: 500; color: #90a1b9; }
+.ls-date { flex: 1; font-size: 9.5px; color: #cad5e2; }
+.ls-cactions { display: flex; align-items: center; gap: 11px; }
+.ls-cactions button { display: grid; place-items: center; padding: 1px; border: none; background: none; color: #90a1b9; cursor: pointer; }
+.ls-cactions button:hover { color: #314158; }
+.ls-cactions button:last-child:hover { color: #ec003f; }
+
+/* inactive card dimming */
+.ls-card-off .ls-cname, .ls-card-off .ls-csub, .ls-card-off .ls-icon { opacity: .55; }
+.ls-card-off .ls-date { color: #e2e8f0; }
+
+/* ── modal ── */
+.ls-overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(0,0,0,.5); }
+.ls-modal { width: 805px; max-height: 88vh; display: flex; flex-direction: column; background: #fff; border-radius: 10px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); }
+.ls-mhead { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid #f1f5f9; }
+.ls-mtitle { margin: 0; font-size: 16px; font-weight: 600; color: #0f172b; }
+.ls-mclose { display: grid; place-items: center; padding: 2px; border: none; background: none; color: #62748e; cursor: pointer; }
+
+.ls-mbody { flex: 1; min-height: 0; display: grid; grid-template-columns: 250px 1fr; overflow: visible; }
+.ls-mleft { padding: 20px 20px; overflow: visible; border-right: 1px solid #f1f5f9; }
+.ls-mlabel { display: block; margin-bottom: 6px; font-size: 9px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #90a1b9; }
+.ls-mlabel b { color: #ec003f; }
+.ls-mt { margin-top: 16px; }
+.ls-minput {
+  display: block; width: 100%; height: 33px; padding: 0 11px; outline: none; background: #fff;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.ls-minput:focus { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73,130,207,.15); }
+.ls-minput::placeholder { color: #90a1b9; }
+.ls-msel > div > button { height: 33px; font-size: 12.5px; }
+.ls-mtextarea {
+  display: block; width: 100%; height: 66px; padding: 8px 11px; resize: vertical; outline: none; background: #fff;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 12px; line-height: 17px; color: #0f172b;
+}
+.ls-mtextarea:focus { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73,130,207,.15); }
+.ls-mtextarea::placeholder { color: #90a1b9; }
+
+.ls-mitemshead { margin: 20px 0 10px; font-size: 9px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #90a1b9; }
+.ls-mitemshead b { color: #4982cf; }
+.ls-mnoitems { margin: 0; font-size: 10.5px; line-height: 15px; color: #cad5e2; }
+.ls-mgroup { margin: 0 0 6px; font-size: 8px; font-weight: 700; letter-spacing: .5px; color: #90a1b9; }
+.ls-mitems { display: flex; flex-direction: column; gap: 7px; max-height: 150px; overflow-y: auto; }
+.ls-mitem { display: flex; align-items: center; gap: 7px; font-size: 11.5px; font-weight: 500; color: #4982cf; }
+.ls-mitem svg { flex-shrink: 0; color: #90a1b9; }
+
+.ls-mright { display: flex; flex-direction: column; padding: 18px 20px; overflow: hidden; }
+.ls-mrhead { display: flex; align-items: center; gap: 7px; margin-bottom: 12px; font-size: 12.5px; color: #4982cf; }
+.ls-mrhead svg { color: #90a1b9; }
+.ls-mrhead b { font-weight: 600; color: #4982cf; }
+.ls-mcount { display: inline-flex; align-items: center; justify-content: center; min-width: 19px; height: 19px; padding: 0 5px; background: #4982cf; border-radius: 999px; font-size: 10px; font-weight: 700; color: #fff; }
+.ls-msearch { display: flex; align-items: center; gap: 8px; height: 33px; padding: 0 11px; margin-bottom: 14px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; }
+.ls-msearch svg { flex-shrink: 0; color: #90a1b9; }
+.ls-msearch input { flex: 1; border: none; outline: none; background: none; font-family: inherit; font-size: 12px; color: #0f172b; }
+.ls-mlist { flex: 1; overflow-y: auto; }
+.ls-mshead { margin: 12px 0 5px; font-size: 9px; font-weight: 700; letter-spacing: .5px; color: #90a1b9; }
+.ls-mlist > div:first-child .ls-mshead { margin-top: 0; }
+.ls-mtrow { display: flex; align-items: flex-start; gap: 10px; padding: 7px 6px; border-radius: 6px; cursor: pointer; }
+.ls-mtrow input { position: absolute; opacity: 0; width: 0; height: 0; }
+.ls-mtrow:hover { background: #f9fbfd; }
+.ls-mbox { display: grid; place-items: center; width: 15px; height: 15px; flex-shrink: 0; margin-top: 1px; border: 1.5px solid #cad5e2; border-radius: 4px; background: #fff; color: #fff; }
+.ls-mtrow-on .ls-mbox { background: #4982cf; border-color: #4982cf; }
+.ls-mtname { margin: 0; font-size: 11.5px; font-weight: 500; color: #1d293d; }
+.ls-mtsub { margin: 1px 0 0; font-size: 9px; color: #90a1b9; }
+
+.ls-mfoot { display: flex; justify-content: flex-end; gap: 8px; padding: 14px 24px; border-top: 1px solid #f1f5f9; }
+.ls-mcancel, .ls-msave {
+  height: 33px; padding: 0 16px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 12.5px; font-weight: 600;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ls-mcancel { background: #fff; border: 1px solid #e2e8f0; color: #0f172b; font-weight: 500; }
+.ls-mcancel:hover { background: #f8fafc; }
+.ls-msave { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.ls-msave:hover { background: #356fbb; }
+.ls-msave:disabled { background: #bedbff; border-color: #bedbff; cursor: default; }

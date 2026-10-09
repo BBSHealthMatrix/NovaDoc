@@ -1,0 +1,3 @@
+.msg-avatar { position: relative; flex-shrink: 0; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-size: 9px; font-weight: 700; }
+.msg-avatar i { position: absolute; right: -1px; bottom: -1px; width: 8px; height: 8px; border: 2px solid #fff; border-radius: 50%; background: #cbd5e1; }
+.msg-avatar i.on { background: #22c55e; }

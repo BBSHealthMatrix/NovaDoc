@@ -1,0 +1,87 @@
+/* ── Corporate Pricing › Claims tab (crc-) ── */
+.crc-wrap { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+
+/* toolbar */
+.crc-tools { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.crc-search {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 9px; height: 29px; padding: 0 11px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.crc-search:focus-within { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.crc-search svg { flex-shrink: 0; color: #90a1b9; }
+.crc-search input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-family: inherit; font-size: 12.5px; color: #0f172b; }
+.crc-search input::placeholder { color: #62748e; }
+.crc-status { width: 115px; flex-shrink: 0; }
+.crc-status button[aria-haspopup] { height: 29px; padding: 0 11px; font-size: 11.5px; color: #1d293d; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+.crc-status [role="option"] { font-size: 12.5px; }
+.crc-process {
+  display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; height: 33px; padding: 0 15px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 12px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.crc-process:hover { background: #356fbb; }
+
+/* summary chips */
+.crc-chips { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 15px; flex-shrink: 0; }
+.crc-chip {
+  display: inline-flex; align-items: center; gap: 7px; height: 30px; padding: 0 11px; cursor: pointer;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;
+}
+.crc-chip:hover { border-color: #cad5e2; }
+.crc-chip-on, .crc-chip-on:hover { background: #f5f9ff; border-color: #4982cf; }
+.crc-chip b { font-size: 12px; font-weight: 600; color: #1d293d; }
+.crc-cpend { margin-left: -3px; font-size: 11.5px; color: #90a1b9; }
+.crc-badge {
+  display: inline-flex; align-items: center; gap: 4px; height: 16px; padding: 0 6px;
+  border: 1px solid; border-radius: 4px; font-size: 8.5px; font-weight: 600;
+}
+
+/* status colours (chip badges + row pills only) */
+.crc-unpaid { background: #fff1f2; border-color: #ffccd3; color: #ec003f; }
+.crc-partial { background: #fef3c6; border-color: #fee685; color: #bb4d00; }
+.crc-paid { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+
+/* table */
+.crc-tbl {
+  flex: 1; min-height: 0; margin-top: 15px; overflow-y: auto;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+.crc-row { display: flex; flex-wrap: wrap; align-items: center; row-gap: 10px; padding: 12px 16px; border-bottom: 1px solid #f1f5f9; }
+.crc-row-on { background: #f8fafc; }
+.crc-head {
+  position: sticky; top: 0; z-index: 2; row-gap: 3px; padding: 11px 16px 7px; background: #f9fbfd;
+  font-size: 7.5px; font-weight: 600; line-height: 11px; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.crc-row input[type="checkbox"] { width: 14px; height: 14px; margin: 0; cursor: pointer; accent-color: #4982cf; }
+
+/* column widths */
+.crc-c-chk { width: 33px; flex-shrink: 0; display: flex; }
+.crc-c-pat { width: 85px; flex-shrink: 0; padding-right: 6px; }
+.crc-c-mrn { width: 94px; flex-shrink: 0; }
+.crc-c-svc { width: 64px; flex-shrink: 0; padding-right: 4px; }
+.crc-c-date { width: 64px; flex-shrink: 0; padding-right: 8px; }
+.crc-c-tot { width: 74px; flex-shrink: 0; padding-right: 18px; }
+.crc-c-paid { width: 66px; flex-shrink: 0; padding-right: 14px; }
+.crc-c-pend { width: 91px; flex-shrink: 0; }
+.crc-c-tax { width: 90px; flex-shrink: 0; }
+.crc-c-st { width: 100px; flex-shrink: 0; }
+
+/* cell text */
+.crc-name { display: block; font-size: 12.5px; font-weight: 600; line-height: 17px; color: #1d293d; }
+.crc-visit { display: block; margin-top: 1px; font-size: 8.5px; color: #90a1b9; }
+.crc-mrn { font-family: "JetBrains Mono", monospace; font-size: 7.5px; color: #62748e; }
+.crc-svc { font-size: 8.5px; line-height: 11.5px; color: #62748e; }
+.crc-date { font-size: 8.5px; line-height: 12.5px; color: #62748e; }
+.crc-tot { font-size: 12.5px; font-weight: 700; line-height: 18px; color: #1d293d; }
+.crc-paidamt { font-size: 12.5px; font-weight: 600; line-height: 18px; color: #009966; }
+.crc-pend { font-size: 12.5px; font-weight: 600; color: #ec003f; }
+.crc-pend-0 { color: #cad5e2; }
+.crc-tax { font-size: 11px; color: #90a1b9; }
+
+.crc-pill {
+  display: inline-flex; align-items: center; height: 18px; padding: 0 8px; white-space: nowrap;
+  border: 1px solid; border-radius: 4px; font-size: 8.5px; font-weight: 600;
+}
+
+.crc-none { margin: 0; padding: 40px 16px; text-align: center; font-size: 11px; color: #90a1b9; }

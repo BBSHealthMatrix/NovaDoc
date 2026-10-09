@@ -1,0 +1,65 @@
+/* generic card */
+.gc-gcard {
+  overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.gc-gcard-off .gc-gname, .gc-gcard-off .gc-gcount { opacity: .45; }
+.gc-ghead { display: flex; align-items: center; gap: 9px; height: 46px; padding: 0 22px 0 17px; }
+.gc-gchev { display: grid; place-items: center; padding: 0; margin-right: 5px; border: none; background: none; color: #90a1b9; cursor: pointer; }
+.gc-gchev svg { transition: transform .15s; }
+.gc-rot { transform: rotate(90deg); }
+.gc-gname { font-size: 12.5px; font-weight: 500; color: #1d293d; }
+.gc-gcount { flex: 1; font-size: 10px; color: #90a1b9; }
+.gc-gcount em { font-style: normal; color: #f59e0b; }
+.gc-tg { flex-shrink: 0; margin-right: 7px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.gc-tg span { background: #f8fafc; }
+.gc-gico { display: grid; place-items: center; width: 24px; height: 24px; flex-shrink: 0; padding: 0; margin-left: 6px; border: none; border-radius: 6px; background: none; color: #cad5e2; cursor: pointer; }
+.gc-gico:hover { color: #4982cf; background: #f1f5f9; }
+.gc-gdel:hover { color: #ec003f; background: #fff1f2; }
+
+/* expanded: allergy row + brand table */
+.gc-gbody { border-top: 1px solid #f1f5f9; }
+.gc-allergy { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 7px 16px; font-size: 8.5px; color: #62748e; }
+.gc-allergy svg { color: #f59e0b; }
+.gc-akw { display: inline-flex; align-items: center; height: 15px; padding: 0 6px; background: #fffbeb; border: 1px solid #fee685; border-radius: 3px; font-size: 8.5px; font-weight: 500; color: #bb4d00; }
+
+.gc-bgrid { display: grid; grid-template-columns: 40% 1fr 60px 62px; align-items: center; padding: 0 16px; }
+.gc-bhead {
+  height: 28px; background: #f8fafc; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;
+  font-size: 8px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #62748e;
+}
+.gc-brow { height: 34px; }
+.gc-brow + .gc-brow { border-top: 1px solid #f8fafc; }
+.gc-brow:hover { background: #f8fafc; }
+.gc-bname { display: inline-flex; align-items: center; gap: 6px; font-size: 10.5px; font-weight: 500; color: #314158; }
+.gc-bname svg { flex-shrink: 0; color: #cad5e2; transform: rotate(45deg); }
+.gc-bstr { font-size: 10.5px; color: #45556c; }
+.gc-star { display: grid; place-items: center; width: 18px; height: 18px; padding: 0; border: none; background: none; color: #e2e8f0; cursor: pointer; }
+.gc-star:hover { color: #cad5e2; }
+.gc-star-on, .gc-star-on:hover { color: #ffb900; }
+.gc-bacts { display: flex; align-items: center; justify-content: flex-end; gap: 6px; opacity: 0; }
+.gc-brow:hover .gc-bacts, .gc-bacts-show { opacity: 1; }
+.gc-bacts button { display: grid; place-items: center; width: 18px; height: 18px; padding: 0; border: none; border-radius: 4px; background: none; color: #90a1b9; cursor: pointer; }
+.gc-bacts button:hover { color: #4982cf; background: #f1f5f9; }
+.gc-bacts .gc-bdel:hover { color: #ec003f; background: #fff1f2; }
+.gc-bacts .gc-bok { color: #00a63e; }
+.gc-bacts .gc-bx { color: #ec003f; }
+.gc-brow-edit { background: #f9fbff; }
+.gc-brow-edit .gc-binput { width: calc(100% - 20px); }
+
+.gc-badd { height: 44px; background: #fbfcfd; border-top: 1px solid #f1f5f9; }
+.gc-binput {
+  height: 22px; padding: 0 12px; outline: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.gc-binput::placeholder { color: #62748e; }
+.gc-binput:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.gc-binput-name { width: 117px; }
+.gc-baddstr { display: flex; align-items: center; gap: 5px; }
+.gc-binput-str { width: 101px; }
+.gc-baddbtn {
+  height: 28px; padding: 0 10px; cursor: pointer; background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 8.5px; font-weight: 600; color: #fff;
+}
+.gc-baddbtn:hover { background: #356fbb; }
+.gc-baddplus { display: flex; justify-content: center; color: #cad5e2; }

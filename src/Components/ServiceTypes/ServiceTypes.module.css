@@ -1,0 +1,80 @@
+.st-wrap { max-width: 735px; margin: 0 auto; padding: 22px 22px 22px; }
+.st-title { margin: 0 0 4px; font-size: 21px; font-weight: 700; line-height: 27px; color: #0f172b; }
+.st-desc { margin: 0 0 18px; font-size: 12.5px; line-height: 16px; color: #62748e; }
+
+/* stat cards */
+.st-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 22px; }
+.st-stat {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; height: 74px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+.st-num { margin: 0 0 3px; font-size: 21px; font-weight: 700; line-height: 25px; }
+.st-n-total { color: #314158; }
+.st-n-active { color: #009966; }
+.st-n-inactive { color: #e17100; }
+.st-slabel { margin: 0; font-size: 10.5px; line-height: 14px; color: #45556c; }
+
+/* table */
+.st-card {
+  overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+.st-row { display: grid; grid-template-columns: 311px 144px 1fr auto; align-items: center; padding: 0 18px; }
+.st-th { height: 33px; background: #f9fbfd; border-bottom: 1px solid #f1f5f9; }
+.st-th span { font-size: 8px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9; }
+.st-right { text-align: right; }
+.st-tr { height: 55px; }
+.st-tr + .st-tr { border-top: 1px solid #f1f5f9; }
+.st-name { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1d293d; }
+.st-icon {
+  display: grid; place-items: center; width: 28px; height: 28px; flex-shrink: 0;
+  background: #eef3fa; border-radius: 6px; color: #6d93c8;
+}
+.st-date { font-size: 10.5px; color: #62748e; }
+
+/* status */
+.st-status { display: flex; align-items: center; gap: 8px; }
+.st-status .st-tg { box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.st-status .st-tg span { background: #f8fafc; }
+.st-badge {
+  display: inline-flex; align-items: center; height: 17px; padding: 0 6px; border: 1px solid; border-radius: 4px;
+  font-size: 8px; font-weight: 600;
+}
+.st-b-on { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+.st-b-off { background: #fffbeb; border-color: #fee685; color: #bb4d00; }
+
+/* actions */
+.st-actions { display: flex; align-items: center; gap: 13px; padding-right: 6px; }
+.st-actions button { display: grid; place-items: center; padding: 2px; border: none; background: none; color: #90a1b9; cursor: pointer; }
+.st-actions button:hover { color: #4982cf; }
+.st-actions button:last-child:hover { color: #ec003f; }
+
+/* edit modal */
+.st-overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(0, 0, 0, .5); }
+.st-modal {
+  position: relative; width: 345px; padding: 19px 22px 22px; background: #fff; border-radius: 10px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1);
+}
+.st-close {
+  position: absolute; top: 15px; right: 16px; display: grid; place-items: center; padding: 2px;
+  border: none; background: none; color: #62748e; cursor: pointer;
+}
+.st-close:hover { color: #0f172b; }
+.st-mtitle { margin: 0 0 20px; font-size: 14.5px; font-weight: 600; line-height: 20px; color: #0f172b; }
+.st-mlabel { display: block; margin-bottom: 6px; font-size: 10.5px; font-weight: 600; color: #314158; }
+.st-mlabel b { color: #ec003f; }
+.st-input {
+  display: block; width: 100%; height: 33px; padding: 0 11px; outline: none; background: #fff;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.st-input:focus { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73, 130, 207, .15); }
+.st-mfoot { display: flex; justify-content: flex-end; gap: 7px; margin-top: 18px; }
+.st-cancel, .st-save {
+  height: 33px; padding: 0 14px; border-radius: 6px; font-family: inherit; font-size: 12.5px; cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+.st-cancel { background: #fff; border: 1px solid #e2e8f0; font-weight: 500; color: #0f172b; }
+.st-cancel:hover { background: #f8fafc; }
+.st-save { padding: 0 15px; background: #4982cf; border: 1px solid #356fbb; font-weight: 600; color: #fff; }
+.st-save:hover { background: #356fbb; }

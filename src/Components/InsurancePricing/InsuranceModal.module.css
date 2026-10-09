@@ -1,0 +1,84 @@
+/* ── Add / Edit Insurance modal (ipi-) ── */
+.ipi-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(0,0,0,.8); }
+.ipi-modal {
+  position: relative; display: flex; flex-direction: column; width: 611px; max-width: 100%;
+  height: 523px; max-height: calc(100vh - 40px); padding-top: 20px;
+  background: #f8fafc; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+}
+.ipi-close { position: absolute; top: 16px; right: 17px; display: grid; place-items: center; padding: 1px; border: none; background: none; color: #62748e; cursor: pointer; }
+.ipi-close:hover { color: #0f172b; }
+.ipi-title { flex-shrink: 0; margin: 0; padding: 0 23px 10px; font-size: 16px; font-weight: 600; line-height: 22px; color: #0f172b; }
+
+.ipi-body { flex: 1; min-height: 0; overflow-y: auto; padding: 4px 23px 0; }
+.ipi-sec { font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #4982cf; }
+
+.ipi-lbl { display: block; margin: 15px 0 6px; font-size: 11px; font-weight: 600; line-height: 14px; color: #314158; }
+.ipi-lbl em { font-style: normal; color: #fb2c36; }
+.ipi-first { margin-top: 14px; }
+.ipi-input {
+  display: block; width: 100%; height: 33px; padding: 0 12px; outline: none;
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.ipi-input::placeholder { color: #62748e; }
+.ipi-input:focus { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.ipi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+
+/* upload */
+.ipi-upload { display: flex; align-items: center; gap: 10px; }
+.ipi-file {
+  display: inline-flex; align-items: center; gap: 9px; height: 37px; padding: 0 14px; cursor: pointer;
+  background: none; border: 1px dashed #cad5e2; border-radius: 8px;
+  font-family: inherit; font-size: 12.5px; color: #62748e;
+}
+.ipi-file:hover { border-color: #4982cf; color: #4982cf; }
+.ipi-fx { display: grid; place-items: center; padding: 1px; cursor: pointer; background: none; border: none; color: #90a1b9; }
+.ipi-fx:hover { color: #ec003f; }
+
+/* cards */
+.ipi-card { margin-top: 15px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; }
+.ipi-credit { padding: 15px; }
+.ipi-crow { display: flex; align-items: center; justify-content: space-between; min-height: 18px; }
+.ipi-ctitle { font-size: 12.5px; font-weight: 600; line-height: 18px; color: #314158; }
+.ipi-tg { box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.ipi-tg span { background: #f8fafc; }
+.ipi-climit { margin-top: 10px; }
+.ipi-amount {
+  display: flex; align-items: center; gap: 8px; height: 33px; padding: 0 12px;
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+}
+.ipi-amount:focus-within { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.ipi-amount span { font-size: 12.5px; color: #90a1b9; }
+.ipi-amount input {
+  flex: 1; min-width: 0; padding: 0; outline: none; background: none; border: none;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;    -moz-appearance: textfield; appearance: textfield;
+}
+.ipi-amount input::placeholder { color: #62748e; }
+.ipi-amount input::-webkit-outer-spin-button, .ipi-amount input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.ipi-pricing { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 15px; }
+.ipi-ptitle { font-size: 12.5px; font-weight: 500; line-height: 17px; color: #314158; }
+.ipi-psub { font-size: 10.5px; color: #90a1b9; }
+.ipi-seg { display: inline-flex; width: 106px; height: 27px; flex-shrink: 0; overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 5px; }
+.ipi-seg button {
+  flex: 1; padding: 0; cursor: pointer; background: #fff; border: none;
+  font-family: inherit; font-size: 9.5px; font-weight: 600; color: #62748e;
+}
+.ipi-seg button:hover { background: #f8fafc; }
+.ipi-seg .ipi-seg-on, .ipi-seg .ipi-seg-on:hover { background: #4982cf; color: #fff; }
+
+/* footer (sticks to the bottom of the scroll area) */
+.ipi-foot {
+  position: sticky; bottom: 0; display: flex; justify-content: flex-end; gap: 8px;
+  margin-top: 24px; padding: 14px 0 16px; background: #f8fafc; border-top: 1px solid #e2e8f0;
+}
+.ipi-btn {
+  height: 33px; padding: 0 15px; cursor: pointer; border-radius: 6px;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ipi-ghost { background: #fff; border: 1px solid #e2e8f0; color: #0f172b; }
+.ipi-ghost:hover { background: #f1f5f9; }
+.ipi-primary { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.ipi-primary:hover { background: #356fbb; }
+.ipi-primary:disabled, .ipi-primary:disabled:hover { background: #4982cf; opacity: .4; cursor: not-allowed; box-shadow: none; }

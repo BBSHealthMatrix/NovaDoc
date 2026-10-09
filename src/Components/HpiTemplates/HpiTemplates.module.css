@@ -1,0 +1,53 @@
+.hpi-wrap { padding: 24px 22px 40px; }
+
+/* search + new */
+.hpi-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.hpi-search {
+  display: flex; align-items: center; gap: 9px; width: 201px; height: 29px; padding: 0 10px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 5px; box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+}
+.hpi-search:focus-within { border-color: #4a7fd4; }
+.hpi-search svg { color: #94a3b8; flex-shrink: 0; }
+.hpi-search input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-size: 12.5px; color: #1e293b; font-family: inherit; }
+.hpi-search input::placeholder { color: #64748b; }
+.hpi-new {
+  display: flex; align-items: center; gap: 7px; height: 31px; padding: 0 15px; background: #4a7fd4;
+  border: 1px solid #3b6fd4; border-radius: 4px; color: #fff; font-size: 11px; font-weight: 600;
+  font-family: inherit; cursor: pointer; box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
+}
+.hpi-new:hover { background: #3b6fd4; }
+
+/* table */
+.hpi-table {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, .06);
+}
+.hpi-head, .hpi-row {
+  display: grid; grid-template-columns: 326fr 265fr 120fr 168fr 197fr; align-items: center; padding: 0 15px;
+}
+.hpi-head {
+  height: 35px; border-bottom: 1px solid #eef1f5;
+  font-size: 8.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #64748b;
+}
+.hpi-row { height: 46px; border-top: 1px solid #eef1f5; }
+.hpi-head + .hpi-row { border-top: none; }
+.hpi-row:hover { background: #fbfcfe; }
+.hpi-c { display: flex; justify-content: center; }
+.hpi-r { display: flex; justify-content: flex-end; }
+.hpi-name { font-size: 11px; font-weight: 600; color: #1e293b; }
+.hpi-tag {
+  display: inline-block; padding: 2px 9px; border: 1px solid #dbe2ea; border-radius: 4px; background: #fff;
+  font-size: 8.5px; font-weight: 600; color: #334155;
+}
+.hpi-count { font-size: 10.5px; font-weight: 700; color: #475569; }
+
+/* actions (show on row hover) */
+.hpi-acts { gap: 3px; visibility: hidden; }
+.hpi-row:hover .hpi-acts { visibility: visible; }
+.hpi-acts button {
+  width: 22px; height: 22px; display: grid; place-items: center; padding: 0; border: none; border-radius: 4px;
+  background: none; color: #94a3b8; cursor: pointer;
+}
+.hpi-acts button:hover { background: #f1f5f9; color: #475569; }
+.hpi-acts button:last-child:hover { background: #fee2e2; color: #dc2626; }
+.hpi-empty { padding: 24px 0; text-align: center; font-size: 11px; color: #94a3b8; margin: 0; }

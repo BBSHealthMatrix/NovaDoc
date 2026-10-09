@@ -1,0 +1,15 @@
+.empty-state { margin: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: #cbd5e1; }
+.empty-state b { font-size: 10px; font-weight: 500; color: #94a3b8; }
+.empty-state small { font-size: 8.5px; color: #94a3b8; }
+.empty-state.big { height: calc(100vh - 140px); margin: 0; justify-content: center; }
+.empty-state.big b { font-size: 11px; font-weight: 600; }
+.cal { overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; }
+.mono { font-family: "JetBrains Mono", monospace; }
+.today-row { display: flex; align-items: center; gap: 16px; padding: 11px 14px; border-bottom: 1px solid #eef1f5; font-size: 10px; }
+.today-name { flex: 1; }
+.today-name b { display: block; font-size: 10.5px; }
+.today-name small { font-size: 8.5px; color: #94a3b8; }
+.prio-pill { padding: 2px 8px; border-radius: 99px; background: #f1f5f9; color: #475569; font-size: 8px; font-weight: 700; }
+.prio-pill.routine { background: #f1f5f9; color: #475569; }
+.prio-pill.urgent { background: #fef3c7; color: #d97706; }
+.prio-pill.emergency { background: #fee2e2; color: #dc2626; }

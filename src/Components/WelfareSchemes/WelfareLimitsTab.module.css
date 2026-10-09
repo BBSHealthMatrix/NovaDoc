@@ -1,0 +1,53 @@
+/* ── Welfare Schemes › Limits & Co-pay tab (wsl-) ── */
+.wsl-wrap { max-width: 609px; }
+.wsl-card { padding: 18px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.wsl-card + .wsl-card { margin-top: 23px; }
+.wsl-title { margin: 0 0 18px; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #90a1b9; }
+
+.wsl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 14px; }
+.wsl-lbl { display: block; font-size: 11.5px; font-weight: 500; line-height: 15px; color: #314158; }
+.wsl-help { display: block; margin-top: 2px; font-size: 8.5px; color: #90a1b9; }
+.wsl-in {
+  display: block; width: 100%; height: 28px; margin-top: 7px; padding: 0 12px; outline: none;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.wsl-in:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.wsl-rlbl { margin-top: 24px; }
+.wsl-sel { width: 175px; margin-top: 7px; }
+.wsl-sel button[aria-haspopup] { height: 29px; padding: 0 12px; font-size: 12.5px; color: #0f172b; }
+.wsl-sel [role="option"] { font-size: 12.5px; }
+
+/* co-pay card */
+.wsl-copay { overflow: hidden; padding: 0; }
+.wsl-chead { padding: 13px 18px 12px; background: #f8fafc; border-bottom: 1px solid #f1f5f9; }
+.wsl-chead .wsl-title { margin: 0; }
+.wsl-chead p { margin: 3px 0 0; font-size: 8.5px; color: #90a1b9; }
+.wsl-row { display: flex; align-items: center; height: 48px; padding: 0 20px 0 18px; border-bottom: 1px solid #f1f5f9; }
+.wsl-row:last-child { border-bottom: none; }
+.wsl-dot { width: 6px; height: 6px; margin-right: 10px; flex-shrink: 0; border-radius: 50%; background: #00bc7d; }
+.wsl-name { flex: 1; min-width: 0; font-size: 12.5px; font-weight: 500; color: #1d293d; }
+.wsl-pin {
+  width: 72px; height: 25px; padding: 0 10px; outline: none; text-align: right;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.wsl-pin:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.wsl-pct { margin: 0 20px 0 10px; font-size: 11px; color: #90a1b9; }
+.wsl-pill {
+  display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 17px; font-style: normal;
+  border: 1px solid; border-radius: 4px; font-size: 7.5px; font-weight: 600;
+}
+.wsl-none { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+.wsl-low { background: #eff6ff; border-color: #bedbff; color: #155dfc; }
+.wsl-high { background: #fffbeb; border-color: #fee685; color: #bb4d00; }
+
+.wsl-save { display: flex; align-items: center; gap: 11px; margin-top: 22px; }
+.wsl-btn {
+  height: 28px; padding: 0 13px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 11.5px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.wsl-btn:hover { background: #356fbb; }
+.wsl-saved { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: #009966; }

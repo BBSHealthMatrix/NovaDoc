@@ -1,0 +1,3 @@
+.adm-page { display: flex; min-height: calc(100vh - 56px); background: #f7f9fc; }
+.adm-main { flex: 1; min-width: 0; }
+.adm-soon { padding: 40px; font-size: 11px; color: #94a3b8; text-align: center; }

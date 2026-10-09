@@ -1,0 +1,85 @@
+/* ── Users & Counter Mapping page (uc-) ── */
+.uc-wrap { height: calc(100vh - 56px); overflow-y: auto; padding: 24px 20px 28px; background: #f8fafc; }
+.uc-inner { max-width: 930px; margin: 0 auto; }
+
+/* header */
+.uc-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.uc-title { margin: 0; font-size: 21px; font-weight: 700; line-height: 28px; color: #0f172b; }
+.uc-desc { margin: 2px 0 0; font-size: 12.5px; color: #62748e; }
+.uc-add {
+  display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; height: 34px; margin-top: 6px; padding: 0 16px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 13px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.uc-add:hover { background: #356fbb; }
+
+/* role filter */
+.uc-bar { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; }
+.uc-seg { display: inline-flex; gap: 1px; padding: 1px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; }
+.uc-segb {
+  height: 24px; padding: 0 10px; cursor: pointer; background: none; border: none; border-radius: 4px;
+  font-family: inherit; font-size: 11px; font-weight: 600; color: #45556c;
+}
+.uc-segb:hover { color: #0f172b; }
+.uc-segb-on, .uc-segb-on:hover { background: #4982cf; color: #fff; }
+.uc-count { font-size: 10.5px; color: #90a1b9; }
+
+/* stat cards */
+.uc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px; }
+.uc-stat { min-height: 104px; padding: 18px 15px 14px; border: 1px solid; border-radius: 12px; }
+.uc-slbl { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; }
+.uc-sico { font-size: 12px; line-height: 1; }
+.uc-sval { margin-top: 6px; font-size: 26px; font-weight: 700; line-height: 32px; }
+.uc-ssub { margin-top: 4px; font-size: 8.5px; color: #62748e; }
+.uc-stat-admin { background: #faf5ff; border-color: #e9d4ff; color: #8200db; }
+.uc-stat-desk { background: #eff6ff; border-color: #bedbff; color: #155dfc; }
+.uc-stat-doc { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+
+/* table */
+.uc-tbl { margin-top: 23px; overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.uc-row {
+  display: grid; grid-template-columns: 329px 109px 127px 145px 91px minmax(0, 1fr); align-items: center;
+  min-height: 55px; padding: 0 18px; border-bottom: 1px solid #f1f5f9;
+}
+.uc-row:last-child { border-bottom: none; }
+.uc-row:not(.uc-thead):hover { background: #f8fafc; }
+.uc-thead {
+  min-height: 31px; background: #f9fbfd;
+  font-size: 7.5px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.uc-user { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.uc-av {
+  display: grid; place-items: center; width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%;
+  font-style: normal; font-size: 10.5px; font-weight: 700; color: #fff;
+}
+.uc-user b { font-size: 13px; font-weight: 600; color: #1d293d; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.uc-role {
+  display: inline-flex; align-items: center; height: 18px; padding: 0 9px; font-style: normal;
+  border: 1px solid; border-radius: 4px; font-size: 8px; font-weight: 600;
+}
+.uc-role-admin { background: #faf5ff; border-color: #e9d4ff; color: #8200db; }
+.uc-role-desk { background: #eff6ff; border-color: #bedbff; color: #155dfc; }
+.uc-role-doc { background: #ecfdf5; border-color: #a4f4cf; color: #007a55; }
+
+.uc-login { font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: #1d293d; }
+.uc-counter { font-size: 11.5px; color: #314158; }
+.uc-dash { color: #cad5e2; }
+
+.uc-status { display: flex; align-items: center; gap: 9px; }
+.uc-on { font-size: 11.5px; font-weight: 600; color: #009966; }
+.uc-off { font-size: 11.5px; color: #90a1b9; }
+
+.uc-joined { display: flex; align-items: center; gap: 8px; }
+.uc-date { width: 50px; flex-shrink: 0; font-size: 10.5px; line-height: 15px; color: #90a1b9; }
+.uc-acts { display: flex; gap: 2px; opacity: 0; transition: opacity .12s; }
+.uc-row:hover .uc-acts, .uc-acts:focus-within { opacity: 1; }
+.uc-ibtn {
+  display: grid; place-items: center; width: 22px; height: 22px; padding: 0; cursor: pointer;
+  background: none; border: none; border-radius: 5px; color: #90a1b9;
+}
+.uc-edit:hover { background: #eff6ff; color: #4982cf; }
+.uc-del:hover { background: #fff1f2; color: #ec003f; }
+
+.uc-none { margin: 0; padding: 30px 16px; text-align: center; font-size: 11px; color: #90a1b9; }    

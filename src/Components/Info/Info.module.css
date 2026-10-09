@@ -1,0 +1,20 @@
+.info-grid { display: grid; gap: 10px; padding: 18px 22px; }
+.info-grid.scope { grid-template-columns: repeat(5, 1fr); }
+.info-grid.vision { grid-template-columns: repeat(3, 1fr); }
+.info-card { position: relative; display: flex; flex-direction: column; gap: 5px; padding: 16px 14px; background: #fff; border: 1px solid #e6eaf0; border-radius: 10px; box-shadow: 0 1px 3px rgba(15,23,42,.06); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.vision .info-card { min-height: 140px; padding: 18px; }
+.info-card :global(.m-icon) { width: 32px; height: 32px; margin-bottom: 8px; transition: transform .2s ease, box-shadow .2s ease; }
+.vision .info-card :global(.m-icon) { width: 40px; height: 40px; }
+.info-card b { font-size: 11.5px; }
+.info-card small { font-size: 9.5px; color: #64748b; line-height: 1.5; }
+.info-num { position: absolute; top: 10px; right: 12px; font-size: 8px; color: #cbd5e1; }
+.info-line { width: 26px; height: 2px; margin-top: 10px; background: #e2e8f0; transition: width .25s ease, background-color .25s ease; }
+.info-card:hover { transform: translateY(-4px); border-color: #a9c1ea; box-shadow: 0 10px 24px rgba(59,111,212,.12); }
+.info-card:hover :global(.m-icon) { transform: scale(1.08); box-shadow: 0 4px 10px rgba(15,23,42,.12); }
+.info-card:hover .info-line { width: 56px; background-color: #3b6fd4; }
+@media (max-width: 1200px) {
+  .info-grid.scope { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .info-grid.scope, .info-grid.vision { grid-template-columns: 1fr 1fr; }
+}

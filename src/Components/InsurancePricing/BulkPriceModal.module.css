@@ -1,0 +1,42 @@
+/* ── Bulk Price Change modal (ipb-) ── */
+.ipb-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(0,0,0,.8); }
+.ipb-modal {
+  position: relative; width: 349px; max-width: 100%; padding: 20px 22px 22px;
+  background: #f8fafc; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+}
+.ipb-close { position: absolute; top: 16px; right: 17px; display: grid; place-items: center; padding: 1px; border: none; background: none; color: #62748e; cursor: pointer; }
+.ipb-close:hover { color: #0f172b; }
+.ipb-title { margin: 0; font-size: 16px; font-weight: 600; line-height: 22px; color: #0f172b; }
+
+.ipb-lbl { display: block; margin: 16px 0 6px; font-size: 11px; font-weight: 600; line-height: 14px; color: #314158; }
+
+.ipb-sel button[aria-haspopup] { height: 33px; padding: 0 12px; font-size: 12.5px; color: #0f172b; }
+.ipb-sel [role="option"] { font-size: 12.5px; }
+
+.ipb-inc { display: flex; gap: 8px; }
+.ipb-seg { display: inline-flex; width: 70px; height: 28px; flex-shrink: 0; overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 5px; }
+.ipb-seg button {
+  flex: 1; padding: 0; cursor: pointer; background: #fff; border: none;
+  font-family: inherit; font-size: 9.5px; font-weight: 700; color: #62748e;
+}
+.ipb-seg button:hover { background: #f8fafc; }
+.ipb-seg .ipb-seg-on, .ipb-seg .ipb-seg-on:hover { background: #4982cf; color: #fff; }
+.ipb-in {
+  flex: 1; min-width: 0; height: 28px; padding: 0 12px; outline: none;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.ipb-in::placeholder { color: #62748e; }
+.ipb-in:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+
+.ipb-foot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 15px; }
+.ipb-btn {
+  height: 33px; padding: 0 15px; cursor: pointer; border-radius: 6px;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ipb-ghost { background: #fff; border: 1px solid #e2e8f0; color: #0f172b; }
+.ipb-ghost:hover { background: #f1f5f9; }
+.ipb-primary { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.ipb-primary:hover { background: #356fbb; }
+.ipb-primary:disabled, .ipb-primary:disabled:hover { background: #4982cf; opacity: .4; cursor: not-allowed; box-shadow: none; }

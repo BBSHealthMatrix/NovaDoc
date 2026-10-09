@@ -1,0 +1,26 @@
+.navbar { position: sticky; top: 0; z-index: 50; height: 56px; padding: 0 20px; display: flex; align-items: center; background: #fff; border-bottom: 1px solid #e6eaf0; }
+.logo { display: flex; align-items: center; gap: 6px; font-size: 22px; font-weight: 700; color: #0b1f3f; letter-spacing: -.02em; }
+.nav { flex: 1; display: flex; justify-content: center; gap: 2px; }
+.nav-item { position: relative; }
+.nav-link { display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 0; border-radius: 6px; background: none; color: #334155; font-size: 12.5px; font-weight: 500; cursor: pointer; }
+.nav-link:hover { background: #f4f6fa; }
+.nav-link.active { background: #edf3ff; color: #1e4fd8; }
+.chev { color: #94a3b8; }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-search { display: flex; align-items: center; gap: 6px; width: 170px; height: 30px; padding: 0 10px; border: 1px solid #d8dee8; border-radius: 6px; color: #94a3b8; }
+.nav-search input { border: 0; outline: 0; width: 100%; font-size: 12px; }
+.me { width: 28px; height: 28px; border-radius: 50%; background: #1e4fd8; color: #fff; font-size: 10px; font-weight: 700; display: grid; place-items: center; }
+.dropdown { position: absolute; top: calc(100% + 6px); left: 0; width: 250px; padding-bottom: 4px; background: #fff; border: 1px solid #e6eaf0; border-radius: 8px; box-shadow: 0 10px 30px rgba(15,23,42,.12); }
+.dropdown > div + div { border-top: 1px solid #e6eaf0; margin-top: 4px; }
+.dd-title { padding: 10px 14px 8px; margin-bottom: 4px; border-bottom: 1px solid #e6eaf0; font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #94a3b8; }
+.dd-item { display: flex; align-items: center; gap: 10px; padding: 7px 14px; }
+.dd-item:hover { background: #f6f8fb; }
+.dd-item b { display: block; font-size: 12.5px; font-weight: 500; }
+.dd-item small { display: block; font-size: 10.5px; color: #64748b; }
+.dd-icon { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; }
+.dd-item.current { background: #eef3ff; }
+.dd-item.current b { color: #1e4fd8; }
+@media (max-width: 900px) {
+  .nav-link { font-size: 0; gap: 0; }
+  .nav-search { display: none; }
+}

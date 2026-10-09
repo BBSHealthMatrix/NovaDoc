@@ -1,0 +1,155 @@
+const BUNDLES = [
+  "General / Primary Care", "Cardiology", "Endocrinology", "Respiratory", "Gastroenterology", "Neurology",
+  "Musculoskeletal", "Mental Health", "Nephrology", "Infections", "Dermatology", "Hematology",
+];
+
+let n = 0;
+// [code, description] pairs → rows of one bundle; fav = starred
+const group = (bundle, rows, fav = false) => rows.map(([code, desc]) => ({ id: ++n, code, desc, bundle, fav }));
+
+const CODES = [
+  // favourites
+  ...group("General / Primary Care", [
+    ["J06.9", "Acute upper respiratory infection, unspecified"],
+    ["R05.9", "Cough, unspecified"],
+    ["J18.9", "Pneumonia, unspecified organism"],
+    ["N39.0", "Urinary tract infection, site not specified"],
+  ], true),
+  ...group("Cardiology", [
+    ["I10", "Essential (primary) hypertension"],
+    ["I25.10", "Atherosclerotic heart disease of native coronary artery"],
+  ], true),
+  ...group("Endocrinology", [
+    ["E11.9", "Type 2 diabetes mellitus without complications"],
+    ["E78.5", "Hyperlipidemia, unspecified"],
+    ["E03.9", "Hypothyroidism, unspecified"],
+  ], true),
+  ...group("Respiratory", [["J45.909", "Unspecified asthma, uncomplicated"]], true),
+  ...group("Gastroenterology", [["K21.9", "Gastroesophageal reflux disease without esophagitis"]], true),
+  ...group("Neurology", [["G43.909", "Migraine, unspecified, not intractable"]], true),
+  ...group("Musculoskeletal", [["M54.5", "Low back pain"]], true),
+  ...group("Mental Health", [
+    ["F32.9", "Major depressive disorder, single episode, unspec."],
+    ["F41.1", "Generalized anxiety disorder"],
+  ], true),
+
+  // the rest
+  ...group("General / Primary Care", [
+    ["R50.9", "Fever, unspecified"],
+    ["R51.9", "Headache, unspecified"],
+    ["R10.9", "Unspecified abdominal pain"],
+    ["R00.0", "Tachycardia, unspecified"],
+    ["Z00.00", "Encounter for general adult medical examination"],
+    ["R53.83", "Fatigue"],
+    ["R06.00", "Dyspnea, unspecified"],
+    ["J11.1", "Influenza with other respiratory manifestations"],
+    ["B34.9", "Viral infection, unspecified"],
+  ]),
+  ...group("Cardiology", [
+    ["I20.9", "Angina pectoris, unspecified"],
+    ["I21.9", "Acute myocardial infarction, unspecified"],
+    ["I48.91", "Atrial fibrillation, unspecified"],
+    ["I50.9", "Heart failure, unspecified"],
+    ["I63.9", "Cerebral infarction, unspecified"],
+    ["I83.90", "Varicose veins of unspecified lower extremity"],
+    ["I73.9", "Peripheral vascular disease, unspecified"],
+    ["I27.0", "Primary pulmonary hypertension"],
+  ]),
+  ...group("Endocrinology", [
+    ["E10.9", "Type 1 diabetes mellitus without complications"],
+    ["E11.65", "Type 2 diabetes mellitus with hyperglycemia"],
+    ["E11.40", "Type 2 DM with diabetic neuropathy, unspecified"],
+    ["E05.90", "Thyrotoxicosis, unspecified, without thyrotoxic crisis"],
+    ["E66.9", "Obesity, unspecified"],
+    ["E27.49", "Other adrenocortical insufficiency"],
+    ["E23.0", "Hypopituitarism"],
+  ]),
+  ...group("Respiratory", [
+    ["J45.901", "Unspecified asthma with acute exacerbation"],
+    ["J44.1", "COPD with acute exacerbation"],
+    ["J44.0", "COPD with acute lower respiratory infection"],
+    ["J44.9", "Chronic obstructive pulmonary disease, unspecified"],
+    ["J47.9", "Bronchiectasis, uncomplicated"],
+    ["J93.9", "Pneumothorax, unspecified"],
+    ["J98.01", "Acute bronchospasm"],
+    ["J30.9", "Allergic rhinitis, unspecified"],
+    ["J33.9", "Nasal polyp, unspecified"],
+  ]),
+  ...group("Gastroenterology", [
+    ["K21.0", "Gastroesophageal reflux disease with esophagitis"],
+    ["K29.70", "Gastritis, unspecified, without bleeding"],
+    ["K57.30", "Diverticulosis of large intestine without perforation"],
+    ["K80.20", "Calculus of gallbladder without cholecystitis"],
+    ["K85.9", "Acute pancreatitis, unspecified"],
+    ["K51.90", "Ulcerative colitis, unspecified, without complications"],
+    ["K58.9", "Irritable bowel syndrome without diarrhea"],
+    ["K59.00", "Constipation, unspecified"],
+    ["K74.60", "Unspecified cirrhosis of liver"],
+  ]),
+  ...group("Neurology", [
+    ["G35", "Multiple sclerosis"],
+    ["G20", "Parkinson's disease"],
+    ["G40.909", "Epilepsy, unspecified, not intractable"],
+    ["G89.29", "Other chronic pain"],
+    ["G62.9", "Polyneuropathy, unspecified"],
+    ["G45.9", "Transient cerebral ischaemic attack, unspecified"],
+    ["G47.00", "Insomnia, unspecified"],
+    ["G25.0", "Essential tremor"],
+  ]),
+  ...group("Musculoskeletal", [
+    ["M54.2", "Cervicalgia (neck pain)"],
+    ["M17.11", "Primary osteoarthritis, right knee"],
+    ["M17.12", "Primary osteoarthritis, left knee"],
+    ["M05.79", "Rheumatoid arthritis with rheumatoid factor, unspec."],
+    ["M10.9", "Gout, unspecified"],
+    ["M79.3", "Panniculitis, unspecified"],
+    ["M25.561", "Pain in right knee"],
+    ["M06.9", "Rheumatoid arthritis, unspecified"],
+  ]),
+  ...group("Mental Health", [
+    ["F33.9", "Major depressive disorder, recurrent, unspecified"],
+    ["F41.9", "Anxiety disorder, unspecified"],
+    ["F20.9", "Schizophrenia, unspecified"],
+    ["F31.9", "Bipolar disorder, unspecified"],
+    ["F43.10", "Post-traumatic stress disorder, unspecified"],
+    ["F90.9", "Attention-deficit hyperactivity disorder, unspecified"],
+    ["F50.00", "Anorexia nervosa, unspecified"],
+  ]),
+  ...group("Nephrology", [
+    ["N18.9", "Chronic kidney disease, unspecified"],
+    ["N18.3", "Chronic kidney disease, stage 3 (moderate)"],
+    ["N18.4", "Chronic kidney disease, stage 4 (severe)"],
+    ["N17.9", "Acute kidney failure, unspecified"],
+    ["N04.9", "Nephrotic syndrome with unspecified morphologic changes"],
+    ["N20.0", "Calculus of kidney (nephrolithiasis)"],
+  ]),
+  ...group("Infections", [
+    ["A09", "Infectious gastroenteritis and colitis, unspecified"],
+    ["A41.9", "Sepsis, unspecified organism"],
+    ["A41.51", "Sepsis due to Escherichia coli [E. coli]"],
+    ["B02.9", "Zoster without complications (Shingles)"],
+    ["B37.0", "Candidal stomatitis (oral thrush)"],
+    ["A49.9", "Bacterial infection, unspecified"],
+    ["J02.0", "Streptococcal pharyngitis"],
+    ["A01.00", "Typhoid fever, unspecified"],
+  ]),
+  ...group("Dermatology", [
+    ["L30.9", "Dermatitis, unspecified"],
+    ["L20.9", "Atopic dermatitis, unspecified"],
+    ["L40.9", "Psoriasis, unspecified"],
+    ["L60.0", "Ingrowing nail"],
+    ["L03.90", "Cellulitis, unspecified"],
+    ["L50.9", "Urticaria, unspecified"],
+    ["B35.9", "Dermatophytosis, unspecified"],
+  ]),
+  ...group("Hematology", [
+    ["D64.9", "Anaemia, unspecified"],
+    ["D50.9", "Iron deficiency anaemia, unspecified"],
+    ["D51.0", "Vitamin B12 deficiency anaemia"],
+    ["D69.6", "Thrombocytopenia, unspecified"],
+    ["D47.9", "Neoplasm of uncertain behaviour of lymphoid tissue"],
+    ["C91.00", "Acute lymphoblastic leukaemia"],
+  ]),
+];
+
+export { BUNDLES, CODES };

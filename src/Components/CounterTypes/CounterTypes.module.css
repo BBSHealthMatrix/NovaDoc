@@ -1,0 +1,74 @@
+.ct-wrap { max-width: 736px; margin: 0 auto; padding: 22px 22px 40px; }
+
+/* header */
+.ct-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.ct-title { margin: 0 0 4px; font-size: 21px; font-weight: 700; line-height: 27px; color: #0f172b; }
+.ct-desc { margin: 0; font-size: 12.5px; line-height: 16px; color: #62748e; }
+.ct-add {
+  display: flex; align-items: center; justify-content: center; gap: 7px; width: 163px; height: 34px; flex-shrink: 0;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px; color: #fff; font-size: 12.5px; font-weight: 600;
+  font-family: inherit; cursor: pointer; box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
+}
+.ct-add:hover { background: #356fbb; }
+
+/* table */
+.ct-card {
+  overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+.ct-row { display: grid; grid-template-columns: 164px 327px 1fr auto; align-items: center; padding: 0 21px 0 18px; }
+.ct-th { height: 31px; background: #f9fbfd; border-bottom: 1px solid #f1f5f9; }
+.ct-th span { font-size: 8px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9; }
+.ct-tr { height: 46px; }
+.ct-tr + .ct-tr { border-top: 1px solid #f1f5f9; }
+.ct-tr:hover { background: #f8fafc; }
+.ct-name { font-size: 12.5px; font-weight: 600; color: #1d293d; }
+.ct-text { padding-right: 16px; font-size: 10.5px; color: #62748e; }
+.ct-max { font-size: 12.5px; font-weight: 600; color: #314158; }
+.ct-acts { display: flex; gap: 1.5px; visibility: hidden; }
+.ct-tr:hover .ct-acts { visibility: visible; }
+.ct-acts button {
+  display: grid; place-items: center; width: 20px; height: 20px; padding: 0; border: none; border-radius: 4px;
+  background: none; color: #90a1b9; cursor: pointer;
+}
+.ct-acts .ct-edit { color: #4982cf; }
+.ct-acts .ct-edit:hover { background: #eff6ff; }
+.ct-acts .ct-del:hover { background: #fef2f2; color: #fb2c36; }
+.ct-empty { margin: 0; padding: 30px 0; text-align: center; font-size: 12.5px; color: #90a1b9; }
+
+/* modal */
+.ct-overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(0, 0, 0, .8); }
+.ct-modal {
+  position: relative; width: 403px; padding: 22px 21px 22px 22px; background: #f8fafc; border: 1px solid #dce2e8;
+  border-radius: 10px; box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+.ct-mtitle { margin: 0 0 20px; font-size: 16.5px; font-weight: 600; line-height: 21px; color: #0f172b; }
+.ct-close {
+  position: absolute; top: 15px; right: 16px; display: grid; place-items: center; width: 20px; height: 20px; padding: 0;
+  border: none; border-radius: 4px; background: none; color: #5c626f; cursor: pointer;
+}
+.ct-close:hover { background: #f1f5f9; color: #0f172b; }
+.ct-field { display: flex; flex-direction: column; margin-bottom: 17px; }
+.ct-last { margin-bottom: 16px; }
+.ct-field > span { margin-bottom: 2.5px; font-size: 10.5px; font-weight: 500; line-height: 13px; color: #45556c; }
+.ct-in {
+  height: 33px; padding: 0 11px; background: transparent; border: 1px solid #e5eaf1; border-radius: 6px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1); outline: none;
+  font-size: 12.5px; color: #0f172b; font-family: inherit;
+}
+.ct-in::placeholder { color: #62748e; }
+.ct-in:focus { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73, 130, 207, .15); }
+.ct-area { height: 54px; padding: 8px 11px; resize: none; line-height: 16px; }
+.ct-mfoot { display: flex; justify-content: flex-end; gap: 6px; }
+.ct-cancel {
+  height: 32px; padding: 0 15px; background: #fff; border: 1px solid #e5e7eb; border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05); color: #0f172b; font-size: 12.5px; font-weight: 500;
+  font-family: inherit; cursor: pointer;
+}
+.ct-cancel:hover { background: #f1f5f9; }
+.ct-save {
+  display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 15px; background: #4982cf;
+  border: 1px solid #356fbb; border-radius: 6px; color: #fff; font-size: 12.5px; font-weight: 600;
+  font-family: inherit; cursor: pointer;
+}
+.ct-save:hover { background: #356fbb; }

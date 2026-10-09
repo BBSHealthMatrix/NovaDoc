@@ -1,0 +1,56 @@
+.ptb-page { max-width: 604px; margin: 0 auto; padding: 22px 0 40px; color: #0b1f3f; }
+
+.ptb-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.ptb-title { margin: 0; font-size: 21px; font-weight: 700; color: #0f172a; letter-spacing: -0.2px; }
+.ptb-sub { margin: 5px 0 0; max-width: 490px; font-size: 12.5px; line-height: 1.45; color: #64748b; }
+.ptb-new {
+  display: flex; align-items: center; gap: 7px; flex-shrink: 0;
+  height: 32px; padding: 0 12px; margin-top: -1px;
+  border: none; border-radius: 6px; background: #4a7fd4; color: #fff;
+  font: inherit; font-size: 11px; font-weight: 600; cursor: pointer;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.1);
+}
+.ptb-new:hover { background: #3b6fd4; }
+
+.ptb-list { display: flex; flex-direction: column; gap: 12px; }
+
+.ptb-newbox {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+  padding: 13px 14px; border: 1px solid #bfd3f2; border-radius: 10px; background: #eff5fd;
+}
+.ptb-newinp {
+  flex: 1; min-width: 0; box-sizing: border-box; height: 34px; padding: 0 11px;
+  border: 1px solid #64748b; border-radius: 6px; background: #eef3fb; outline: none;
+  font: inherit; font-size: 12.5px; color: #0f172a;
+}
+.ptb-newinp::placeholder { color: #64748b; }
+.ptb-newinp:focus { border-color: #3b6fd4; box-shadow: 0 0 0 2px rgba(59, 111, 212, 0.15); }
+.ptb-newok {
+  display: grid; place-items: center; width: 38px; height: 32px;
+  border: none; border-radius: 6px; background: #4a7fd4; color: #fff; cursor: pointer;
+}
+.ptb-newok:hover { background: #3b6fd4; }
+.ptb-newx {
+  display: grid; place-items: center; width: 32px; height: 32px;
+  border: none; background: transparent; color: #0f172a; cursor: pointer;
+}
+.ptb-empty {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 162px; border: 1px dashed #dbe2ec; border-radius: 10px; color: #94a3b8;
+}
+.ptb-empty svg { margin-bottom: 8px; }
+.ptb-empty h4 { margin: 0; font-size: 12px; font-weight: 700; }
+.ptb-empty p { margin: 8px 0 0; font-size: 10px; }
+
+/* saved toast */
+.ptb-toast {
+  position: fixed; top: 14px; right: 22px; z-index: 3000;
+  display: flex; align-items: center; gap: 6px;
+  height: 29px; padding: 0 15px;
+  border-radius: 20px; background: #16a34a; color: #fff;
+  font-size: 11px; font-weight: 600;
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.3);
+  opacity: 0; transform: translateY(-8px); pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.ptb-toast-show { opacity: 1; transform: translateY(0); }

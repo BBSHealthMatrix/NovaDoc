@@ -1,0 +1,69 @@
+.tk-wrap { max-width: 648px; margin: 0 auto; padding: 22px 22px 40px; }
+.tk-title { margin: 0 0 4px; font-size: 21px; font-weight: 700; line-height: 27px; color: #0f172b; }
+.tk-desc { margin: 0 0 22px; font-size: 12.5px; line-height: 16px; color: #62748e; }
+
+/* live preview */
+.tk-preview {
+  display: flex; align-items: center; justify-content: space-between; height: 133px; margin-bottom: 21px; padding: 0 21px 0 22px;
+  background: linear-gradient(135deg, #eef3f9, #e9f0f8); border: 1px solid #cddcf0; border-radius: 12px;
+}
+.tk-plabel { margin: 0 0 6px; font-size: 8px; font-weight: 700; line-height: 10px; letter-spacing: 1px; text-transform: uppercase; color: #4982cf; }
+.tk-psub { margin: 0; font-size: 10.5px; line-height: 13px; color: #62748e; }
+.tk-pright { display: flex; flex-direction: column; align-items: flex-end; gap: 9px; padding-top: 17px; }
+.tk-token {
+  display: grid; place-items: center; min-width: 102px; height: 66px; padding: 0 30px; background: #fff; border: 1px solid #c8d9f1;
+  border-radius: 12px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+  font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; letter-spacing: 1.5px; color: #4982cf;
+}
+.tk-next { font-size: 8.5px; color: #90a1b9; }
+
+/* settings card */
+.tk-card {
+  overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+.tk-cols { display: grid; grid-template-columns: 1fr 1fr; }
+.tk-col { padding: 23px 18px 9px; }
+.tk-col-r { border-left: 1px solid #f1f5f9; }
+.tk-field { display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 23px; }
+.tk-label { margin-bottom: 4px; font-size: 10.5px; font-weight: 600; line-height: 13px; color: #45556c; }
+.tk-help { margin-bottom: 6px; font-size: 8.5px; line-height: 12px; color: #90a1b9; }
+.tk-in {
+  height: 36px; padding: 0 10px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; text-align: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1); outline: none; color: #0f172b; font-family: inherit;
+}
+.tk-in:focus { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73, 130, 207, .15); }
+.tk-prefix { width: 86px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+.tk-start { width: 100px; font-size: 12.5px; font-weight: 600; }
+
+/* reset frequency + display format */
+.tk-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; }
+.tk-opt {
+  height: 34px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-size: 12.5px; font-weight: 500; color: #62748e; font-family: inherit; cursor: pointer;
+}
+.tk-opt:hover { border-color: #cad5e2; }
+.tk-opt-on, .tk-opt-on:hover { background: #f6f9fd; border-color: #4982cf; color: #4982cf; font-weight: 600; }
+.tk-fmt {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 6px; height: 54px; padding: 0 12px;
+  justify-content: center; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; cursor: pointer;
+}
+.tk-fmt:hover { border-color: #cad5e2; }
+.tk-fmt-on, .tk-fmt-on:hover { background: #f6f9fd; border-color: #4982cf; }
+.tk-fname { font-size: 10px; font-weight: 600; line-height: 12px; color: #45556c; }
+.tk-fmt-on .tk-fname { color: #4982cf; }
+.tk-fval { font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 14px; color: #314158; }
+
+/* manual token entry */
+.tk-manual {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 64px; padding: 0 19px 0 18px;
+  border-top: 1px solid #f1f5f9;
+}
+.tk-mtitle { margin: 0 0 3px; font-size: 12.5px; font-weight: 600; line-height: 15px; color: #314158; }
+.tk-mdesc { margin: 0; font-size: 10.5px; line-height: 13px; color: #90a1b9; }
+.tk-switch { display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.tk-state { min-width: 22px; font-size: 10.5px; font-weight: 500; }
+.tk-switch .tk-tg { box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.tk-switch .tk-tg span { background: #f8fafc; }
+.tk-off { color: #90a1b9; }
+.tk-on { color: #009966; }

@@ -1,0 +1,5 @@
+.spc-bdg {
+  font-style: normal; padding: 1px 6px; border: 1px solid #a7f3d0; border-radius: 4px;
+  background: #ecfdf5; color: #047857; font-size: 8px; font-weight: 600;
+}
+.spc-bdg-off { border-color: #fde68a; background: #fffbeb; color: #d97706; }

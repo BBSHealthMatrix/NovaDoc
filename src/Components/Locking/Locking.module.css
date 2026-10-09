@@ -1,0 +1,36 @@
+.lk-wrap { max-width: 648px; margin: 0 auto; padding: 22px 22px 40px; }
+.lk-title { margin: 0 0 4px; font-size: 21px; font-weight: 700; line-height: 27px; color: #0f172b; }
+.lk-desc { margin: 0 0 22px; font-size: 12.5px; line-height: 16px; color: #62748e; }
+
+/* card + rows */
+.lk-card {
+  padding: 0 18px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+.lk-row { display: flex; align-items: center; padding: 16px 0; }
+.lk-row + .lk-row { border-top: 1px solid #f1f5f9; }
+.lk-info { flex: 1; min-width: 0; }
+.lk-name { margin: 0 0 2px; font-size: 12.5px; font-weight: 600; line-height: 15px; color: #314158; }
+.lk-text { margin: 0; font-size: 10.5px; line-height: 15px; color: #90a1b9; }
+
+/* toggle + On/Off label */
+.lk-switch { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.lk-state { min-width: 42px; font-size: 10.5px; font-weight: 500; color: #90a1b9; }
+.lk-switch .lk-tg { box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.lk-switch .lk-tg span { background: #f8fafc; }
+
+/* number input */
+.lk-num {
+  width: 87px; height: 32px; flex-shrink: 0; padding: 0 8px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+  text-align: center; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1); outline: none;
+  font-size: 12.5px; font-weight: 500; color: #0f172b; font-family: inherit;
+}
+.lk-num:focus { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73, 130, 207, .15); }
+
+/* admin warning */
+.lk-warn {
+  display: flex; align-items: flex-start; gap: 9px; margin-top: 20px; padding: 14px 18px 13px 13px;
+  background: #fffbeb; border: 1px solid #fee685; border-radius: 10px;
+}
+.lk-warn svg { flex-shrink: 0; margin-top: 1px; color: #fe9a00; }
+.lk-warn p { margin: 0; font-size: 10.5px; line-height: 14px; color: #45556c; }

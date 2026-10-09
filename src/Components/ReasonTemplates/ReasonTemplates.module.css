@@ -1,0 +1,66 @@
+/* ── shell: fixed header + bar, scrolling body ── */
+.rt-wrap { display: flex; flex-direction: column; height: calc(100vh - 56px); background: #f8fafc; }
+.rt-header { flex-shrink: 0; padding: 18px 22px 16px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.rt-hrow { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
+.rt-hicon { display: grid; place-items: center; width: 29px; height: 29px; flex-shrink: 0; background: #eef3fa; border-radius: 8px; color: #4982cf; }
+.rt-title { margin: 0 0 2px; font-size: 15px; font-weight: 700; line-height: 19px; color: #0f172b; }
+.rt-desc { margin: 0; font-size: 11px; line-height: 14px; color: #62748e; }
+.rt-tabs { display: inline-flex; gap: 2px; padding: 2px; background: #f1f5f9; border-radius: 8px; }
+.rt-tab {
+  display: inline-flex; align-items: center; gap: 6px; height: 25px; padding: 0 9px; border-radius: 6px;
+  text-decoration: none; font-size: 11.5px; font-weight: 500; color: #62748e;
+}
+.rt-tab:hover { color: #314158; }
+.rt-tab-on { background: #fff; color: #1d293d; box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1); }
+
+.rt-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-shrink: 0;
+  height: 51px; padding: 0 22px; background: #f8fafc; border-bottom: 1px solid #e2e8f0;
+}
+.rt-bartext { margin: 0; font-size: 11px; color: #62748e; }
+.rt-btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 29px; padding: 0 12px; flex-shrink: 0;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px; color: #fff; cursor: pointer;
+  font-family: inherit; font-size: 11.5px; font-weight: 600;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.rt-btn:hover { background: #356fbb; }
+.rt-btn:disabled { background: #a0bee6; border-color: #a0bee6; cursor: not-allowed; box-shadow: none; }
+.rt-btn-done:disabled { background: #fff; border-color: #e2e8f0; color: #cad5e2; }
+
+.rt-scroll { flex: 1; min-height: 0; overflow-y: auto; padding: 16px 22px 22px; }
+
+/* shared small bits */
+.rt-ico-del:hover { color: #ec003f; }
+
+/* ── reason templates ── */
+.rt-rtadd { display: flex; align-items: center; gap: 8px; flex-shrink: 0; padding: 12px 22px; border-bottom: 1px solid #e2e8f0; }
+.rt-rtadd input {
+  flex: 1; min-width: 0; height: 29px; padding: 0 12px; outline: none; background: #f8fafc;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.rt-rtadd input::placeholder { color: #62748e; }
+.rt-rtadd input:focus { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73,130,207,.12); }
+.rt-rtadd .rt-btn { height: 31px; padding: 0 13px; }
+.rt-rtlist { display: flex; flex-direction: column; gap: 6px; }
+.rt-rt {
+  display: flex; align-items: center; gap: 10px; height: 36px; padding: 0 14px 0 14px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; cursor: grab;
+}
+.rt-rt:hover { border-color: #bedbff; }
+.rt-rt-drag { opacity: .5; }
+.rt-rtgrip { flex-shrink: 0; color: #cad5e2; }
+.rt-rtnum { width: 16px; flex-shrink: 0; text-align: right; font-size: 8.5px; font-weight: 700; color: #90a1b9; }
+.rt-rttext { flex: 1; min-width: 0; font-size: 12.5px; color: #314158; }
+.rt-rtacts { display: flex; align-items: center; gap: 4px; opacity: 0; }
+.rt-rt:hover .rt-rtacts { opacity: 1; }
+.rt-rtacts button { display: grid; place-items: center; width: 20px; height: 20px; padding: 0; border: none; border-radius: 4px; background: none; color: #90a1b9; cursor: pointer; }
+.rt-rtacts button:first-child:hover { background: #f1f5f9; color: #4982cf; }
+.rt-rtacts .rt-ico-del:hover { color: #ec003f; }
+.rt-rtedit {
+  flex: 1; min-width: 0; height: 26px; padding: 0 10px; outline: none; background: #fff;
+  border: 1px solid #4982cf; border-radius: 6px; font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.rt-rtok, .rt-rtx { display: grid; place-items: center; padding: 2px; border: none; background: none; cursor: pointer; }
+.rt-rtok { color: #00a63e; }
+.rt-rtx { color: #ec003f; }

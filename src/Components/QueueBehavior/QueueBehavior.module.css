@@ -1,0 +1,43 @@
+.qb-wrap { max-width: 648px; margin: 0 auto; padding: 22px 22px 36px; }
+.qb-title { margin: 0 0 4px; font-size: 21px; font-weight: 700; line-height: 27px; color: #0f172b; }
+.qb-desc { margin: 0 0 22px; font-size: 12.5px; line-height: 16px; color: #62748e; }
+
+/* cards + rows */
+.qb-card {
+  padding: 0 18px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+}
+.qb-row { display: flex; align-items: center; padding: 16px 0; }
+.qb-row + .qb-row { border-top: 1px solid #f1f5f9; }
+.qb-info { flex: 1; min-width: 0; }
+.qb-name { display: flex; align-items: center; gap: 7px; margin: 0 0 2px; font-size: 12.5px; font-weight: 600; line-height: 15px; color: #314158; }
+.qb-text { margin: 0; font-size: 10.5px; line-height: 15px; color: #90a1b9; }
+
+/* toggle + On/Off label */
+.qb-switch { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.qb-state { min-width: 43px; font-size: 10.5px; font-weight: 500; color: #90a1b9; }
+.qb-switch .qb-tg { box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.qb-switch .qb-tg span { background: #f8fafc; }
+.qb-bswitch .qb-state { min-width: 28px; }
+
+/* number inputs */
+.qb-num {
+  height: 32px; flex-shrink: 0; padding: 0 8px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; text-align: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1); outline: none;
+  font-size: 12.5px; font-weight: 500; color: #0f172b; font-family: inherit;
+}
+.qb-num:focus { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73, 130, 207, .15); }
+
+/* billing section */
+.qb-stitle { margin: 28px 0 4px; font-size: 12.5px; font-weight: 600; line-height: 15px; color: #0f172b; }
+.qb-sdesc { margin: 0 0 14px; font-size: 10.5px; line-height: 15px; color: #62748e; }
+.qb-group { margin-bottom: 18px; }
+.qb-ghead { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; padding: 0 3px; }
+.qb-ghead span { font-size: 8px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9; white-space: nowrap; }
+.qb-ghead i { flex: 1; height: 1px; background: #f1f5f9; }
+.qb-ghead em { font-size: 7.5px; font-style: normal; color: #cad5e2; white-space: nowrap; }
+.qb-brow { padding: 14px 0; }
+.qb-badge {
+  display: inline-flex; align-items: center; height: 13px; padding: 0 5px; background: #eff6ff; border-radius: 3px;
+  font-size: 7px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #4982cf;
+}

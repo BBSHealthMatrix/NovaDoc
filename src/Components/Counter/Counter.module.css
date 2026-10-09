@@ -1,0 +1,31 @@
+.c-wrap { min-height: calc(100vh - 56px); display: flex; flex-direction: column; }
+.c-bar { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; background: #4a7fd4; color: #fff; font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.c-bar > span:first-child { display: flex; align-items: center; gap: 8px; }
+.c-bar > span:last-child { font-size: 8.5px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.c-bar em { margin-left: 4px; padding: 2px 7px; border-radius: 99px; background: rgba(255,255,255,.25); font-style: normal; font-weight: 700; }
+.c-body { flex: 1; display: flex; }
+.c-side { width: 178px; padding: 12px 11px; background: #fff; border-right: 1px solid #e6eaf0; }
+.c-side :global(.label) { margin-bottom: 8px; font-size: 7.5px; }
+.c-side hr { margin: 12px -11px; border: 0; border-top: 1px solid #eef1f5; }
+.c-stat { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; padding: 9px 12px; border: 1px solid; border-radius: 6px; font-size: 8px; color: #475569; }
+.c-stat b { font-size: 13px; }
+.c-stat:global(.blue) { background: #f5f9ff; border-color: #bfdbfe; }
+.c-stat:global(.blue) b { color: #2563eb; }
+.c-stat:global(.amber) { background: #fffcf0; border-color: #fde68a; }
+.c-stat:global(.amber) b { color: #d97706; }
+.c-stat.red { background: #fff7f7; border-color: #fecaca; }
+.c-stat.red b { color: #dc2626; }
+.c-stat.teal { background: #f3fdfb; border-color: #99f6e4; }
+.c-stat.teal b { color: #0d9488; }
+.c-queue { padding: 9px 12px; border: 1px solid; border-radius: 6px; }
+.c-queue b { display: flex; align-items: center; gap: 5px; font-size: 9.5px; }
+.c-queue small { font-size: 7.5px; color: #64748b; }
+.c-queue:global(.blue) { background: #f5f9ff; border-color: #bfdbfe; color: #1e4fd8; }
+.c-queue.red { background: #fff5f7; border-color: #fecdd3; color: #be123c; }
+.c-queue.purple { background: #faf5ff; border-color: #e9d5ff; color: #7c3aed; }
+.c-main { flex: 1; display: flex; flex-direction: column; padding: 14px; }
+.c-waiting { display: flex; align-items: center; gap: 6px; font-size: 7.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #ea580c; }
+@media (max-width: 900px) {
+  .c-body { flex-direction: column; }
+  .c-side { width: 100%; }
+}

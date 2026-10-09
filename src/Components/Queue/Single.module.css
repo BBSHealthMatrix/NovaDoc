@@ -1,0 +1,45 @@
+.big-token { font-family: 'JetBrains Mono', monospace; }
+.q-body { flex: 1; display: flex; min-height: 0; }
+.q-side { width: 266px; flex-shrink: 0; display: flex; flex-direction: column; background: #fff; border-right: 1px solid #e6eaf0; overflow-y: auto; }
+.q-block { padding: 12px 11px; border-bottom: 1px solid #eef1f5; }
+.q-block :global(.label) { margin-bottom: 8px; font-size: 8px; }
+.link-btn { display: flex; align-items: center; gap: 4px; border: 0; background: none; font-size: 9px; color: #1e4fd8; cursor: pointer; }
+.link-btn.gray { color: #94a3b8; }
+.q-side :global(.search) { height: 30px; }
+.q-side :global(.search) input { font-size: 10.5px; }
+.mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.mini { padding: 8px 0; border: 1px solid; border-radius: 6px; text-align: center; }
+.mini b { display: block; font-size: 14px; }
+.mini span { font-size: 7.5px; letter-spacing: .08em; text-transform: uppercase; }
+.mini:global(.amber) { background: #fffbeb; border-color: #fde68a; color: #d97706; }
+.mini:global(.blue) { background: #eff6ff; border-color: #bfdbfe; color: #2563eb; }
+.mini.gray { background: #f8fafc; border-color: #e2e8f0; color: #475569; }
+.hint { margin-top: 12px; text-align: center; font-size: 8.5px; color: #94a3b8; line-height: 1.6; }
+.q-actions { margin-top: auto; padding: 11px; display: flex; flex-direction: column; gap: 6px; }
+.q-actions .hint { margin-top: 0; }
+.gen { display: flex; align-items: center; justify-content: center; gap: 6px; height: 38px; border: 0; border-radius: 6px; color: #fff; font-size: 11.5px; font-weight: 600; cursor: pointer; }
+.gen:disabled { opacity: .45; cursor: not-allowed; }
+.gen-outline { display: flex; align-items: center; justify-content: center; gap: 6px; height: 28px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff; color: #334155; font-size: 10.5px; cursor: pointer; }
+.q-main { flex: 1; min-width: 0; display: flex; flex-direction: column; overflow-y: auto; }
+.serving { display: flex; justify-content: space-between; padding: 16px; background: #fff; border-bottom: 1px solid #e6eaf0; }
+.serving :global(.label) { margin-bottom: 10px; font-size: 8px; }
+.serving-row { display: flex; align-items: center; gap: 16px; }
+.big-token { padding: 12px 28px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 30px; font-weight: 700; letter-spacing: .08em; color: #3b6fd4; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.serving-row b { display: block; margin: 5px 0 3px; font-size: 10.5px; }
+.serving-row small, .wq-time { display: inline-flex; align-items: center; gap: 3px; font-size: 8.5px; color: #94a3b8; }
+.counter-tag { display: flex; align-items: center; gap: 4px; width: 128px; padding: 2px 8px; border-radius: 3px; background: #dbeafe; color: #2563eb; font-size: 8.5px; }
+.serving-right { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; }
+.live-txt { display: flex; align-items: center; gap: 5px; font-size: 9px; font-weight: 600; color: #16a34a; }
+.btn-outline { display: flex; align-items: center; gap: 4px; height: 24px; padding: 0 9px; border: 1px solid #e2e8f0; border-radius: 5px; background: #fff; font-size: 9px; cursor: pointer; }
+.wq-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid #eef1f5; }
+.wq-head b { display: flex; align-items: center; gap: 6px; font-size: 9.5px; }
+.count-pill { padding: 0 5px; border-radius: 99px; background: #fef3c7; color: #d97706; font-size: 8px; }
+.wq-row { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: #fff; border-bottom: 1px solid #eef1f5; font-size: 10px; }
+.muted-num { width: 10px; font-size: 9px; color: #cbd5e1; }
+.wq-name { flex: 1; margin-left: 16px; color: #64748b; }
+.q-foot { margin-top: auto; display: flex; align-items: center; gap: 6px; padding: 9px 16px; background: #fff; border-top: 1px solid #e6eaf0; font-size: 8.5px; color: #94a3b8; }
+.done-chip { padding: 1px 5px; border: 1px solid #e2e8f0; border-radius: 3px; font-family: 'JetBrains Mono', monospace; font-size: 6.5px; }
+@media (max-width: 900px) {
+  .q-body { flex-direction: column; }
+  .q-side { width: 100%; }
+}

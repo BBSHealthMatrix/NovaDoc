@@ -1,0 +1,6 @@
+.footer { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 10px 14px; border-top: 1px solid #e6eaf0; }
+.single { grid-template-columns: 1fr; }
+.confirm { display: flex; align-items: center; justify-content: center; gap: 5px; height: 26px; border: 0; border-radius: 5px; background: #3b6fd4; color: #fff; font-size: 9.5px; font-weight: 600; cursor: pointer; }
+.confirm:disabled { opacity: .45; cursor: not-allowed; }
+.single .confirm { height: 28px; }
+.cancel { height: 26px; border: 1px solid #d8dee8; border-radius: 5px; background: #fff; font-size: 9.5px; cursor: pointer; }

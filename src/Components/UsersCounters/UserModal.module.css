@@ -1,0 +1,51 @@
+/* ── Add / Edit User modal (ucm-) ── */
+.ucm-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(0,0,0,.8); }
+.ucm-modal {
+  position: relative; width: 464px; max-width: 100%;
+  padding: 21px 22px 22px; background: #f8fafc; border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+}
+.ucm-close { position: absolute; top: 17px; right: 20px; display: grid; place-items: center; padding: 1px; border: none; background: none; color: #45556c; cursor: pointer; }
+.ucm-close:hover { color: #0f172b; }
+.ucm-title { margin: 0; font-size: 16.5px; font-weight: 600; line-height: 22px; color: #0f172b; }
+
+.ucm-lbl { display: block; margin: 20px 0 5px; font-size: 11px; font-weight: 600; line-height: 14px; color: #314158; }
+.ucm-lbl em { font-style: normal; color: #fb2c36; }
+.ucm-first { margin-top: 18px; }
+.ucm-input {
+  display: block; width: 100%; height: 32px; padding: 0 12px; outline: none;
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+  font-family: inherit; font-size: 13px; color: #0f172b;
+}
+.ucm-input::placeholder { color: #62748e; }
+.ucm-input:focus { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.ucm-mono { font-family: "JetBrains Mono", monospace; font-size: 12px; }
+
+.ucm-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 15px; }
+.ucm-grid > div:nth-child(n+3) .ucm-lbl { margin-top: 18px; }
+
+.ucm-pw { position: relative; }
+.ucm-pw .ucm-input { padding-right: 34px; }
+.ucm-eye {
+  position: absolute; top: 50%; right: 9px; transform: translateY(-50%);
+  display: grid; place-items: center; padding: 1px; cursor: pointer; background: none; border: none; color: #90a1b9;
+}
+.ucm-eye:hover { color: #45556c; }
+
+.ucm-sel button[aria-haspopup] { height: 33px; padding: 0 12px; background: #f8fafc; font-size: 12.5px; color: #0f172b; }
+.ucm-sel [role="option"] { padding-top: 7px; padding-bottom: 7px; font-size: 12.5px; }
+
+.ucm-active { display: flex; align-items: center; gap: 11px; margin-top: 18px; }
+.ucm-alabel { font-size: 11px; font-weight: 600; line-height: 14px; color: #314158; }
+.ucm-ahelp { margin-top: 1px; font-size: 9px; color: #90a1b9; }
+
+.ucm-foot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 22px; }
+.ucm-btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 15px; cursor: pointer; border-radius: 6px;
+  font-family: inherit; font-size: 13px; font-weight: 500;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ucm-ghost { background: #fff; border: 1px solid #e2e8f0; color: #0f172b; }
+.ucm-ghost:hover { background: #f1f5f9; }
+.ucm-primary { background: #4982cf; border: 1px solid #356fbb; color: #fff; }
+.ucm-primary:hover { background: #356fbb; }

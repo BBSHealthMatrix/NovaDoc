@@ -1,0 +1,33 @@
+.d-label { font-size: 8px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #475569; }
+.search.grow { flex: 1; height: 26px; }
+.btn-blue.big { display: flex; align-items: center; gap: 5px; height: 26px; padding: 0 12px; }
+.d-sub { font-size: 8.5px; font-weight: 500; color: #475569; }
+.d-note { font-size: 8.5px; color: #94a3b8; }
+.slot-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+.slot-grid button, .prio button { height: 24px; border: 1px solid #d8dee8; border-radius: 4px; background: #fff; font-size: 9px; cursor: pointer; }
+.slot-grid button.on { background: #3b6fd4; border-color: #3b6fd4; color: #fff; }
+.prio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.prio button { display: flex; align-items: center; justify-content: center; gap: 4px; color: #475569; font-weight: 600; }
+.prio button.on { background: #475569; border-color: #475569; color: #fff; }
+.d-toggle { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; }
+.d-toggle .toggle small { font-size: 8px; color: #64748b; }
+
+
+.prio button.on.urgent { background: #f59e0b; border-color: #f59e0b; }
+.prio button.on.emergency { background: #ef4444; border-color: #ef4444; }
+
+
+
+.row { display: flex; align-items: center; gap: 8px; }
+.search { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border: 1px solid #d8dee8; border-radius: 6px; color: #94a3b8; }
+.search input { flex: 1; border: 0; outline: 0; font-size: 12px; }
+.btn-blue { height: 24px; padding: 0 9px; border: 0; border-radius: 5px; background: #3b6fd4; color: #fff; font-size: 9px; font-weight: 600; cursor: pointer; }
+.toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.toggle input { display: none; }
+.track { width: 26px; height: 14px; border-radius: 99px; background: #cbd5e1; position: relative; }
+.track::after { content: ""; position: absolute; top: 2px; left: 2px; width: 10px; height: 10px; border-radius: 50%; background: #fff; transition: .15s; }
+.toggle input:checked + .track { background: #1e4fd8; }
+.toggle input:checked + .track::after { transform: translateX(12px); }
+
+.btn-book { composes: confirm from "../DrawerFooter/DrawerFooter.module.css"; }
+.btn-cancel { composes: cancel from "../DrawerFooter/DrawerFooter.module.css"; }

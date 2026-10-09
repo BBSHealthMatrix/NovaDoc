@@ -1,0 +1,69 @@
+/* ── Pharmacy Partners page (pp-) ── */
+.pp-wrap { flex: 1; min-height: 0; overflow-y: auto; background: #f8fafc; }
+
+.pp-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 22px 0; }
+.pp-desc { margin: 0; font-size: 11.5px; color: #62748e; }
+.pp-new {
+  display: inline-flex; align-items: center; gap: 7px; flex-shrink: 0; height: 32px; padding: 0 16px; cursor: pointer;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px;
+  font-family: inherit; font-size: 12px; font-weight: 600; color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.pp-new:hover { background: #356fbb; }
+
+.pp-list { display: flex; flex-direction: column; gap: 12px; padding: 28px 22px 22px; }
+
+/* partner card */
+.pp-card {
+  overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.pp-head { display: flex; align-items: center; gap: 12px; height: 55px; padding: 0 14px 0 16px; }
+.pp-ico { display: grid; place-items: center; width: 31px; height: 31px; flex-shrink: 0; background: #f1f5f9; border-radius: 8px; color: #62748e; }
+.pp-info { flex: 1; min-width: 0; }
+.pp-top { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
+.pp-name { font-size: 13px; font-weight: 600; line-height: 18px; color: #1d293d; }
+.pp-badge {
+  display: inline-flex; align-items: center; height: 14px; padding: 0 6px;
+  border: 1px solid; border-radius: 4px; font-size: 7.5px; font-weight: 600;
+}
+.pp-int { background: #eff6ff; border-color: #bedbff; color: #155dfc; }
+.pp-ext { background: #fffbeb; border-color: #fee685; color: #e17100; }
+.pp-off { background: #f8fafc; border-color: #e2e8f0; color: #90a1b9; }
+.pp-sub { margin-top: 1px; font-size: 9px; line-height: 13px; color: #90a1b9; }
+.pp-gcount { color: #4982cf; }
+
+/* right actions */
+.pp-acts { display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.pp-tg { margin-right: 1px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.pp-tg span { background: #f8fafc; }
+.pp-btn {
+  display: grid; place-items: center; width: 26px; height: 26px; padding: 0; cursor: pointer;
+  background: none; border: 1px solid transparent; border-radius: 6px; color: #90a1b9;
+}
+.pp-btn:hover { color: #4982cf; background: #f1f5f9; }
+.pp-del:hover { color: #ec003f; background: #fff1f2; }
+.pp-chev-on { background: #f1f5f9; border-color: #e2e8f0; color: #62748e; }
+
+/* expanded: brand pricing */
+.pp-body { background: #f8fafc; border-top: 1px solid #e2e8f0; }
+.pp-bbar { display: flex; align-items: center; justify-content: space-between; height: 29px; padding: 0 16px; border-bottom: 1px solid #f1f5f9; }
+.pp-blabel { font-size: 8.5px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9; }
+.pp-import {
+  display: inline-flex; align-items: center; gap: 4px; padding: 0; cursor: pointer;
+  background: none; border: none; font-family: inherit; font-size: 9.5px; font-weight: 600; color: #4982cf;
+}
+.pp-import:hover { color: #356fbb; }
+.pp-none { margin: 0; padding: 22px 16px; text-align: center; font-size: 11px; color: #90a1b9; }
+
+.pp-tbl { background: #fff; }
+.pp-trow { display: grid; grid-template-columns: 1.2fr 1fr 130px 110px; align-items: center; gap: 12px; min-height: 30px; padding: 0 16px 0 30px; border-bottom: 1px solid #f8fafc; }
+.pp-thead { min-height: 28px; background: #f8fafc; font-size: 7.5px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9; }
+.pp-thead span:nth-child(n+3) { text-align: right; }
+.pp-tgen { padding: 7px 16px; background: #fbfcfd; border-bottom: 1px solid #f1f5f9; font-size: 11px; font-weight: 600; color: #314158; }
+.pp-tgen em { margin-left: 6px; font-style: normal; font-size: 8px; font-weight: 400; color: #90a1b9; }
+.pp-tbrand { font-size: 11px; font-weight: 500; color: #314158; }
+.pp-tstr { font-size: 8.5px; color: #90a1b9; }
+.pp-tnum { text-align: right; font-size: 11px; color: #314158; }
+
+.pp-empty { margin: 30px 0; text-align: center; font-size: 11px; color: #90a1b9; }

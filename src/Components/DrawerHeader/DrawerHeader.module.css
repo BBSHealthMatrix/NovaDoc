@@ -1,0 +1,5 @@
+.header { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid #e6eaf0; }
+.header b { display: block; font-size: 10.5px; }
+.header small { font-size: 8px; color: #94a3b8; }
+.row { display: flex; align-items: center; gap: 8px; }
+.iconButton { display: grid; place-items: center; padding: 4px; border: 0; background: none; color: #64748b; cursor: pointer; }

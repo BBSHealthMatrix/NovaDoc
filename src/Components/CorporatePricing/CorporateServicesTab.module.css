@@ -1,0 +1,41 @@
+/* ── Corporate Pricing › Service Prices tab (crs-) ── */
+.crs-info {
+  display: flex; align-items: flex-start; gap: 9px; padding: 7px 15px;
+  background: #eff6ff; border: 1px solid #bedbff; border-radius: 8px;
+  font-size: 11px; line-height: 15px; color: #1447e6;
+}
+.crs-info svg { flex-shrink: 0; margin-top: 1px; }
+
+.crs-sec { margin-top: 16px; overflow: hidden; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.crs-sec + .crs-sec { margin-top: 13px; }
+.crs-shead { display: flex; align-items: center; gap: 9px; height: 34px; padding: 0 16px; background: #f8fafc; border-bottom: 1px solid #f1f5f9; }
+.crs-dot { width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; }
+.crs-stitle { font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #314158; }
+.crs-via { font-size: 8.5px; color: #90a1b9; }
+.crs-via b { font-weight: 600; color: #45556c; }
+
+.crs-scroll { max-height: 234px; overflow-y: auto; }
+.crs-row {
+  display: grid; grid-template-columns: 49px minmax(0, 1fr) 110px 195px; align-items: center;
+  height: 32px; padding: 0 16px; border-bottom: 1px solid #f8fafc;
+}
+.crs-row:not(.crs-thead):hover { background: #f8fafc; }
+.crs-thead {
+  position: sticky; top: 0; z-index: 1; height: 21px; background: #fff; border-bottom: 1px solid #f1f5f9;
+  font-size: 7.5px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.crs-thead span:nth-child(n+3) { text-align: right; }
+.crs-tg { box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.crs-tg span { background: #f8fafc; }
+.crs-name { font-size: 11.5px; color: #314158; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.crs-base { text-align: right; font-size: 10.5px; color: #45556c; }
+.crs-in {
+  justify-self: end; width: 87px; height: 19px; padding: 0 8px; outline: none; text-align: right;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 4px;
+  font-family: inherit; font-size: 11px; color: #314158;
+}
+.crs-in::placeholder { color: #a7b4c5; }
+.crs-in:focus { border-color: #4982cf; box-shadow: 0 0 0 1px #4982cf; }
+.crs-row-off .crs-name, .crs-row-off .crs-base, .crs-row-off .crs-in { opacity: .45; }
+
+.crs-empty { margin: 0; padding: 21px 16px; text-align: center; font-size: 11.5px; color: #62748e; }

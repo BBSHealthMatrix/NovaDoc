@@ -1,0 +1,76 @@
+.hpi-field { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 11px 11px 10px; }
+
+.hpi-f-top { display: flex; align-items: center; gap: 6px; }
+.hpi-grip { display: grid; color: #cbd5e1; cursor: grab; flex-shrink: 0; }
+.hpi-f-label {
+  flex: 1; min-width: 0; height: 22px; margin-right: 6px; padding: 0 4px; border: none; border-bottom: 1px solid #cbd5e1;
+  background: none; outline: none; font-size: 11px; font-weight: 600; color: #0f172a; font-family: inherit;
+}
+.hpi-f-label::placeholder { color: #94a3b8; font-weight: 400; }
+.hpi-f-label:focus { border-bottom-color: #4a7fd4; }
+.hpi-f-type {
+  width: 84px; height: 20px; margin-right: 4px; padding: 0 2px 0 6px; border: 1px solid #cbd5e1; border-radius: 3px;
+  background: #fff; font-size: 8.5px; color: #1e293b; font-family: inherit; cursor: pointer;
+}
+.hpi-f-req { font-size: 8.5px; color: #64748b; }
+.hpi-f-x { display: grid; margin-left: 10px; padding: 0; border: none; background: none; color: #cbd5e1; cursor: pointer; }
+.hpi-f-x:hover { color: #ef4444; }
+
+/* placeholder (free text / number) */
+.hpi-f-sub {
+  width: 100%; height: 22px; margin-top: 9px; padding: 0 8px; background: #f8fafc; border: 1px solid #eef1f5;
+  border-radius: 4px; outline: none; font-size: 8.5px; color: #334155; font-family: inherit;
+}
+.hpi-f-sub::placeholder { color: #94a3b8; }
+.hpi-f-sub:focus { border-color: #4a7fd4; background: #fff; }
+
+/* options (radio / multi-select) */
+.hpi-opts { display: flex; flex-direction: column; gap: 3.5px; margin-top: 7px; padding-left: 15px; }
+.hpi-opt { display: flex; align-items: center; gap: 5px; }
+.hpi-opt-grip { color: #cbd5e1; cursor: grab; flex-shrink: 0; }
+.hpi-opt input {
+  flex: 1; min-width: 0; height: 20px; padding: 0 8px; background: #f8fafc; border: 1px solid #eef1f5; border-radius: 3px;
+  outline: none; font-size: 10px; color: #1e293b; font-family: inherit;
+}
+.hpi-opt input:focus { border-color: #4a7fd4; background: #fff; }
+.hpi-opt button {
+  display: grid; width: 14px; margin-left: 4px; padding: 0; border: none; background: none; color: #cbd5e1; cursor: pointer;
+}
+.hpi-opt button:hover { color: #ef4444; }
+.hpi-opt-add { display: flex; gap: 5px; margin-top: 3px; }
+.hpi-opt-add input {
+  flex: 1; min-width: 0; height: 25px; padding: 0 11px; background: #fff; border: 1px solid #cbd5e1; border-radius: 4px;
+  outline: none; font-size: 12px; color: #1e293b; font-family: inherit;
+}
+.hpi-opt-add input::placeholder { color: #64748b; }
+.hpi-opt-add input:focus { border-color: #4a7fd4; }
+.hpi-opt-add button {
+  height: 25px; padding: 0 9px; background: #eef4fc; border: 1px solid #334e7e; border-radius: 4px;
+  font-size: 10px; font-weight: 500; color: #1e293b; font-family: inherit; cursor: pointer;
+}
+.hpi-opt-add button:hover { background: #dfe9f8; }
+
+/* show only when... */
+.hpi-f-cond {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 9px; padding-top: 9px;
+  border-top: 1px solid #eef1f5; font-size: 8.5px;
+}
+.hpi-f-cond-label { font-weight: 600; color: #64748b; }
+.hpi-f-off { color: #94a3b8; }
+.hpi-f-hint { font-size: 8px; font-style: italic; color: #94a3b8; }
+
+.hpi-when {
+  margin: 8px 0 1px 32px; padding: 10px 10px 11px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px;
+}
+.hpi-when-row { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; }
+.hpi-when-lbl { display: block; font-size: 8.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #475569; }
+.hpi-when-row select {
+  flex: 1; min-width: 0; height: 20px; padding: 0 2px 0 8px; border: 1px solid #cbd5e1; border-radius: 3px;
+  background: #fff; font-size: 8.5px; color: #1e293b; font-family: inherit; cursor: pointer;
+}
+.hpi-when-vals { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.hpi-when-val {
+  padding: 4px 9px; background: #fff; border: 1px solid #e2e8f0; border-radius: 99px;
+  font-size: 8.5px; font-weight: 600; color: #334155; font-family: inherit; cursor: pointer;
+}
+.hpi-when-on { background: #f59e0b; border-color: #f59e0b; color: #fff; }

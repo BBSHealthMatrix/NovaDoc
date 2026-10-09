@@ -1,0 +1,166 @@
+/* ── shell: fixed header + bar, scrolling body ── */
+.ip-wrap { display: flex; flex-direction: column; height: calc(100vh - 56px); background: #f8fafc; }
+.ip-header { flex-shrink: 0; padding: 18px 22px 16px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.ip-hrow { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
+.ip-hicon { display: grid; place-items: center; width: 29px; height: 29px; flex-shrink: 0; background: #eef3fa; border-radius: 8px; color: #4982cf; }
+.ip-title { margin: 0 0 2px; font-size: 15px; font-weight: 700; line-height: 19px; color: #0f172b; }
+.ip-desc { margin: 0; font-size: 11px; line-height: 14px; color: #62748e; }
+.ip-tabs { display: inline-flex; gap: 2px; padding: 2px; background: #f1f5f9; border-radius: 8px; }
+.ip-tab {
+  display: inline-flex; align-items: center; gap: 6px; height: 25px; padding: 0 9px; border-radius: 6px;
+  text-decoration: none; font-size: 11.5px; font-weight: 500; color: #62748e;
+}
+.ip-tab:hover { color: #314158; }
+.ip-tab-on { background: #fff; color: #1d293d; box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1); }
+
+.ip-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-shrink: 0;
+  height: 51px; padding: 0 22px; background: #f8fafc; border-bottom: 1px solid #e2e8f0;
+}
+.ip-bartext { margin: 0; font-size: 11px; color: #62748e; }
+.ip-btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 29px; padding: 0 12px; flex-shrink: 0;
+  background: #4982cf; border: 1px solid #356fbb; border-radius: 6px; color: #fff; cursor: pointer;
+  font-family: inherit; font-size: 11.5px; font-weight: 600;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ip-btn:hover { background: #356fbb; }
+.ip-btn:disabled { background: #a0bee6; border-color: #a0bee6; cursor: not-allowed; box-shadow: none; }
+
+.ip-scroll { flex: 1; min-height: 0; overflow-y: auto; padding: 16px 22px 22px; }
+
+/* shared small bits */
+.ip-chev { display: grid; place-items: center; flex-shrink: 0; padding: 0; border: none; background: none; color: #62748e; cursor: pointer; }
+.ip-chev svg { transition: transform .15s; }
+.ip-chev-sm { color: #90a1b9; }
+.ip-chev-closed { transform: rotate(-90deg); }
+.ip-dot { width: 9px; height: 9px; flex-shrink: 0; border-radius: 50%; }
+.ip-dot-sm { width: 7px; height: 7px; }
+.ip-tg { flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.ip-tg span { background: #f8fafc; }
+.ip-ico { display: grid; place-items: center; flex-shrink: 0; padding: 3px; border: none; background: none; color: #cad5e2; cursor: pointer; }
+.ip-ico:hover { color: #4982cf; }
+.ip-ico-del:hover { color: #ec003f; }
+
+/* ── catalog-list rules: these classes are shared with the partner modal, so they applied here before the split too (kept so the UI stays exactly the same) ── */
+.ip-mhead { display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 20px 0 16px; border-bottom: 1px solid #f1f5f9; }
+.ip-mcount { font-size: 8.5px; color: #90a1b9; }
+.ip-mhead .ip-ico { margin-left: 2px; }
+.ip-mfoot { display: flex; align-items: center; height: 31px; padding: 0 31px; background: #f8fafc; border-top: 1px solid #f1f5f9; }
+
+/* ── partners list ── */
+.ip-plist { display: flex; flex-direction: column; gap: 13px; }
+.ip-pcard {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ip-pchead { display: flex; align-items: center; gap: 14px; height: 55px; padding: 0 22px 0 16px; }
+.ip-picon { display: grid; place-items: center; width: 31px; height: 31px; flex-shrink: 0; background: #f1f5f9; border-radius: 8px; color: #62748e; }
+.ip-pinfo { flex: 1; min-width: 0; }
+.ip-ptname { display: flex; align-items: center; gap: 7px; margin: 0 0 2px; font-size: 12.5px; font-weight: 700; color: #1d293d; }
+.ip-ptype { display: inline-flex; align-items: center; height: 13px; padding: 0 5px; border: 1px solid; border-radius: 999px; font-size: 7.5px; font-weight: 600; white-space: nowrap; }
+.ip-ptype-int { background: #eff6ff; border-color: #bedbff; color: #4982cf; }
+.ip-ptype-ext { background: #fffbeb; border-color: #fee685; color: #e17100; }
+.ip-ptsub { margin: 0; font-size: 8.5px; color: #90a1b9; }
+.ip-pchead .ip-tg { margin-right: 4px; }
+.ip-pchead .ip-ico { color: #90a1b9; }
+.ip-pchead .ip-ico:hover { color: #4982cf; }
+.ip-pchead .ip-ico-del:hover { color: #ec003f; }
+
+.ip-pricing { border-top: 1px solid #f1f5f9; }
+.ip-prbar {
+  display: flex; align-items: center; height: 29px; padding: 0 16px; border-bottom: 1px solid #f1f5f9;
+  font-size: 8px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.ip-prempty { margin: 0; padding: 16px; text-align: center; font-size: 11px; color: #cad5e2; }
+.ip-prthead {
+  display: flex; align-items: center; justify-content: space-between; height: 28px; padding: 0 28px 0 16px;
+  background: #f9fbfd; border-bottom: 1px solid #f1f5f9;
+  font-size: 8px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: #90a1b9;
+}
+.ip-prtbody { max-height: 204px; overflow-y: auto; }
+.ip-prrow { display: flex; align-items: center; justify-content: space-between; height: 34px; padding: 0 16px; }
+.ip-prrow + .ip-prrow { border-top: 1px solid #f1f5f9; }
+.ip-prrow > span { font-size: 10.5px; color: #314158; }
+.ip-prrow input {
+  width: 102px; height: 22px; padding: 0 8px; outline: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 4px;
+  font-family: inherit; font-size: 12px; text-align: right; color: #0f172b;
+}
+.ip-prrow input:focus { border-color: #4982cf; }
+
+/* ── partner modal ── */
+.ip-overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(0,0,0,.8); }
+.ip-modal {
+  position: relative; width: 611px; max-height: 92vh; display: flex; flex-direction: column;
+  background: #f8fafc; border-radius: 8px; box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+}
+.ip-mclose { position: absolute; top: 14px; right: 18px; display: grid; place-items: center; padding: 1px; border: none; background: none; color: #62748e; cursor: pointer; }
+.ip-mclose:hover { color: #0f172b; }
+.ip-mhead { display: flex; align-items: center; justify-content: space-between; padding: 20px 22px 0; }
+.ip-mtitle { margin: 0; font-size: 16px; font-weight: 600; color: #0f172b; }
+.ip-mstep { font-size: 9.5px; color: #90a1b9; }
+.ip-mstepper { display: flex; align-items: center; gap: 8px; padding: 14px 22px 0; }
+.ip-msi { display: flex; align-items: center; gap: 8px; }
+.ip-msn { display: grid; place-items: center; width: 20px; height: 20px; flex-shrink: 0; border-radius: 50%; background: #f1f5f9; font-size: 9px; font-weight: 600; color: #62748e; }
+.ip-msn-on { background: #4982cf; color: #fff; }
+.ip-msl { font-size: 10.5px; font-weight: 500; color: #62748e; white-space: nowrap; }
+.ip-msl-on { color: #4982cf; }
+.ip-msline { flex: 1; height: 1px; background: #e2e8f0; }
+
+.ip-mbody { padding: 28px 22px 0; }
+.ip-mgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.ip-mlabel { display: block; margin-bottom: 6px; font-size: 10.5px; font-weight: 600; color: #314158; }
+.ip-mlabel b { color: #ec003f; }
+.ip-mt { margin-top: 15px; }
+.ip-minput, .ip-msel {
+  display: block; width: 100%; height: 33px; padding: 0 11px; outline: none;
+  border: 1px solid #e2e8f0; border-radius: 6px; font-family: inherit; font-size: 12.5px; color: #0f172b;
+}
+.ip-minput { background: #f8fafc; }
+.ip-minput::placeholder { color: #62748e; }
+.ip-minput:focus { background: #fff; border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73,130,207,.2); }
+.ip-msel { padding: 0 8px 0 11px; background: #fff; cursor: pointer; }
+
+.ip-mbody-tree { display: flex; flex-direction: column; min-height: 0; flex: 1; padding-top: 20px; }
+.ip-mselhead { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.ip-msearch {
+  display: flex; align-items: center; gap: 8px; width: 291px; height: 29px; padding: 0 10px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; color: #90a1b9;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.ip-msearch input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-family: inherit; font-size: 12.5px; color: #0f172b; }
+.ip-msearch input::placeholder { color: #62748e; }
+.ip-mcount { font-size: 10px; color: #62748e; }
+.ip-mlink { padding: 0; border: none; background: none; cursor: pointer; font-family: inherit; font-size: 10.5px; font-weight: 600; color: #4982cf; }
+.ip-mlink-gray { margin-left: -4px; color: #90a1b9; }
+
+.ip-tree { flex: 1; min-height: 0; max-height: 295px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 8px; }
+.ip-tmod { display: flex; align-items: center; gap: 8px; height: 35px; padding: 0 22px 0 12px; border-bottom: 1px solid #e2e8f0; }
+.ip-tmname { flex: 1; min-width: 0; font-size: 9px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: #1d293d; }
+.ip-tpart { display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 22px 0 32px; border-bottom: 1px solid #f1f5f9; }
+.ip-tpname { flex: 1; min-width: 0; font-size: 10.5px; font-weight: 600; color: #314158; }
+.ip-tcount { font-size: 8px; color: #90a1b9; }
+.ip-tall { padding: 0; margin-left: 8px; border: none; background: none; cursor: pointer; font-family: inherit; font-size: 8.5px; font-weight: 700; color: #4982cf; }
+.ip-tproto { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 26px; padding: 0 22px 0 56px; }
+.ip-tproto label { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; font-size: 10.5px; color: #314158; cursor: pointer; }
+.ip-tproto input[type="checkbox"] { width: 12px; height: 12px; margin: 0; accent-color: #4982cf; cursor: pointer; }
+.ip-tprice { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.ip-tprice span { font-size: 8px; font-weight: 600; color: #90a1b9; }
+.ip-tprice input {
+  width: 72px; height: 22px; padding: 0 8px; outline: none; background: #fff; border: 1px solid #e2e8f0; border-radius: 4px;
+  font-family: inherit; font-size: 12px; text-align: right; color: #0f172b;
+}
+.ip-tprice input:focus { border-color: #4982cf; }
+.ip-tnone { margin: 0; padding: 18px; text-align: center; font-size: 11px; color: #90a1b9; }
+
+.ip-mfoot { display: flex; align-items: center; gap: 8px; padding: 20px 22px 22px; }
+.ip-mspacer { flex: 1; }
+.ip-mback, .ip-mcancel, .ip-mnext {
+  display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 14px; border-radius: 6px; cursor: pointer;
+  font-family: inherit; font-size: 12.5px; box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px -1px rgba(0,0,0,.1);
+}
+.ip-mback, .ip-mcancel { background: #fff; border: 1px solid #e2e8f0; font-weight: 500; color: #0f172b; }
+.ip-mback:hover, .ip-mcancel:hover { background: #f1f5f9; }
+.ip-mnext { background: #4982cf; border: 1px solid #356fbb; font-weight: 600; color: #fff; }
+.ip-mnext:hover { background: #356fbb; }
+.ip-mnext:disabled { background: #a0bee6; border-color: #a0bee6; cursor: not-allowed; }

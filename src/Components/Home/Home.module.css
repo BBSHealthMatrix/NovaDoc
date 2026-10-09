@@ -1,0 +1,21 @@
+.modules { padding: 20px; }
+.modules-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.count { color: #16a34a; }
+.grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+.card { position: relative; min-height: 104px; padding: 22px 10px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 1px solid #e6eaf0; border-radius: 8px; }
+.card.on { background: #fff; border-color: #3566d6; transition: .15s; }
+.card.on:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(30,79,216,.14); }
+.card.off { background: #fbfcfd; opacity: .6; }
+.card b { font-size: 11.5px; font-weight: 600; }
+.card.off b { font-weight: 500; color: #64748b; }
+.card small { margin-top: 3px; font-size: 9.5px; color: #64748b; }
+.live-tag { position: absolute; top: 9px; left: 10px; display: flex; align-items: center; gap: 4px; font-size: 8.5px; font-weight: 700; color: #16a34a; }
+.soon-tag { position: absolute; top: 8px; right: 8px; padding: 2px 6px; border-radius: 4px; background: #f1f5f9; font-size: 8.5px; color: #94a3b8; }
+.arrow { position: absolute; top: 9px; right: 9px; color: #1e4fd8; opacity: 0; }
+.card.on:hover .arrow { opacity: 1; }
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}

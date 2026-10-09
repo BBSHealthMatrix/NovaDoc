@@ -1,0 +1,44 @@
+.toggle {
+  --width: 26px;
+  --height: 15px;
+  --thumb: 11px;
+  --inset: 2px;
+  --active-color: #10b981;
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  background: #e2e8f0;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background .15s;
+}
+
+.toggle span {
+  position: absolute;
+  top: var(--inset);
+  left: var(--inset);
+  width: var(--thumb);
+  height: var(--thumb);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  transition: left .15s;
+}
+
+.on { background: var(--active-color); }
+.on span { left: calc(var(--width) - var(--thumb) - var(--inset)); }
+.medium { --width: 31px; --height: 17px; --thumb: 13px; }
+.large { --width: 33px; --height: 18px; --thumb: 14px; }
+.small { --width: 24px; --height: 14px; --thumb: 10px; }
+.tiny { --width: 22px; --height: 12px; --thumb: 9px; --inset: 1.5px; }
+.blue { --active-color: #3b6fd4; }
+.softBlue { --active-color: #4a7fd4; }
+.green { --active-color: #10b981; }
+.compact { --width: 26px; --height: 15px; --thumb: 11px; }
+.toggle:focus-visible { outline: 2px solid #3b6fd4; outline-offset: 3px; }
+.toggle:disabled { opacity: .6; cursor: not-allowed; }
+
+.amber { --active-color: #f59e0b; }

@@ -1,0 +1,30 @@
+.d-field { composes: d-field from "../Field/Field.module.css"; }
+.row-between { display: flex; justify-content: space-between; align-items: center; }
+.req { font-style: normal; color: #ef4444; }
+.mrn-box { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc; color: #94a3b8; }
+.mrn-box small { display: block; font-size: 7px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.mrn-box b { font-family: 'JetBrains Mono', monospace; font-size: 8.5px; color: #0f172a; }
+.d-field .row-between { margin: 0; }
+.mini-seg { display: flex; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 4px; }
+.mini-seg button { padding: 2px 7px; border: 0; background: #fff; color: #64748b; font-size: 7px; font-weight: 700; cursor: pointer; }
+.mini-seg button.on { background: #3b6fd4; color: #fff; }
+.age-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.age-grid label { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.age-grid input { width: 100%; text-align: center; }
+.age-grid small { font-size: 7px; color: #94a3b8; }
+.gender-seg { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border: 1px solid #d8dee8; border-radius: 5px; }
+.gender-seg button { height: 24px; border: 0; background: #fff; color: #475569; font-size: 9px; font-weight: 500; cursor: pointer; }
+.gender-seg button.on { background: #3b6fd4; color: #fff; }
+.ptype { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.ptype button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; height: 42px; border: 1px solid #d8dee8; border-radius: 6px; background: #fff; color: #475569; font-size: 8px; font-weight: 600; cursor: pointer; }
+.ptype button.on { border-color: transparent; color: #fff; }
+.ptype button.on.green { background: #10b981; }
+.ptype button.on.blue { background: #3b6fd4; }
+.ptype button.on.orange { background: #f59e0b; }
+.ptype button.on.red { background: #ef4444; }
+.extra-box { display: flex; flex-direction: column; gap: 8px; padding: 11px; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc; }
+.extra-box.welfare { background: #f5f9ff; border-color: #cfdcf3; }
+.extra-title { display: flex; align-items: center; gap: 6px; font-size: 9.5px; font-weight: 600; color: #3b6fd4; }
+
+.d-label { font-size: 8px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #475569; }
+.btn-book { composes: confirm from "../DrawerFooter/DrawerFooter.module.css"; }

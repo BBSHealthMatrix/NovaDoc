@@ -1,0 +1,35 @@
+/* ── "Add Medicine" box + search dropdown ── */
+.mp-box { padding: 13px 12px; background: #fbfcfd; border: 1px solid #e2e8f0; border-radius: 10px; }
+.mp-lbl {
+  display: flex; align-items: center; gap: 5px; margin-bottom: 11px;
+  font-size: 9px; font-weight: 600; line-height: 12px; letter-spacing: .5px; text-transform: uppercase; color: #90a1b9;
+}
+
+.mp-sw { position: relative; }
+.mp-search {
+  display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;
+}
+.mp-search:focus-within { border-color: #4982cf; box-shadow: 0 0 0 2px rgba(73,130,207,.15); }
+.mp-search svg { flex-shrink: 0; color: #90a1b9; }
+.mp-search input { flex: 1; min-width: 0; border: none; outline: none; background: none; font-family: inherit; font-size: 11.5px; color: #0f172b; }
+.mp-search input::placeholder { color: #62748e; }
+
+/* dropdown */
+.mp-drop {
+  position: absolute; top: calc(100% + 5px); left: 0; right: 2px; z-index: 20; max-height: 260px; overflow-y: auto;
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+}
+.mp-cat { padding: 9px 11px 5px; font-size: 8px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #7c86ff; }
+.mp-gen { padding: 4px 11px; background: #fbfcfd; font-size: 9px; font-weight: 600; color: #45556c; }
+.mp-brand {
+  display: flex; align-items: center; gap: 7px; width: 100%; height: 30px; padding: 0 12px 0 25px; cursor: pointer;
+  background: #fff; border: none; border-top: 1px solid #f8fafc; font-family: inherit; text-align: left;
+}
+.mp-brand:hover { background: #f8fafc; }
+.mp-star { flex-shrink: 0; color: #cad5e2; }
+.mp-star-on { flex-shrink: 0; color: #ffb900; }
+.mp-bname { flex: 1; min-width: 0; font-size: 11.5px; font-weight: 600; color: #1d293d; }
+.mp-bstr { font-size: 9.5px; color: #62748e; }
+.mp-empty { margin: 0; padding: 14px; text-align: center; font-size: 10.5px; color: #90a1b9; }

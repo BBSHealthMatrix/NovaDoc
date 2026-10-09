@@ -1,0 +1,74 @@
+.alg-wrap { padding: 46px 43px 40px; }
+.alg-title { font-size: 17px; font-weight: 600; color: #0f172a; margin: 0 0 7px; }
+.alg-desc { font-size: 12.5px; color: #8492a6; margin: 0 0 19px; }
+
+/* tabs */
+.alg-tabs { display: inline-flex; gap: 2px; padding: 3px; margin-bottom: 15px; background: #eef1f5; border-radius: 8px; }
+.alg-tab {
+  height: 24px; padding: 0 11px; border: none; border-radius: 6px; background: none;
+  font-size: 10.5px; font-weight: 600; color: #475569; font-family: inherit; cursor: pointer;
+}
+.alg-tab:hover { color: #1e293b; }
+.alg-tab-on { background: #fff; color: #3b6fd4; box-shadow: 0 1px 2px rgba(15, 23, 42, .1); }
+
+/* add row */
+.alg-add { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.alg-input {
+  flex: 1; min-width: 0; height: 30px; padding: 0 11px; background: #fff; border: 1px solid #dfe5ec; border-radius: 5px;
+  outline: none; font-size: 12.5px; color: #1e293b; font-family: inherit; box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+}
+.alg-input::placeholder { color: #64748b; }
+.alg-input:focus { border-color: #4a7fd4; }
+.alg-select {
+  width: 107px; height: 29px; padding: 0 4px 0 9px; background: #fff; border: 1px solid #dfe5ec; border-radius: 4px;
+  font-size: 11px; color: #1e293b; font-family: inherit; cursor: pointer;
+}
+.alg-btn {
+  height: 32px; padding: 0 14px; background: #4a7fd4; border: 1px solid #3b6fd4; border-radius: 5px;
+  color: #fff; font-size: 11px; font-weight: 600; font-family: inherit; cursor: pointer; box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
+}
+.alg-btn:hover { background: #3b6fd4; }
+
+/* allergens table */
+.alg-table {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, .06);
+}
+.alg-head, .alg-row { display: grid; grid-template-columns: 454px 1fr 40px; align-items: center; padding: 0 15px; }
+.alg-head {
+  height: 31px; background: #fafbfc; border-bottom: 1px solid #eef1f5;
+  font-size: 8.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #64748b;
+}
+.alg-row { height: 34px; border-top: 1px solid #eef1f5; }
+.alg-head + .alg-row { border-top: none; }
+.alg-row:hover { background: #fafbfd; }
+.alg-name { font-size: 10.5px; font-weight: 500; color: #1e293b; }
+.alg-tag {
+  display: inline-block; padding: 1px 6px; background: #fff; border: 1px solid #d5dce5; border-radius: 4px;
+  font-size: 7.5px; font-weight: 500; color: #334155;
+}
+
+/* reactions / onset options */
+.alg-list { display: flex; flex-direction: column; gap: 4px; }
+.alg-item {
+  display: flex; align-items: center; justify-content: space-between; height: 27px; padding: 0 12px;
+  background: #fff; border: 1px solid #eef1f5; border-radius: 6px; font-size: 10.5px; color: #334155;
+}
+.alg-item:hover { border-color: #e2e8f0; }
+.alg-edit {
+  flex: 1; min-width: 0; height: 20px; margin-right: 10px; padding: 0 6px; border: 1px solid #4a7fd4; border-radius: 4px;
+  outline: none; font-size: 10.5px; color: #1e293b; font-family: inherit;
+}
+
+/* hover actions */
+.alg-acts { display: flex; justify-content: flex-end; gap: 3px; visibility: hidden; }
+.alg-row:hover .alg-acts, .alg-item:hover .alg-acts { visibility: visible; }
+.alg-acts button {
+  width: 16px; height: 16px; display: grid; place-items: center; padding: 0; border: none; border-radius: 3px;
+  background: none; color: #94a3b8; cursor: pointer;
+}
+.alg-acts button:first-child { color: #4a7fd4; }
+.alg-acts button:last-child:hover { color: #dc2626; }
+.alg-acts button.alg-del { background: #fef2f2; color: #f87171; }
+.alg-acts button.alg-del:hover { background: #fee2e2; color: #dc2626; }
+.alg-empty { padding: 20px 0; margin: 0; text-align: center; font-size: 11px; color: #94a3b8; }
